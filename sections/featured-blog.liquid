@@ -1,0 +1,54 @@
+<section class="content__wrapper black--bg">
+  <div class="page-width">
+    <div class="mainhead">
+      {% if section.settings.blog_heading != blank %}
+      	<h2>{{ section.settings.blog_heading }}</h2>
+      {% endif %}
+    </div>
+    {%- assign blog = blogs[section.settings.blog] -%}
+    <div class="blogs blog__slider general--animation">
+      {%- for article in blog.articles limit: 3 -%}
+        <div class="slide">
+          <div class="blog">
+            <a href="{{ article.url }}">
+              <div class="blog__image">
+                {% if article.image %}
+                  {{ article | img_url: '370x247' | img_tag: article.title }}
+                  {% else %}
+                  <img src="{{ 'blog01.jpg' | asset_url }}" alt="{{ article.title }}">
+                {% endif %}
+              </div>
+              <div class="blog__text">
+                {% capture date %}{{ article.published_at | time_tag: format: 'month_day_year' }}{% endcapture %}
+                <time class="time">{{ date }}</time>
+                <h3>{{ article.title }}</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Featured Blog",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Blog Heading"
+      },
+      {
+        "type": "text",
+        "id": "blog_heading",
+        "label": "Blog Heading"
+      },
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Select Blog"
+      }
+	]
+  }
+
+{% endschema %}

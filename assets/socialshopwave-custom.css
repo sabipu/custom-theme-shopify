@@ -1,0 +1,179 @@
+#ssw-avg-rate-profile-html {
+  margin-bottom: 6px;
+}
+
+.share-embed {
+  margin-bottom: 20px;
+}
+
+.share-embed > a {
+  border-radius: 25px;
+}
+
+#ssw-widget-recommends-html .btn.button.ssw-question-add-review,
+#ssw-widget-recommends-html .btn.button.ssw-ask-question-link,
+#ssw-reviews-page-wrapper .btn.button.ssw-question-add-review,
+#ssw-reviews-page-wrapper .btn.button.ssw-ask-question-link,
+#ssw-review-simple-html .ssw-control-group.ssw-text-right input.btn.button,
+#ssw-reviews-page-wrapper .ssw-control-group.ssw-text-right input.btn.button,
+#ssw-widget-review-bar .ssw-control-group.ssw-text-right input.btn.button{
+  line-height: 16px !important;
+  border-radius: 20px !important;
+  border: 2px solid #242526 !important;
+  background: #242526 !important;
+  transition: all 0.3s ease-out;
+}
+
+#ssw-widget-recommends-html .btn.button.ssw-question-add-review:hover,
+#ssw-widget-recommends-html .btn.button.ssw-ask-question-link:hover,
+#ssw-reviews-page-wrapper .btn.button.ssw-question-add-review:hover,
+#ssw-reviews-page-wrapper .btn.button.ssw-ask-question-link:hover,
+#ssw-review-simple-html .ssw-control-group.ssw-text-right input.btn.button:hover,
+#ssw-reviews-page-wrapper .ssw-control-group.ssw-text-right input.btn.button:hover,
+#ssw-widget-review-bar .ssw-control-group.ssw-text-right input.btn.button:hover {
+  background: #fff !important;
+}
+
+textarea.ssw-input-block-level {
+  height: auto !important;
+}
+
+#ssw-reviews-page-wrapper .ssw-review-input-block.ssw-group1 .ssw-input-block-level,
+.ssw-question-input-block.ssw-group1 .ssw-input-block-level,
+.ssw-question-input-block.ssw-group2 .ssw-input-block-level,
+.ssw-review-input-block.ssw-group1 .ssw-input-block-level,
+.ssw-review-input-block.ssw-group2 .ssw-input-block-level,
+.ssw-add-question-form textarea,
+#ssw-simple-add-review-form .ssw-control-group textarea {
+  height: auto !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  box-sizing: border-box !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  background: #fff !important;
+}
+
+.ssw-faveiticon {
+  left: 4px;
+  display: flex !important;
+  top: 6px;
+  align-items: center;
+}
+
+.ssw-faveiticon .faves-count {
+  padding: 0 5px;
+  line-height: 18px;
+  height: 20px;
+  margin-left: 4px;
+}
+
+.ssw-dropdown-menu li {
+  list-style: none !important;
+  line-height: 28px !important;
+}
+
+.ssw-dropdown-menu li:before,
+.ssw-dropdown-menu li:after {
+  display: none !important;
+}
+
+.ssw-modal input[type="text"],
+.ssw-modal input[type="email"],
+.ssw-modal input[type="number"],
+.ssw-modal input[type="password"],
+#first_name,
+#last_name,
+#about,
+#birthdate,
+#about_body,
+#phone {
+  height: auto !important;
+  padding: 11px 16px;
+  outline: none;
+}
+
+.ssw-socialconnect > .ssw-social-btn > a {
+  height: 44px !important;
+}
+
+.ssw-social-btn a {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 50px !important;
+}
+
+.ssw-social-btn > a > i {
+  width: 30% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ssw-socialconnect > .ssw-social-btn > a > span {
+  display: flex !important;   
+  justify-content: flex-start !important;
+  font-size: 13px !important;
+  padding: 0 5px !important;
+}
+
+#ssw-page {
+  padding: 0 20px;
+}
+
+.ssw-edit-profile-page h2 {
+  line-height: 36px;
+}
+
+.ssw-nav.ssw-nav-pills.ssw-profile-edit-tabs {
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+
+.ssw-nav.ssw-nav-pills.ssw-profile-edit-tabs li > a {
+  padding: 0 0 10px 0 !important;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-decoration: none !important;
+}
+
+.ssw-edit-profile-page #accept_marketing_div .ssw-controls .ssw-radio.ssw-inline {
+  padding-left: 0 !important;
+}
+
+.ssw-edit-profile-page #accept_marketing_div .ssw-controls .ssw-radio.ssw-inline #ssw_accepts_marketing-edit-profile {
+  margin: 0 !important;
+}
+
+.ssw-edit-profile-page #accept_marketing_div .ssw-radio.ssw-inline {
+  padding-left: 0;
+}
+
+@media all and (max-width: 460px) {
+  .ssw-edit-profile-page .ssw-control-label {
+    float: none !important;
+    width: auto !important;
+    margin-bottom: 30px;
+  }
+  .ssw-edit-profile-page .ssw-controls {
+    display: block;
+    margin-left: 0 !important;
+  }
+  .ssw-edit-profile-page .ssw-social-btn {
+    margin-left: 0 !important;
+  }
+}
+
+@media all and (max-width: 364px) {
+  #privacy_div .ssw-controls .ssw-radio.ssw-inline {
+    margin-left: 0 !important;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .ssw-faves-share-bar .ssw-share-faves {
+    margin: 0 2px !important;
+  }
+}

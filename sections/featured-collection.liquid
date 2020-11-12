@@ -1,0 +1,137 @@
+<section class="content__wrapper {% if section.settings.has_black_bg != false %}black--bg{% endif %}">
+  <div class="page-width">
+    <header class="mainhead">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title | escape }}</h2>
+      {% endif %}
+    </header>
+    {%- assign collection = collections[section.settings.collection] -%}
+    <div class="products product__slider general--animation">
+      {% for product in collection.products limit: 4 %}
+      
+      	{%- assign current_variant = product.selected_or_first_available_variant -%}
+      
+        <div class="slide">
+          <div class="product">
+            <div class="product__image">
+              <a href="{{ product.url }}">
+                {% if product.featured_image != blank %}
+                  {{ product.featured_image.src | img_url: '268x270' | img_tag: product.title }}
+                {% else %}
+                  <img src="{{ 'cable01.png' | asset_url }}" alt="{{ shop.name }}">
+                {% endif %}
+              </a>
+            </div>
+            <div class="product__text">
+              <h2><a href="{{ product.url }}">{{ product.title }}</a></h2>
+              {% if product.metafields.productexcerpt.excerpt != blank %}
+              <p class="product-exceprt">{{ product.metafields.productexcerpt.excerpt | strip_html | truncate: 80 }}</p>
+              {% else %}
+              <p class="product-exceprt">{{ product.description | strip_html | truncate: 80 }}</p>
+              {% endif %}
+              <!-- <span class="product__option">6 colors</span> -->
+              <div class="product__meta">
+                <a href="{{ product.url }}" class="button">{% if section.settings.hiring_block != false %} hire now {% else %} buy now {% endif %}<span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+                {% if section.settings.hiring_block != false %}  {% else %} <span class="product__price"> {{ product.variants[0].price | money }} </span> {% endif %}  
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      
+    </div>
+    <div class="browse_all">
+      <a href="{{ collection.url }}" class="button">BROWSE ALL</a>
+    </div>
+  </div>
+</section>
+
+
+
+{% comment %}{%- assign collection = collections[section.settings.collection] -%}
+
+{% for product in collection.products limit: 6 %}
+  <a href="{{ product.url }}">
+
+    {% if product.featured_image != blank %}
+      {{ product.featured_image.src | img_url: '480x480' | img_tag: product.title }}
+    {% endif %}
+
+    <p>{{ product.title }}</p>
+  </a>
+
+  <p>
+    {% if product.compare_at_price > product.price %}
+
+      {% if product.price_varies %}
+        {%- assign sale_price = product.price | money -%}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+      {% else %}
+        {{ 'products.product.on_sale' | t }}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% else %}
+
+      {% if product.price_varies %}
+        {%- assign price = product.price | money -%}
+        {{ 'products.product.from_text_html' | t: price: price }}
+      {% else %}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% endif %}
+  </p>
+{% else %}
+
+  {% for i in (1..6) %}
+    <a href="#">
+      {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+      {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+
+      <p>
+        {{ 'homepage.onboarding.product_title' | t }}
+      </p>
+    </a>
+
+    <p>{{ 1999 | money }}</p>
+  {% endfor %}
+{% endfor %}{% endcomment %}
+
+{% schema %}
+  {
+    "name": "Featured collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "has_black_bg",
+        "label": "Black Background Style",
+        "default": false
+      },
+	{
+        "type": "checkbox",
+        "id": "hiring_block",
+        "label": "Use Hire Now Button",
+        "default": false
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured collection",
+        "category": "Collection"
+      }
+    ]
+  }
+
+{% endschema %}

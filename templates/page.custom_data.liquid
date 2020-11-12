@@ -1,0 +1,453 @@
+  <div id="main">
+    <div id="configurator">
+
+    <!-- OPTION: Cable -->
+    <div id="image_column" class="col col30">
+      <div id="image">
+        <div id="cable_side_a">
+
+          <div class="cable_block" id="cable_side_a_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_a_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_a_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_a_connector">
+          </div>
+
+          
+          
+
+        </div>
+        <div id="cable_side_b">
+          
+          <div class="cable_block" id="cable_side_b_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_b_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_b_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_b_connector">
+          </div>
+
+
+
+        </div>
+      </div>
+      {% include "configurator_tech_specs" %}
+    </div>
+
+    <div id="options" class="col col70">
+
+      <h1>Build your <em>Data Cable</em></h1>
+
+      <!-- OPTION: Cable -->
+      <div class="group open" id="cable">
+        <div class="group_header">
+          <h2>Cable</h2>
+          <span class="group_price price">$1.80</span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          
+           <div class="option option_select independent" id="select_cable_brand">
+            <h3>Application</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul">
+                <li data-url-value="Ethernet"><a href="#sommer"><span>Ethernet</span></a></li>
+                <li data-url-value="BNC"><a href="#belden"><span>BNC</span></a></li>
+                <li data-url-value="DMX/AES/EBU"><a href="#klotz"><span>DMX/AES/EBU</span></a></li>
+
+<!--                 <li data-url-value="syntax" data-show="#cable_types_syntax"><a href="#syntax"><span>Syntax</span></a></li> -->
+              </ul>
+            </div>
+          </div>
+          
+          
+          
+          <div class="option option_select independent" id="select_cable_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" data-hide="#select_cable_types .input_select_ul, #select_cable_color, #select_cable_length" data-show="#select_cable_types" data-deselect="#select_cable_types, #select_cable_color, #select_cable_length">
+                <li data-url-value="sommer" data-show="#cable_types_sommer"><a href="#sommer"><span>Sommer</span></a></li>
+                <li data-url-value="belden" data-show="#cable_types_belden"><a href="#belden"><span>Belden</span></a></li>
+                <li data-url-value="klotz" data-show="#cable_types_klotz"><a href="#klotz"><span>Klotz</span></a></li>
+
+<!--                 <li data-url-value="syntax" data-show="#cable_types_syntax"><a href="#syntax"><span>Syntax</span></a></li> -->
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="option option_select dependent" id="select_cable_types" data-key="cable_type">
+            <h3>Cable Type</h3>
+            <div class="input input_select input_select_subtitles" data-show="#select_cable_length" data-hide=".input_select_ul_hidden, #select_cable_color"  data-deselect="#select_cable_color">
+              
+              <ul class="input_select_ul" id="cable_types_sommer">
+                <li data-url-value="sommer_cat_7_pur" data-variant-id="27746770976854" class="chooseable" data-chooseable="sommer_cat_7_pur" data-show=".select_connectors_group1"><a href="#sommer_cat_7_pur"><span>CAT.7 PUR</span><em>Cable</em></a></li>
+              </ul>
+              
+              <ul class="input_select_ul" id="cable_types_klotz">
+                <li data-url-value="klotz_KTZ_OT1000" data-variant-id="27721263448150" class="chooseable" data-multiply-by-length="true" data-chooseable="klotz_KTZ_OT1000"><a href="#klotz_KTZ_OT1000"><span>KTZ-OT1000</span><em>AES/EBU</em></a></li>
+              </ul>
+              
+              
+              <ul class="input_select_ul" id="cable_types_belden">
+                <li data-variant-id="27721571631190"  data-url-value="aes_ebu"  class="chooseable" data-multiply-by-length="true" data-chooseable="beldon_1800F"><a href="#beldon_1800F"><span>AES/EBU</span><em>1800F</em></a></li>
+                
+                <li data-url-value="belden_1694F_bnc" data-variant-id="28062303649878" class="chooseable" data-chooseable="belden_1694F_bnc" data-show=".select_connectors_group2"><a href="#belden_1694F_bnc"><span>1694F BNC</span><em>Cable</em></a></li>
+
+                <li data-url-value="belden_1303pu_cat6a" data-variant-id="28062303649878" class="chooseable" data-chooseable="belden_1303pu_cat6a" data-show=".select_connectors_group1"><a href="#belden_1303pu_cat6a"><span>1303PU</span><em>CAT6A</em></a></li>
+
+                <li data-url-value="belden_1303pvc_cat6a" data-variant-id="28062303649878" class="chooseable" data-chooseable="belden_1303pvc_cat6a" data-show=".select_connectors_group1"><a href="#belden_1303pvc_cat6a"><span>1303PVC</span><em>CAT6A</em></a></li>
+
+                <li data-url-value="belden_4694r_bnc" data-variant-id="19749354209366" class="chooseable" data-chooseable="belden_4694r_bnc"  data-show=".select_connectors_group2"><a href="#belden_4694r_bnc"><span>4694R BNC</span><em>Cable</em></a></li>
+
+                <li data-url-value="belden_4694f_bnc" data-variant-id="28062303649878" class="chooseable" data-chooseable="belden_4694f_bnc"  data-show=".select_connectors_group2"><a href="#belden_4694f_bnc"><span>4694F BNC</span><em>Cable</em></a></li>
+
+
+              </ul>
+              <ul class="input_select_ul" id="cable_types_syntax">
+                <li data-url-value="syntax_cat_6_pur" data-variant-id="xxxxxxxxxx" class="chooseable unavailable" data-chooseable="syntax_cat_6_pur" data-show=".select_connectors_group1"><a href="#sommer_cat_7_pur"><span>CAT.6 PUR</span><em>Cable</em></a></li>
+              </ul>
+
+            </div>
+          </div>
+
+          
+
+          <div class="option option_text dependent" id="select_cable_length"  data-key="cable_length">
+            <h3>Cable Length</h3>
+            <div class="input input_text input_text_dial">
+              <div class="input_box">
+                <button type="button" class="minus"><span><i class="fas fa-minus"></i></span></button>
+                <input type="text" value="10 m" data-number="10" />
+                <button type="button" class="plus"><span><i class="fas fa-plus"></i></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Cable -->
+
+
+      <!-- OPTION: Connector A -->
+      <div class="group closed connector_group" id="connectorA">
+        <div class="group_header">
+          <h2>Connector <em>A</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+
+
+          <div class="option option_select selected" id="select_connectorA_connector" data-hide="#select_connectorA_ringColor, #select_connectorA_bootColor" data-key="connectorA">
+            <h3>Choose Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+              <!-- SOMMER CAT7 CONNECTORS -->
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group1" id="select_connectorA_connector_group1">
+                <li data-variant-id="19524194107478" class="chooseable connector_neutrik_ne8mx6t" data-chooseable="connector_neutrik_ne8mx6t" data-show="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #connectorA_adapter_choices, #select_connectorA_adapter" data-hide="#select_connectorA_bootColor_hirose_container, #select_connectorA_bootColor_hirose"><a href="#connector_neutrik_ne8mx6t"><span>Neutrik CAT.6A etherCON</span><em>NE8MX6-T</em></a></li>
+                <li data-variant-id="19524194140246" class="chooseable connector_neutrik_ne8mx6tb" data-chooseable="connector_neutrik_ne8mx6tb" data-show="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik,#select_connectorA_bootColor_cat6, #select_connectorA_bootColor_neutrik_cat6, #connectorA_adapter_choices, #select_connectorA_adapter" data-hide="#select_connectorA_bootColor_hirose_container, #select_connectorA_bootColor_hirose"><a href="#male_xlr"><span>Neutrik CAT.6A etherCON</span><em>NE8MX6-B-T</em></a></li>
+                <li data-variant-id="19524185358422" class="chooseable connector_hirose_rj45_cat6a" data-chooseable="connector_hirose_rj45_cat6a" data-hide="#select_connectorA_ringColor, #select_connectorA_bootColor, #select_connectorA_adapter" data-show="#select_connectorA_bootColor_hirose_container, #select_connectorA_bootColor_hirose"><a href="#male_xlr"><span>Hirose CAT.6A RJ45</span><em>TM31P-TM-88P (01)</em></a></li>
+              </ul>
+              <!-- END SOMMER CAT7 CONNECTORS -->
+
+              <!-- BELDEN BNC CONNECTORS -->
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group2" id="select_connectorA_connector_group2">
+                <li data-variant-id="19524194467926" class="chooseable connector_neutrik_NBNC75BRU11" data-chooseable="connector_neutrik_NBNC75BRU11"  data-hide="#select_connectorA_ringColor" data-show="#select_connectorA_bootColor"><a href="#connector_neutrik_NBNC75BRU11"><span>Neutrik HD BNC</span><em>NBNC75BRU11</em></a></li>
+
+                <li data-variant-id="19524195844182" class="chooseable connector_neutrik_NBNC75BTU11X" data-chooseable="connector_neutrik_NBNC75BTU11X"  data-hide="#select_connectorA_ringColor" data-show="#select_connectorA_bootColor"><a href="#connector_neutrik_NBNC75BTU11X"><span>Neutrik 4k UHD BNC</span><em>NBNC75BTU11X</em></a></li>
+              </ul>
+              <!-- END BELDEN BNC CONNECTORS -->
+
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group3" id="select_connectorA_connector_group3">
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5fxxb" data-chooseable="connector_neutrik_nc5fxxb"><a href="#connector_neutrik_nc5fxxb"><span>Neutrik 5 pin XLR</span><em>Female Black</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5mxxb" data-chooseable="connector_neutrik_nc5mxxb"><a href="#connector_neutrik_nc5mxxb"><span>Neutrik 5 pin XLR</span><em>Male Black</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5fxx" data-chooseable="connector_neutrik_nc5fxx"><a href="#connector_neutrik_nc5fxx"><span>Neutrik 5 pin XLR</span><em>Female Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5mxx" data-chooseable="connector_neutrik_nc5mxx"><a href="#connector_neutrik_nc5mxx"><span>Neutrik 5 pin XLR</span><em>Male Nickel</em></a></li>
+
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5fxxtop" data-chooseable="connector_neutrik_nc5fxxtop"><a href="#connector_neutrik_nc5fxxtop"><span>Neutrik 5 pin XLR Top</span><em>Female Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5mxxtop" data-chooseable="connector_neutrik_nc5mxxtop"><a href="#connector_neutrik_nc5mxxtop"><span>Neutrik 5 pin XLR Top</span><em>Male Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc3fxx" data-chooseable="connector_neutrik_nc3fxx"><a href="#connector_neutrik_nc3fxx"><span>Neutrik XLR</span><em>Female Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc3mxx" data-chooseable="connector_neutrik_nc3mxx"><a href="#connector_neutrik_nc3mxx"><span>Neutrik XLR</span><em>Male Nickel</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group4" id="select_connectorA_connector_group4">
+                <li data-variant-id="19524194435158" class="chooseable connector_switchcraft_xlr_aaa3mbauz" data-chooseable="connector_switchcraft_xlr_aaa3mbauz"><a href="#connector_switchcraft_xlr_aaa3mbauz"><span>Switchcraft XLR</span><em>Male Black</em></a></li>
+                <li data-variant-id="19524194435158" class="chooseable connector_switchcraft_xlr_aaa3fbauz" data-chooseable="connector_switchcraft_xlr_aaa3fbauz"><a href="#connector_switchcraft_xlr_aaa3fbauz"><span>Switchcraft XLR</span><em>Female Black</em></a></li>
+              </ul>
+
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_ringColor" data-key="connectorA_ring_color">
+            <h3>Ring Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorA_ringColor_neutrik">
+                <li data-variant-id=""  class="chooseable" data-chooseable="neutrik_ringColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170580054"  class="chooseable" data-chooseable="neutrik_ringColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170612822"  class="chooseable" data-chooseable="neutrik_ringColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170645590"  class="chooseable" data-chooseable="neutrik_ringColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170678358"  class="chooseable" data-chooseable="neutrik_ringColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170711126"  class="chooseable" data-chooseable="neutrik_ringColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171333718"  class="chooseable" data-chooseable="neutrik_ringColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171366486"  class="chooseable" data-chooseable="neutrik_ringColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171399254"  class="chooseable" data-chooseable="neutrik_ringColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171432022"  class="chooseable border" data-chooseable="neutrik_ringColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171464790"  class="chooseable" data-chooseable="neutrik_ringColor_clear" data-colour="cancel"><a href="#no_sleeve"><span>Clear</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_bootColor" data-key="connectorA_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+            
+
+              <ul class="input_select_ul" id="select_connectorA_bootColor_neutrik">
+                <li data-variant-id=""  class="chooseable" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524194304086"  class="chooseable" data-chooseable="neutrik_bootColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194336854"  class="chooseable" data-chooseable="neutrik_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194369622"  class="chooseable" data-chooseable="neutrik_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195156054"  class="chooseable" data-chooseable="neutrik_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195188822"  class="chooseable" data-chooseable="neutrik_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195221590"  class="chooseable" data-chooseable="neutrik_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195254358"  class="chooseable" data-chooseable="neutrik_bootColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195287126"  class="chooseable" data-chooseable="neutrik_bootColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195319894"  class="chooseable border" data-chooseable="neutrik_bootColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+              </ul>
+
+
+
+
+
+            </div>
+          </div>
+
+
+
+          <div class="option option_select dependent" id="select_connectorA_bootColor_cat6" data-key="connectorA_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorA_bootColor_neutrik_cat6">
+                <li data-variant-id=""  class="chooseable selected" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          
+
+          <div class="option option_select dependent" id="select_connectorA_bootColor_hirose_container" data-key="connectorA_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorA_bootColor_hirose">
+                <li data-variant-id="19524185555030"  class="chooseable" data-chooseable="hirose_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524186243158"  class="chooseable" data-chooseable="hirose_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524186210390"  class="chooseable" data-chooseable="hirose_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524185587798"  class="chooseable" data-chooseable="hirose_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+               <li data-variant-id="19524185620566"  class="chooseable" data-chooseable="hirose_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524185456726"  class="chooseable" data-chooseable="hirose_bootColor_lt_grey" data-colour="#d2d2d2"><a href="#colour_lt_grey"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524185522262"  class="chooseable" data-chooseable="hirose_bootColor_grey" data-colour="#aaaaaa"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524185489494"  class="chooseable" data-chooseable="hirose_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+              </ul>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector A -->
+
+      <!-- OPTION: Connector B -->
+      <div class="group closed connector_group" id="connectorB">
+        <div class="group_header">
+          <h2>Connector <em>B</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+
+
+          <div class="option option_select selected" id="select_connectorB_connector" data-hide="#select_connectorB_ringColor, #select_connectorB_bootColor" data-key="connectorB">
+            <h3>Choose Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+              <!-- SOMMER CAT7 CONNECTORS -->
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group1" id="select_connectorB_connector_group1">
+                <li data-variant-id="19524194107478" class="chooseable connector_neutrik_ne8mx6t" data-chooseable="connector_neutrik_ne8mx6t" data-show="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #connectorB_adapter_choices, #select_connectorB_adapter" data-hide="#select_connectorB_bootColor_hirose_container, #select_connectorB_bootColor_hirose"><a href="#connector_neutrik_ne8mx6t"><span>Neutrik CAT.6A etherCON</span><em>NE8MX6-T</em></a></li>
+                <li data-variant-id="19524194140246" class="chooseable connector_neutrik_ne8mx6tb" data-chooseable="connector_neutrik_ne8mx6tb" data-show="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik,#select_connectorB_bootColor_cat6, #select_connectorB_bootColor_neutrik_cat6, #connectorB_adapter_choices, #select_connectorB_adapter" data-hide="#select_connectorB_bootColor_hirose_container, #select_connectorB_bootColor_hirose"><a href="#male_xlr"><span>Neutrik CAT.6A etherCON</span><em>NE8MX6-B-T</em></a></li>
+                <li data-variant-id="19524185358422" class="chooseable connector_hirose_rj45_cat6a" data-chooseable="connector_hirose_rj45_cat6a" data-hide="#select_connectorB_ringColor, #select_connectorB_bootColor, #select_connectorB_adapter" data-show="#select_connectorB_bootColor_hirose_container, #select_connectorB_bootColor_hirose"><a href="#male_xlr"><span>Hirose CAT.6A RJ45</span><em>TM31P-TM-88P (01)</em></a></li>
+              </ul>
+              <!-- END SOMMER CAT7 CONNECTORS -->
+
+              <!-- BELDEN BNC CONNECTORS -->
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group2" id="select_connectorB_connector_group2">
+                <li data-variant-id="19524194467926" class="chooseable connector_neutrik_NBNC75BRU11" data-chooseable="connector_neutrik_NBNC75BRU11"  data-hide="#select_connectorB_ringColor" data-show="#select_connectorB_bootColor"><a href="#connector_neutrik_NBNC75BRU11"><span>Neutrik HD BNC</span><em>NBNC75BRU11</em></a></li>
+
+                <li data-variant-id="19524195844182" class="chooseable connector_neutrik_NBNC75BTU11X" data-chooseable="connector_neutrik_NBNC75BTU11X"  data-hide="#select_connectorB_ringColor" data-show="#select_connectorB_bootColor"><a href="#connector_neutrik_NBNC75BTU11X"><span>Neutrik 4k UHD BNC</span><em>NBNC75BTU11X</em></a></li>
+              </ul>
+              <!-- END BELDEN BNC CONNECTORS -->
+
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group3" id="select_connectorB_connector_group3">
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5fxxb" data-chooseable="connector_neutrik_nc5fxxb"><a href="#connector_neutrik_nc5fxxb"><span>Neutrik 5 pin XLR</span><em>Female Black</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5mxxb" data-chooseable="connector_neutrik_nc5mxxb"><a href="#connector_neutrik_nc5mxxb"><span>Neutrik 5 pin XLR</span><em>Male Black</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5fxx" data-chooseable="connector_neutrik_nc5fxx"><a href="#connector_neutrik_nc5fxx"><span>Neutrik 5 pin XLR</span><em>Female Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5mxx" data-chooseable="connector_neutrik_nc5mxx"><a href="#connector_neutrik_nc5mxx"><span>Neutrik 5 pin XLR</span><em>Male Nickel</em></a></li>
+
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5fxxtop" data-chooseable="connector_neutrik_nc5fxxtop"><a href="#connector_neutrik_nc5fxxtop"><span>Neutrik 5 pin XLR Top</span><em>Female Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc5mxxtop" data-chooseable="connector_neutrik_nc5mxxtop"><a href="#connector_neutrik_nc5mxxtop"><span>Neutrik 5 pin XLR Top</span><em>Male Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc3fxx" data-chooseable="connector_neutrik_nc3fxx"><a href="#connector_neutrik_nc3fxx"><span>Neutrik XLR</span><em>Female Nickel</em></a></li>
+
+                <li data-variant-id="19524194435158" class="chooseable connector_neutrik_nc3mxx" data-chooseable="connector_neutrik_nc3mxx"><a href="#connector_neutrik_nc3mxx"><span>Neutrik XLR</span><em>Male Nickel</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul input_select_ul_hidden select_connectors_group4" id="select_connectorB_connector_group4">
+                <li data-variant-id="19524194435158" class="chooseable connector_switchcraft_xlr_aaa3mbauz" data-chooseable="connector_switchcraft_xlr_aaa3mbauz"><a href="#connector_switchcraft_xlr_aaa3mbauz"><span>Switchcraft XLR</span><em>Male Black</em></a></li>
+                <li data-variant-id="19524194435158" class="chooseable connector_switchcraft_xlr_aaa3fbauz" data-chooseable="connector_switchcraft_xlr_aaa3fbauz"><a href="#connector_switchcraft_xlr_aaa3fbauz"><span>Switchcraft XLR</span><em>Female Black</em></a></li>
+              </ul>
+
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_ringColor" data-key="connectorB_ring_color">
+            <h3>Ring Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorB_ringColor_neutrik">
+                <li data-variant-id=""  class="chooseable" data-chooseable="neutrik_ringColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170580054"  class="chooseable" data-chooseable="neutrik_ringColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170612822"  class="chooseable" data-chooseable="neutrik_ringColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170645590"  class="chooseable" data-chooseable="neutrik_ringColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170678358"  class="chooseable" data-chooseable="neutrik_ringColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170711126"  class="chooseable" data-chooseable="neutrik_ringColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171333718"  class="chooseable" data-chooseable="neutrik_ringColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171366486"  class="chooseable" data-chooseable="neutrik_ringColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171399254"  class="chooseable" data-chooseable="neutrik_ringColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171432022"  class="chooseable border" data-chooseable="neutrik_ringColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171464790"  class="chooseable" data-chooseable="neutrik_ringColor_clear" data-colour="cancel"><a href="#no_sleeve"><span>Clear</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_bootColor" data-key="connectorB_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+            
+
+              <ul class="input_select_ul" id="select_connectorB_bootColor_neutrik">
+                <li data-variant-id=""  class="chooseable" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524194304086"  class="chooseable" data-chooseable="neutrik_bootColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194336854"  class="chooseable" data-chooseable="neutrik_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194369622"  class="chooseable" data-chooseable="neutrik_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195156054"  class="chooseable" data-chooseable="neutrik_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195188822"  class="chooseable" data-chooseable="neutrik_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195221590"  class="chooseable" data-chooseable="neutrik_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195254358"  class="chooseable" data-chooseable="neutrik_bootColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195287126"  class="chooseable" data-chooseable="neutrik_bootColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195319894"  class="chooseable border" data-chooseable="neutrik_bootColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+              </ul>
+
+
+
+
+
+            </div>
+          </div>
+
+
+
+          <div class="option option_select dependent" id="select_connectorB_bootColor_cat6" data-key="connectorB_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorB_bootColor_neutrik_cat6">
+                <li data-variant-id=""  class="chooseable selected" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          
+
+          <div class="option option_select dependent" id="select_connectorB_bootColor_hirose_container" data-key="connectorB_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorB_bootColor_hirose">
+                <li data-variant-id="19524185555030"  class="chooseable" data-chooseable="hirose_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524186243158"  class="chooseable" data-chooseable="hirose_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524186210390"  class="chooseable" data-chooseable="hirose_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524185587798"  class="chooseable" data-chooseable="hirose_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+               <li data-variant-id="19524185620566"  class="chooseable" data-chooseable="hirose_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524185456726"  class="chooseable" data-chooseable="hirose_bootColor_lt_grey" data-colour="#d2d2d2"><a href="#colour_lt_grey"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524185522262"  class="chooseable" data-chooseable="hirose_bootColor_grey" data-colour="#aaaaaa"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524185489494"  class="chooseable" data-chooseable="hirose_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+              </ul>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector B -->
+
+	{% include "custom_logo_text" %}
+
+
+
+      <!-- CART BUTTON & TOTAL -->
+      <div id="cart_buttons">
+        <h5>Total</h5>
+        <div id="total_price" class="price"><span class="currency_symbol">$</span><span class="price_text">0.00</span></div>
+        <button type="button" id="addToCart"><span class="text">Add To Cart</span></button>
+
+        <div class="button_spinner" id="addToCartSpinner" style="display:none;">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </div>
+
+        <div id="cart_status_message" style="display:none;">
+
+        </div>
+
+
+
+      </div>
+      <!-- END OF CART BUTTON & TOTAL -->
+
+
+
+    </div>
+    </div>
+  </div>

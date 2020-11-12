@@ -1,0 +1,17 @@
+.ch2, .ch4, .ch8, .ch12, .ch24
+{
+	display: none;
+}
+
+.channels_2 li.ch2, .channels_4 li.ch4, .channels_8 li.ch8, .channels_12 li.ch12, .channels_24 li.ch24
+{
+	display: list-item;
+}
+
+
+#image.multicore_image
+{
+	background-image: url(https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/multicore_cable.png);
+    background-size: 100%;
+
+}

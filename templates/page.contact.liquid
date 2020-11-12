@@ -1,0 +1,94 @@
+{% comment %}<h1>{{ page.title }}</h1>
+
+<div class="rte">
+  {{ page.content }}
+</div>{% endcomment %}
+<div class="contact__wrapper">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-third">
+        <h2>Get in touch</h2>
+        <div class="contact__detail">
+          <span class="contact__text">
+            <span class="ico-holder">{% include 'icon-mail' %}</span>
+            <a class="email" href="mailto:info@cablesmiths.com.au">info@cablesmiths.com.au</a></span>
+        </div>
+        <div class="contact__detail">
+          <span class="contact__text">
+            <span class="ico-holder">{% include 'icon-phone' %}</span>
+            <a href="mailto:0423961903">0423 961 903</a></span>
+        </div>
+        <span class="office__timing">9:00am - 5:00pm, Monday to Friday</span>
+        <div class="social__holder">
+          <ul class="social-networks">
+            <li><a href="https://facebook.com/cablesmiths">{% include 'icon-facebook' %}</a></li>
+            <li><a href="https://instagram.com/cablesmiths">{% include 'icon-instagram' %}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid__item medium-up--two-thirds">
+        <h2>Send us a message</h2>
+        <p>If you are unable to reach us by phone use this form to ask any questions you may have and we will get back to you as soon as possible.</p>
+        {% form 'contact' %}
+          {% if form.posted_successfully? %}
+            <p class="form-success">
+              {{ 'contact.form.post_success' | t }}
+            </p>
+          {% endif %}
+
+          {{ form.errors | default_errors }}
+          <div class="grid">
+            <div class="grid__item medium-up--one-half">
+              <div class="form__holder">
+                <input class="form__input"
+                  type="text"
+                  name="contact[name]"
+                  id="ContactFormName"
+                  placeholder="{{ 'contact.form.name' | t }}"
+                  value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-half">
+              <div class="form__holder">
+                <input class="form__input"
+                  type="email"
+                  name="contact[email]"
+                  id="ContactFormEmail"
+                  placeholder="{{ 'contact.form.email' | t }}"
+                  value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                  spellcheck="false"
+                  autocomplete="off"
+                  autocapitalize="off">
+              </div>
+            </div>
+          </div>
+          {% comment %}<div class="form__holder">
+            <label for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+            <input type="tel"
+              name="contact[phone]"
+              id="ContactFormPhone"
+              placeholder="{{ 'contact.form.phone' | t }}"
+              value="{% if form[phone] %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+              pattern="[0-9\-]*">
+          </div>{% endcomment %}
+          <div class="form__holder">
+            <textarea rows="10"
+              class="form__input"
+              name="contact[body]"
+              id="ContactFormMessage"
+              placeholder="{{ 'contact.form.message' | t }}">
+              {%- if form.body -%}
+                {{- form.body -}}
+              {%- endif -%}
+            </textarea>
+          </div>
+          <div class="form__holder">
+            <input class="button" type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,160 @@
+<div class="product__listing">
+  <div class="page-width">
+    {% paginate collection.products by 6 %}
+      <div class="grid">
+        <div class="grid__item medium-up--one-quarter">
+          <div class="sidebar__filter">
+            <div class="sidebar__filter-hold">
+              {% include 'breadcrumbs' %}
+              {% if collection.all_tags.size > 0 %}
+                <h3>Browse by Application</h3>
+                <ul class="collection__filters prod__list prod__list--two">
+                  {% for tag in collection.all_tags %}
+                    {% if current_tags contains tag %}
+                      <li class="active">
+                        {{ tag | link_to_remove_tag: tag }}
+                      </li>
+                    {% else %}
+                      <li>
+                        {{ tag | link_to_tag: tag }}
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+            <div class="sidebar__filter-hold" id="brand__filter">
+              <h3>Browse by Brand</h3>
+              <ul class="collection__brands prod__list"></ul>
+            </div>
+            <div class="sidebar__filter-hold" id="color__filter">
+              <h3>Browse by Color</h3>
+              <ul class="collection__colors prod__color"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid__item medium-up--three-quarters">
+          <div class="collectionitem__wrapper">
+            <header role="banner" class="listing__heading">
+              <h1>{{ collection.title }}</h1>
+              <span class="page__counter">Showing: <span class="page__counts"><span class="product__visible"></span> of {{ collection.all_products_count }}</span></span>
+            </header>
+            <div class="grid products__container">
+              {% for product in collection.products %}
+                <div class="grid__item medium-up--one-third">
+                  <div class="product">
+                      <div class="product__image">
+                        {% if product.featured_image != blank %}
+                        <a href="{{ product.url | within: collection }}">
+                          {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
+                        </a>
+                        {% endif %}
+                      </div>
+                    <div class="product__text">
+                      <h2><a href="{{ product.url | within: collection }}">{{ product.title }}</a></h2>
+
+                      {% capture the_snippet_review_avg %}{% render 'ssw-widget-avg-rate-listing', product: product %}{% endcapture %}
+                      {% unless the_snippet_review_avg contains 'Liquid error' %}
+                      {{ the_snippet_review_avg }}
+                      {% endunless %}    
+                      
+                      {% comment %}<p>
+                        {% if product.compare_at_price > product.price %}
+                          {% if product.price_varies %}
+                            {%- assign sale_price = product.price | money -%}
+                            {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                          {% else %}
+                            {{ 'products.product.on_sale' | t }}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% else %}
+                          {% if product.price_varies %}
+                            {%- assign price = product.price | money -%}
+                            {{ 'products.product.from_text_html' | t: price: price }}
+                          {% else %}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% endif %}
+                        {% if product.compare_at_price > product.price %}
+                          <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                          <s>{{ product.compare_at_price | money }}</s>
+                        {% endif %}
+                        {% unless product.available %}
+                          {{ 'products.product.sold_out' | t }}
+                        {% endunless %}
+                      
+                      
+                      </p>{% endcomment %}
+                      {% if product.metafields.productexcerpt.excerpt != blank %}
+                      	<p class="product-exceprt">{{ product.metafields.productexcerpt.excerpt | strip_html | truncate: 80 }}</p>
+                      {% else %}
+                      	<p class="product-exceprt">{{ product.description | strip_html | truncate: 80 }}</p>
+                      {% endif %}
+
+                      {% if product.metafields['Contact']['show-contact-us-button'] != blank %}
+                      
+                      
+                      <div class="product__meta">
+                        <a href="{{ product.url | within: collection }}" class="button">{% if product.metafields.bookthatapp.config %}Hire Now {% else %}Hire Now {% endif %}<span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+                        <span class="product__price2">
+                         
+                        </span>
+                      </div>
+                      
+                      
+                      
+                      {% else %}
+                      
+                      <div class="product__meta">
+                        <a href="{{ product.url | within: collection }}" class="button">{% if product.metafields.bookthatapp.config %}Hire Now {% else %}Buy Now {% endif %}<span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+                        <span class="product__price">
+                          {{ product.variants[0].price | money }}
+                        </span>
+                      </div>
+                      
+                      
+                      {% endif %}
+                      
+                    </div>
+                  </div>
+                </div>
+              {% else %}
+                {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+                  {% for i in (1..8) %}
+                    <a href="#">
+                      {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                      {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+                    </a>
+
+                    <p>
+                      <a href="#">{{ 'homepage.onboarding.product_title' | t }}</a>
+                    </p>
+
+                    <p>
+                      {{ 1999 | money }}
+                    </p>
+                  {% endfor %}
+                {% else %}
+                  <p>{{ 'collections.general.no_matches' | t }}</p>
+                {% endif %}
+              {% endfor %}
+            </div>
+            {% if paginate.pages > 1 %}
+              <div class="pagination__holder">
+                <span class="pagination__title">Pages: </span>
+                  {% include 'pagination' %}
+              </div>
+            {% endif %}
+			</div>
+        </div>
+      </div>
+    {% endpaginate %}
+    <div class="collection__desc">
+      {% if collection.description != blank %}
+      <div class="rte">
+        {{ collection.description }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

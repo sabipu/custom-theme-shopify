@@ -1,0 +1,240 @@
+<script src="{{ 'mustash.js' | asset_url }}"></script>
+<script type="text/javascript">
+  var customTags = [ '<%=', '=%>' ];
+  Mustache.tags = customTags;
+</script>
+
+<script type="text/javascript">
+  var json_cart = {{ cart | json }};
+
+  $(function ()
+  {
+    processCart(json_cart);
+  });
+
+</script>
+<script id="cart_product" type="x-tmpl-mustache">
+<tr class="responsive-table-row parent__product">
+    <td data-label="{{ customer.order.product | t }}">
+        <div class="cart__image">
+            <a href=""></a>
+        </div>
+        <div class="cart__desc">
+            <span class="cart__prodtitle"><a href=""><%=title=%></a></span>
+            <ul class="product_includes_container">
+                <li><strong>Includes:</strong> <span class="product_includes"></span></li>
+            </ul>
+        </div>
+    </td>
+    <td data-label="">
+        <div class="form__number">
+            <input type="number" name="updates[]" id="updates_" value="<%=quantity=%>" min="0" step="1" aria-label="<%=quantity=%>">
+        </div>
+    </td>
+    <td data-label="">
+        <span class="cart__price">$<%=price=%></span>
+    </td>
+    <td data-label="">
+        <div class="remove_button">
+            <a class="button button--red" href="#/cart/change?line=&amp;quantity=0"><span>Remove</span></a>
+        </div>
+    </td>
+</tr>
+</script>
+
+
+<div class="cart__wrapper">
+    <div class="page-width">
+        {% if cart.item_count > 0 %}
+        <h1>{{ 'cart.general.title' | t }}</h1>
+        <div class="grid">
+            <div class="grid__item two-thirds cart_mobile">
+                <table class="responsive-table cart__table">
+                    <thead class="small--hide">
+                        <tr>
+                            <th>{{ 'cart.label.product' | t }}</th>
+                            <th>{{ 'cart.label.quantity' | t }}</th>
+                            <th>{{ 'cart.label.price' | t }}</th>
+                            <th><!-- {{ 'cart.label.total' | t }} --></th>
+                        </tr>
+                    </thead>
+                    <tbody id="newcart_items">
+                    </tbody>
+                </table>
+              
+<!--               	<div id="about_cart" class="mobile_none">
+                  <h3>Does your custom cable order look wrong when you checkout?</h3>
+                  <p>Don't worry. It's not. When you order custom built cables, we actually break the order down into all the individual parts that make up the custom cable.</p>
+                  
+                   <h3>Are you hiring equipment?</h3>
+                  <p>Please be aware that if you hire any equipment from us we do require you to verify your identity before we will fullfill your order. After you have completed your order on our website, you will be sent an email with instructions on how to prove your identity through our online verification system.</p>
+              	</div> -->
+            </div>
+
+            <div class="grid__item one-third cart_mobile">
+                <div class="cart__subtotal">
+                    <span class="cart__subtotal-title">{{ 'cart.general.subtotal' | t }}</span>
+                    <span class="cart__subtotal-money"><span class="ufe-cart-total-price">{{ cart.total_price | money }}</span></span>
+                    {% if cart.total_discounts > 0 %}
+                    <span class="cart__subtotal-money">{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</span>
+                    {% endif %}
+                    <span class="cart__subtotal-title">{{ 'cart.general.shipping_at_checkout' | t }}</span>
+                </div>
+                <div class="cart__total">
+                    <span class="cart__total-text">Total: <span class="total__amount"><span class="ufe-cart-total-price">{{ cart.total_price | money }}</span></span></span>
+                </div>
+                <div class="cart__buttons">
+                    <!-- <div class="btn__hold">
+                        <input type="submit" name="update" class="button button--green" value="{{ 'cart.general.update' | t }}">
+                    </div> -->
+                    <div class="btn__hold">
+                        <input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}" onclick="window.location.href='/cart/checkout';">
+                    </div>
+                </div>
+<!--               	<div id="about_cart" class="mobile_block">
+                  <h3>Does your custom cable order look wrong when you checkout?</h3>
+                  <p>Don't worry. It's not. When you order custom built cables, we actually break the order down into all the individual parts that make up the custom cable.</p>
+                  
+                   <h3>Are you hiring equipment?</h3>
+                  <p>Please be aware that if you hire any equipment from us we do require you to verify your identity before we will fullfill your order. After you have completed your order on our website, you will be sent an email with instructions on how to prove your identity through our online verification system.</p>
+              	</div> -->
+            </div>
+
+
+        </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <form class="cart__form" action="/cart" method="post" novalidate style="display:none; margin-top: 200px;">
+            <div class="grid">
+                <div class="grid__item two-thirds">
+                    <table class="responsive-table cart__table">
+                        <thead class="small--hide">
+                            <tr>
+                                <th>{{ 'cart.label.product' | t }}</th>
+                                <th>{{ 'cart.label.quantity' | t }}</th>
+                                <th>{{ 'cart.label.price' | t }}</th>
+                                <th>{{ 'cart.label.total' | t }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in cart.items %}
+                           
+                                <tr class="responsive-table-row">
+                                    <td data-label="{{ 'customer.order.product' | t }}">
+                                        {% if item.image != blank %}
+                                        <div class="cart__image">
+                                            <a href="{{ item.url | within: collections.all }}">
+                                                {{ item | img_url: '240x240' | img_tag: item.title }}
+                                            </a>
+                                        </div>
+                                        {% endif %}
+                                        <div class="cart__desc">
+                                            <span class="cart__prodtitle"><a href="{{ item.url }}">{{ item.product.title }}</a></span>
+                                            <ul>
+                                                {% unless item.properties == empty %}
+                                                {% for property in item.properties %}
+                                                {% if property.first != "uniqid" %}
+                                                <li><strong>{{ property.first }}:</strong> {{ property.last }}</li>
+                                                {% endif %}
+                                                {% endfor %}
+                                                {% endunless %}
+                                                
+                                            </ul>
+                                            
+                                        </div>
+                                    </td>
+                                    <td data-label="{{ 'cart.label.quantity' | t }}">
+                                        <div class="form__number">
+                                            <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" step="1" aria-label="{{ 'cart.general.item_quantity' | t }}">
+                                        </div>
+                                    </td>
+                                    <td data-label="{{ 'cart.label.price' | t }}">
+                                        {% if item.original_line_price != item.line_price %}
+                                        <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
+                                        {{ item.price | money }}
+                                        <span class="visually-hidden">{{ 'cart.label.original_price' | t }}</span>
+                                        <s>{{ item.original_price | money }}</s>
+                                        {% else %}
+                                        <span class="cart__price">{{ item.price | money }}</span>
+                                        {% endif %}
+                                    </td>
+                                    <td data-label="{{ 'cart.label.total' | t }}">
+                                        <span class="cart__price">{{ item.line_price | money }}</span>
+                                        <div class="remove__holder">
+                                            <a class="button button--red" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                                                {{ 'cart.general.remove' | t }}
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                        </tbody>
+                    </table>
+                    <div class="cart__comment">
+                        {% if settings.cart_notes_enable %}
+                        <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+                        <textarea name="note" id="CartSpecialInstructions" placeholder="Special Instructions for seller...">{{ cart.note }}</textarea>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="grid__item one-third">
+                    <div class="cart__subtotal">
+                        <span class="cart__subtotal-title">{{ 'cart.general.subtotal' | t }}</span>
+                        <span class="cart__subtotal-money"><span class="ufe-cart-total-price">{{ cart.total_price | money }}</span></span>
+                        {% if cart.total_discounts > 0 %}
+                        <span class="cart__subtotal-money">{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</span>
+                        {% endif %}
+                        <span class="cart__subtotal-title">{{ 'cart.general.shipping_at_checkout' | t }}</span>
+                    </div>
+                    <div class="cart__total">
+                        <span class="cart__total-text">Total: <span class="total__amount"><span class="ufe-cart-total-price">{{ cart.total_price | money }}</span></span></span>
+                    </div>
+                    <div class="cart__buttons">
+                        <div class="btn__hold">
+                            <input type="submit" name="update" class="button button--green" value="{{ 'cart.general.update' | t }}">
+                        </div>
+                        <div class="btn__hold">
+                            <input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        {% else %}
+        <h1>{{ 'cart.general.title' | t }}</h1>
+        
+        <div class="supports-cookies">
+            <p>{{ 'cart.general.empty' | t }}</p>
+<!--             <p>{{ 'cart.general.continue_browsing_html' | t }}</p> -->
+        </div>
+        
+        <div class="supports-no-cookies">
+            <p>{{ 'cart.general.cookies_required' | t }}</p>
+        </div>
+        {% endif %}
+    </div>
+</div>

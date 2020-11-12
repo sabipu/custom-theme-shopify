@@ -1,0 +1,642 @@
+  <div id="main">
+    <div id="configurator">
+
+    <!-- OPTION: Cable -->
+    <div id="image_column" class="col col30">
+      <div id="image" class="sideA multicore_image">
+        <div id="multicore_cable_sideA" class="multicore_cable_side">
+
+          <div class="cable_block" id="cable_side_a_cable"></div>
+
+          <div class="braided_sleeve" id="cable_side_a_braided_sleeve"></div>
+
+          <div class="custom_sleeve" id="cable_side_a_sleeve"></div>
+
+          <div class="connectors" id="cable_side_a_connectors">
+            <div class="connector ch2 ch4 ch8 ch12" id="cable_side_a_connector_ch1"></div>
+            <div class="connector ch2 ch4 ch8 ch12" id="cable_side_a_connector_ch2"></div>
+            <div class="connector ch4 ch8 ch12" id="cable_side_a_connector_ch3"></div>
+            <div class="connector ch4 ch8 ch12" id="cable_side_a_connector_ch4"></div>
+            <div class="connector ch8 ch12" id="cable_side_a_connector_ch5"></div>
+            <div class="connector ch8 ch12" id="cable_side_a_connector_ch6"></div>
+            <div class="connector ch8 ch12" id="cable_side_a_connector_ch7"></div>
+            <div class="connector ch8 ch12" id="cable_side_a_connector_ch8"></div>
+            <div class="connector ch12" id="cable_side_a_connector_ch9"></div>
+            <div class="connector ch12" id="cable_side_a_connector_ch10"></div>
+            <div class="connector ch12" id="cable_side_a_connector_ch11"></div>
+            <div class="connector ch12" id="cable_side_a_connector_ch12"></div>
+          </div>
+
+        </div>
+
+        <div id="multicore_cable_sideB" class="multicore_cable_side">
+
+          <div class="cable_block" id="cable_side_b_cable"></div>
+
+          <div class="braided_sleeve" id="cable_side_b_braided_sleeve"></div>
+
+          <div class="custom_sleeve" id="cable_side_b_sleeve"></div>
+
+          <div class="connectors" id="cable_side_b_connectors">
+            <div class="connector ch2 ch4 ch8 ch12" id="cable_side_b_connector_ch1"></div>
+            <div class="connector ch2 ch4 ch8 ch12" id="cable_side_b_connector_ch2"></div>
+            <div class="connector ch4 ch8 ch12" id="cable_side_b_connector_ch3"></div>
+            <div class="connector ch4 ch8 ch12" id="cable_side_b_connector_ch4"></div>
+            <div class="connector ch8 ch12" id="cable_side_b_connector_ch5"></div>
+            <div class="connector ch8 ch12" id="cable_side_b_connector_ch6"></div>
+            <div class="connector ch8 ch12" id="cable_side_b_connector_ch7"></div>
+            <div class="connector ch8 ch12" id="cable_side_b_connector_ch8"></div>
+            <div class="connector ch12" id="cable_side_b_connector_ch9"></div>
+            <div class="connector ch12" id="cable_side_b_connector_ch10"></div>
+            <div class="connector ch12" id="cable_side_b_connector_ch11"></div>
+            <div class="connector ch12" id="cable_side_b_connector_ch12"></div>
+          </div>
+
+        </div>
+
+      </div>
+      <div id="cable_side_toggle">
+        <strong>Side</strong>
+        <a href="#sideA" id="cable_side_toggle_A"><span>A</span></a>
+        <a href="#sideB" id="cable_side_toggle_B"><span>B</span></a>
+      </div>
+
+      <div id="cable_specs">
+        <div class="col50 left">
+          <a href="#specs">Cable Specifications</a>
+        </div>
+        <div class="col50 right">
+          <span>* Some items will not render on cable</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="options" class="col col70">
+
+      <h1>Build your <em>Multicore Cable</em></h1>
+
+      <!-- OPTION: Cable -->
+      <div class="group open" id="cable">
+        <div class="group_header">
+          <h2>Cable</h2>
+          <span class="group_price price">$1.80</span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_select independent" id="select_cable_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" data-hide="#select_cable_types .input_select_ul, #select_cable_color, #select_cable_length" data-show="#select_cable_types" data-deselect="#select_cable_types, #select_cable_color, #select_cable_length">
+                <li data-url-value="canare" data-show="#cable_types_canare"><a href="#canare"><span>Canare</span></a></li>
+                <li data-url-value="gotham" data-show="#cable_types_gotham"><a href="#gotham"><span>Gotham</span></a></li>
+                <li data-url-value="sommer" data-show="#cable_types_sommer"><a href="#sommer"><span>Sommer</span></a></li>
+                <li data-url-value="vandamme" data-show="#cable_types_vandamme"><a href="#vandamme"><span>Van Damme</span></a></li>
+                <li data-url-value="mogami" data-show="#cable_types_mogami"><a href="#mogami"><span>Mogami</span></a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="option option_select dependent" id="select_cable_types" data-key="cable_type">
+            <h3>Cable Type</h3>
+            <div class="input input_select input_select_subtitles" data-show="#select_cable_length">
+              
+
+              <ul class="input_select_ul" id="cable_types_canare" data-deselect="#select_cable_color">
+                <li data-variant-id="19524180508758"  class="chooseable" data-chooseable="canare_8channel_multicore" data-postcallback="showChannels(8);"><a href="#canare_8channel_multicore"><span>8 Channel</span><em>Star Quad (Analog)</em></a></li>
+                <li data-variant-id="19524180443222"  class="chooseable" data-chooseable="canare_12channel_multicore" data-postcallback="showChannels(12);"><a href="#canare_12channel_multicore"><span>12 Channel</span><em>Star Quad (Analog)</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="cable_types_gotham">
+                <!-- <li data-variant-id="19524182278230" class="chooseable" data-chooseable="gotham_2channel_multicore"><a href="#gotham_2channel_multicore"><span>2 Channel</span><em>Star Quad (Analog)</em></a></li> -->                
+                <li data-variant-id="19524182442070" class="chooseable" data-chooseable="gotham_8channel_multicore" data-postcallback="showChannels(8);"><a href="#"><span>8 Channel</span><em>Star Quad (Analog)</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="cable_types_sommer">
+                <li data-variant-id="19524174184534" class="chooseable" data-chooseable="sommer_8channel_multicore_aesebu" data-postcallback="showChannels(8);"><a href="#"><span>8 Channel</span><em>AES/EBU</em></a></li>
+                <li data-variant-id="19524174151766" class="chooseable" data-chooseable="sommer_12channel_multicore_aesebu" data-postcallback="showChannels(12);"><a href="#"><span>12 Channel</span><em>AES/EBU</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="cable_types_vandamme">
+                <li data-variant-id="19524165238870" class="chooseable" data-chooseable="vandamme_8channel_multicore" data-postcallback="showChannels(8);"><a href="#"><span>8 Channel</span><em>Star Quad</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="cable_types_mogami">
+                <li data-variant-id="19524187750486" class="chooseable" data-chooseable="mogami_4channel_multicore" data-postcallback="showChannels(4);"><a href="#"><span>4 Channel</span><em>Analog</em></a></li>
+                <!-- <li data-variant-id="19524187750486" class="chooseable" data-chooseable="mogami_8channel_multicore"><a href="#"><span>8 Channel</span><em>Analog</em></a></li> -->
+              </ul>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+      <!-- END OF OPTION: Cable -->
+
+
+      <!-- OPTION: Side A -->
+      <div class="group closed connector_group" id="multicore_sideA">
+        <div class="group_header">
+          <h2>Cable Side <em>A</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+
+          <!-- choose side connection / fan or multipin -->
+          <div class="option option_select" data-key="multicore_connection" id="multicore_sideA_connection" data-hide="#multicore_sideA_channels">
+            <h3>Choose Fan or Multipin Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+              <ul class="input_select_ul">
+                <li class="multicore_connection_fan chooseable ch8 ch12" data-url-value="fan"  data-show="#multicore_sideA_channels"><a href="#female_xlr"><span>Fan</span><em>8 Channel</em></a></li>
+
+                <li data-variant-id="19524194009174" class="chooseable connector_lk_25mv ch8" data-chooseable="connector_lk_25mv"><a href="#"><span>LK Pro 8 Channel</span><em>Male Multipin</em></a></li>
+                <li data-variant-id="19524193812566" class="chooseable connector_lk_25fv ch8" data-chooseable="connector_lk_25fv"><a href="#"><span>LK Pro 8 Channel</span><em>Female Multipin</em></a></li>
+
+                <li data-variant-id="19524193714262" class="chooseable connector_lk_37mv ch12" data-chooseable="connector_lk_37mv"><a href="#"><span>LK Pro 12 Channel</span><em>Male Multipin</em></a></li>
+                <li data-variant-id="19524193353814" class="chooseable connector_lk_37fv ch12" data-chooseable="connector_lk_37fv"><a href="#"><span>LK Pro 12 Channel</span><em>Female Multipin</em></a></li>
+      
+                <!-- 
+                <li data-variant-id="19524186964054" class="chooseable connector_lk_25mv_pg21" data-chooseable="connector_lk_25mv_pg21"><a href="#"><span>LK Pro 8 Channel</span><em>Male Multipin (Large Gland)</em></a></li>
+                <li data-variant-id="19524193878102" class="chooseable connector_lk_25fv_pg21" data-chooseable="connector_lk_25fv_pg21"><a href="#"><span>LK Pro 8 Channel</span><em>Female Multipin (Large Gland)</em></a></li>
+
+              -->
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="multicore_sideA_channels">
+
+            <div class="option_mini_choice" id="multicore_sideA_channel_switcher">
+              <h3>Channels</h3>
+              <div class="input input_select">
+                <ul class="input_select_ul circles visible" id="select_sideA_channels" data-hide=".channel_connector">
+                  <li class="" data-show="#multicore_sideA_channel1_connector"><a href="#"><span>1</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel2_connector"><a href="#"><span>2</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel3_connector"><a href="#"><span>3</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel4_connector"><a href="#"><span>4</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel5_connector"><a href="#"><span>5</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel6_connector"><a href="#"><span>6</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel7_connector"><a href="#"><span>7</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel8_connector"><a href="#"><span>8</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel9_connector"><a href="#"><span>9</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel10_connector"><a href="#"><span>10</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel11_connector"><a href="#"><span>11</span></a></li>
+                  <li class="" data-show="#multicore_sideA_channel12_connector"><a href="#"><span>12</span></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="multicore_sideA_channel_connectors">
+              
+
+            </div>
+
+          </div>
+
+          
+        </div>
+      </div>
+      <!-- END OF OPTION: Side A -->
+
+
+      <!-- OPTION: Side B -->
+      <div class="group closed connector_group" id="multicore_sideB">
+        <div class="group_header">
+          <h2>Cable Side <em>B</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+
+          <!-- choose side connection / fan or multipin -->
+          <div class="option option_select" data-key="multicore_connection" id="multicore_sideB_connection" data-hide="#multicore_sideB_channels">
+            <h3>Choose Fan or Multipin Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+              <ul class="input_select_ul">
+                <li class="multicore_connection_fan chooseable ch8 ch12" data-url-value="fan"  data-show="#multicore_sideB_channels"><a href="#female_xlr"><span>Fan</span><em>8 Channel</em></a></li>
+
+                <li data-variant-id="19524194009174" class="chooseable connector_lk_25mv ch8" data-chooseable="connector_lk_25mv"><a href="#"><span>LK Pro 8 Channel</span><em>Male Multipin</em></a></li>
+                <li data-variant-id="19524193812566" class="chooseable connector_lk_25fv ch8" data-chooseable="connector_lk_25fv"><a href="#"><span>LK Pro 8 Channel</span><em>Female Multipin</em></a></li>
+
+                <li data-variant-id="19524193714262" class="chooseable connector_lk_37mv ch12" data-chooseable="connector_lk_37mv"><a href="#"><span>LK Pro 12 Channel</span><em>Male Multipin</em></a></li>
+                <li data-variant-id="19524193353814" class="chooseable connector_lk_37fv ch12" data-chooseable="connector_lk_37fv"><a href="#"><span>LK Pro 12 Channel</span><em>Female Multipin</em></a></li>
+      
+                <!-- 
+                <li data-variant-id="19524186964054" class="chooseable connector_lk_25mv_pg21" data-chooseable="connector_lk_25mv_pg21"><a href="#"><span>LK Pro 8 Channel</span><em>Male Multipin (Large Gland)</em></a></li>
+                <li data-variant-id="19524193878102" class="chooseable connector_lk_25fv_pg21" data-chooseable="connector_lk_25fv_pg21"><a href="#"><span>LK Pro 8 Channel</span><em>Female Multipin (Large Gland)</em></a></li>
+
+              -->
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="multicore_sideB_channels">
+
+            <div class="option_mini_choice" id="multicore_sideB_channel_switcher">
+              <h3>Channels</h3>
+              <div class="input input_select">
+                <ul class="input_select_ul circles visible" id="select_sideB_channels" data-hide=".channel_connector">
+                  <li class="" data-show="#multicore_sideB_channel1_connector"><a href="#"><span>1</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel2_connector"><a href="#"><span>2</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel3_connector"><a href="#"><span>3</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel4_connector"><a href="#"><span>4</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel5_connector"><a href="#"><span>5</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel6_connector"><a href="#"><span>6</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel7_connector"><a href="#"><span>7</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel8_connector"><a href="#"><span>8</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel9_connector"><a href="#"><span>9</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel10_connector"><a href="#"><span>10</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel11_connector"><a href="#"><span>11</span></a></li>
+                  <li class="" data-show="#multicore_sideB_channel12_connector"><a href="#"><span>12</span></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="multicore_sideB_channel_connectors">
+              
+
+            </div>
+
+          </div>
+
+          
+        </div>
+      </div>
+      <!-- END OF OPTION: Side A -->
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- OPTION: Custom Logo & Text -->
+      <div class="group closed" id="group_custom_logo">
+        <div class="group_header">
+          <h2>Custom Logo <em class="amp">&amp;</em> Text</h2>
+          <span class="group_price price"><em>(optional)</em></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_upload">
+            <div class="uploaded_image">
+              
+              <div id="uploaded_image"><img src="" /></div>
+
+              <a href="#remove_logo" class="remove" id="remove-image"><i class="fas fa-times-circle"></i><span>Remove</span></a>
+
+            </div>
+            <div class="upload_form">
+              <h3>Upload a Custom Logo</h3>
+              <div class="input input_file">
+                <form enctype="multipart/form-data" id="custom_logo_file_upload_form" action="#form_upload" method="post">
+                  <input type="hidden" name="submit" value="1" />
+                  <button type="button" class="upload"  id="custom_logo_file_upload_button"><span class="upload_icon"></span> <span class="btn_text">Upload</span></button>
+                  <label  id="custom_logo_file_upload_input_label" style="display: none;">
+                    <input type="file" id="custom_logo_file_upload_input" name="custom_logo_file_upload" />
+                  </label>
+
+                </form>
+              </div>
+              <div class="upload_status hidden">
+                <span class="upload_status_title success" id="upload_status_title">Uploaded</span>
+                <span class="upload_status_filename" id="upload_status_filename">sample_logo.png</span>
+                <span class="upload_status_filesize" id="upload_status_filesize">345 kb</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="option option_text">
+            <h3>Custom Text</h3>
+            <div class="input input_text">
+              <div class="input_box">
+                <input type="text" value="" placeholder="Type your custom text..." id="input_box_custom_text" />
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="option option_select">
+            <h3>Text / Logo Ink Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="custom_text_logo_color_select">
+                <li data-colour="#000000" data-value="black"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#906b4d" data-value="brown"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#c4132a" data-value="red"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#fa7b00" data-value="orange"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#f4cb13" data-value="yellow"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#3d9451" data-value="green"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#4886cf" data-value="blue"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#9452b7" data-value="purple"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#c7c5c0" data-value="grey"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-colour="#ffffff" data-value="white" data-border="#c7c5c0"  class="border"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <input type="hidden" name="custom_logo_text_product" value="19524183588950" id="custom_logo_text_product" />
+
+
+        </div>
+      </div>
+      <!-- END OF OPTION: Custom Logo & Text -->
+
+      <!-- OPTION: Sleeve & Cable Tie -->
+      <div class="group closed" id="sleeve">
+        <div class="group_header">
+          <h2>Sleeve <em class="amp">&amp;</em> Cable Tie</h2>
+          <span class="group_price price"><em>(optional)</em></span>
+          <span class="arrow"></span>
+        </div>
+      
+
+        <div class="group_inner">
+          <div class="option option_select selected" >
+            <h3>Braided Sleeve Colour</h3>
+            <div class="input input_select input_colours input_colours_patterns">
+              <ul class="input_select_ul" id="input_select_cable_sleeve">
+                <li class="chooseable" data-chooseable="cancel" data-image="cancel"><a href="#no_sleeve"><span>No Sleeve</span></a></li>
+          
+                <li data-variant-id="19524165730390" class="chooseable" data-chooseable="braided_sleeve_aqua_blue" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/aqua_blue.jpg"><a href="#colour_aqua_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524165828694" class="chooseable" data-chooseable="braided_sleeve_beige" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/beige.jpg"><a href="#colour_beige"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524166123606" class="chooseable" data-chooseable="braided_sleeve_black_tight_weave" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/black_tight_weave.jpg"><a href="#colour_black_tight_weave"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165861462"  class="chooseable" data-chooseable="braided_sleeve_brown" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/brown.jpg"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+
+<!--                 <li data-variant-id="xxxxx"  class="chooseable" data-chooseable="braided_sleeve_carbon" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/carbon.jpg"><a href="#colour_carbon"><i class="fas fa-check"></i></a></li>
+ -->
+
+                <li data-variant-id="19524165697622"  class="chooseable" data-chooseable="braided_sleeve_checkered_flag" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/checkered_flag.jpg"><a href="#colour_checkered_flag"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524166189142"  class="chooseable" data-chooseable="braided_sleeve_dark_purple" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/dark_purple.jpg"><a href="#colour_dark_purple"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165763158"  class="chooseable" data-chooseable="braided_sleeve_forrest_green" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/forrest_green.jpg"><a href="#colour_forrest_green"><i class="fas fa-check"></i></a></li>
+
+<!--                 <li data-variant-id="xxxxx"  class="chooseable" data-chooseable="braided_sleeve_green_spyder" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/green_spyder.jpg"><a href="#colour_green_spyder"><i class="fas fa-check"></i></a></li>
+ -->
+                <li data-variant-id="19524164681814"  class="chooseable" data-chooseable="braided_sleeve_grey_w_white" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/grey_w_white.jpg"><a href="#colour_grey_w_white"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165926998"  class="chooseable" data-chooseable="braided_sleeve_grey" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/grey.jpg"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+
+<!--                 <li data-variant-id="xxxxx"  class="chooseable" data-chooseable="braided_sleeve_groundwire" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/groundwire.jpg"><a href="#colour_groundwire"><i class="fas fa-check"></i></a></li>
+ -->
+                <li data-variant-id="19524164714582"  class="chooseable" data-chooseable="braided_sleeve_hiphop" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/hiphop.jpg"><a href="#colour_hiphop"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524164747350"  class="chooseable" data-chooseable="braided_sleeve_holiday" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/holiday.jpg"><a href="#colour_holiday"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524164780118"  class="chooseable" data-chooseable="braided_sleeve_neon_pink" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/neon_pink.jpg"><a href="#colour_neon_pink"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="xxxxx"  class="chooseable" data-chooseable="braided_sleeve_nitrox" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/nitrox.jpg"><a href="#colour_nitrox"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165435478"  class="chooseable" data-chooseable="braided_sleeve_ogre_green" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/ogre_green.jpg"><a href="#colour_nitrox"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165795926"  class="chooseable" data-chooseable="braided_sleeve_olive" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/olive.jpg"><a href="#colour_olive"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524166058070"  class="chooseable" data-chooseable="braided_sleeve_orange_spyder" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/orange_spyder.jpg"><a href="#colour_orange_spyder"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165992534"  class="chooseable" data-chooseable="braided_sleeve_orange_with_purple" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/orange_with_purple.jpg"><a href="#colour_orange_with_purple"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165959766"  class="chooseable" data-chooseable="braided_sleeve_orange" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/orange.jpg"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165894230"  class="chooseable" data-chooseable="braided_sleeve_purple" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/purple.jpg"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524166090838"  class="chooseable" data-chooseable="braided_sleeve_red_spyder" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/red_spyder.jpg"><a href="#colour_red_spyder"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165468246"  class="chooseable" data-chooseable="braided_sleeve_safety_stripe" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/safety_stripe.jpg"><a href="#colour_safety_stripe"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165501014"  class="chooseable" data-chooseable="braided_sleeve_sherbert" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/sherbert.jpg"><a href="#colour_sherbert"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165533782"  class="chooseable" data-chooseable="braided_sleeve_twilight" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/twilight.jpg"><a href="#colour_twilight"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165566550"  class="chooseable" data-chooseable="braided_sleeve_uptown_gold" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/uptown_gold.jpg"><a href="#colour_uptown_gold"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165599318"  class="chooseable" data-chooseable="braided_sleeve_uptown_green" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/uptown_green.jpg"><a href="#colour_uptown_green"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524165632086"  class="chooseable" data-chooseable="braided_sleeve_uptown_purple" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/uptown_purple.jpg"><a href="#colour_uptown_purple"><i class="fas fa-check"></i></a></li>
+
+<!--                 <li data-variant-id="xxxxx"  class="chooseable" data-chooseable="braided_sleeve_uptown_red" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/uptown_red.jpg"><a href="#colour_uptown_red"><i class="fas fa-check"></i></a></li>
+ -->
+                <li data-variant-id="19524165664854"  class="chooseable" data-chooseable="braided_sleeve_uptown_yellow" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/uptown_yellow.jpg"><a href="#colour_uptown_yellow"><i class="fas fa-check"></i></a></li>
+
+                <li data-variant-id="19524166025302"  class="chooseable" data-chooseable="braided_sleeve_yellow_spyder" data-image="https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/braided_sleeve/yellow_spyder.jpg"><a href="#colour_yellow_spyder"><i class="fas fa-check"></i></a></li>
+
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select">
+            <h3>Rip-Lock CableWrap Colour (1" x 6.5")</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="input_select_cable_tie">
+                <li class="chooseable" data-chooseable="value" data-colour="cancel"><a href="#no_sleeve"><span>No Cable Tie</span></a></li>
+          
+                <li data-variant-id="19524172677206"  class="chooseable" data-chooseable="black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173987926"  class="chooseable" data-chooseable="brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173955158"  class="chooseable" data-chooseable="red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524172742742"  class="chooseable" data-chooseable="orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173856854"  class="chooseable" data-chooseable="yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173922390"  class="chooseable" data-chooseable="green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173824086"  class="chooseable" data-chooseable="blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524172709974"  class="chooseable" data-chooseable="purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173889622"  class="chooseable" data-chooseable="grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+
+
+                <li data-variant-id="19524174020694"  class="chooseable border" data-chooseable="white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Sleeve & Cable Tie -->
+
+      <!-- CART BUTTON & TOTAL -->
+      <div id="cart_buttons">
+        <h5>Total</h5>
+        <div id="total_price" class="price"><span class="currency_symbol">$</span><span class="price_text">0.00</span></div>
+        <button type="button" id="addToCart"><span class="text">Add To Cart</span></button>
+
+        <div class="button_spinner" id="addToCartSpinner" style="display:none;">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </div>
+
+        <div id="cart_status_message" style="display:none;">
+
+        </div>
+
+
+
+      </div>
+      <!-- END OF CART BUTTON & TOTAL -->
+
+
+
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- HTML TEMPLATE FOR CONNECTORS -->
+<div id="multicore_channel_connector_template"  style="display: none;"> 
+    <div id="multicore_sideX_channelX_connector" class="channel_connector">
+                <div class="option_mini_choice">
+                  <h3>Connection</h3>
+                  <div class="input input_select">
+                    <ul class="input_select_ul visible" id="select_sideX_channelX_connection" data-show="#multicore_sideX_channelX_connectors"  data-hide="#multicore_sideX_channelX_connectors ul">
+                      <li data-show="#select_sideX_channelX_connector_XLR"><a href="#"><span>XLR</span></a></li>
+                      <li data-show="#select_sideX_channelX_connector_14"><a href="#"><span>1/4"</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+                
+
+                <div class="option_mini_choice invisible" id="multicore_sideX_channelX_connectors" >
+                  <h3>Connector</h3>
+                  <div class="input input_select input_select_subtitles input_select_images input_select_products">
+                    <ul class="input_select_ul" id="select_sideX_channelX_connector_14">
+                      
+                      <li data-variant-id="19524193976406"  class="chooseable neutrik_connector_np3x_b" data-chooseable="connector_neutrik_np3x_b"><a href="#neutrik_14"><span>Stereo</span><em>Gold &amp; Black</em></a></li>
+                      <li data-variant-id="19524194041942"  class="chooseable neutrik_connector_np3x" data-chooseable="connector_neutrik_np3x"><a href="#neutrik_14"><span>Stereo</span><em>Nickel</em></a></li>
+                      <li data-variant-id="19524193845334"  class="chooseable neutrik_connector_np3rx_b" data-chooseable="connector_neutrik_np3rx_b"><a href="#neutrik_14"><span>Right Angle</span><em>Gold &amp; Black</em></a></li>
+                      <li data-variant-id="19524193910870"  class="chooseable neutrik_connector_np3rx" data-chooseable="connector_neutrik_np3rx"><a href="#neutrik_14"><span>Right Angle</span><em>Nickel</em></a></li>
+
+                      <li data-variant-id="19524178247766"  class="chooseable switchcraft_connector_297" data-chooseable="switchcraft_connector_297"><a href="#male_xlr"><span>1/4" Stereo</span><em>Nickle 297</em></a></li>
+                      <li data-variant-id="19524176805974"  class="chooseable switchcraft_connector_190" data-chooseable="switchcraft_connector_190"><a href="#female_xlr"><span>1/4" Stereo (Heavy Duty)</span><em>Nickle 190</em></a></li>
+                      <li data-variant-id="19524177985622"  class="chooseable switchcraft_connector_236" data-chooseable="switchcraft_connector_236"><a href="#unisex_xlr"><span>1/4" Stereo (Right Angle)</span><em>Nickle 236</em></a></li>
+                    </ul>
+
+                    <ul class="input_select_ul" id="select_sideX_channelX_connector_XLR">
+                      <li data-variant-id="19524172087382"  class="chooseable neutrik_connector_nc3mxx-b" data-chooseable="neutrik_male_black_xlr" id=""><a href="#neutrik_xlr"><span>Male</span><em>Black</em></a></li>
+                      <li data-variant-id="19524169531478"  class="chooseable neutrik_connector_nc3fxx-b" data-chooseable="neutrik_female_black_xlr" id=""><a href="#neutrik_xlr"><span>Female</span><em>Black</em></a></li>
+
+                      <li data-variant-id="19524172054614"  class="chooseable neutrik_connector_nc3mxx" data-chooseable="neutrik_male_nickel_xlr" id=""><a href="#neutrik_xlr"><span>Male</span><em>Nickel</em></a></li>
+                      <li data-variant-id="19524169236566"  class="chooseable neutrik_connector_nc3fxx" data-chooseable="neutrik_female_nickel_xlr" id=""><a href="#neutrik_xlr"><span>Female</span><em>Nickel</em></a></li>
+
+                      <li data-variant-id="19524166516822"  class="chooseable neutrik_connector_nc3mrx-b" data-chooseable="neutrik_male_black_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Male</span><em>Black</em></a></li>
+                      <li data-variant-id="19524196073558"  class="chooseable neutrik_connector_nc3frx-b" data-chooseable="neutrik_female_black_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Female</span><em>Black</em></a></li>
+
+                      <li data-variant-id="19524196106326"  class="chooseable neutrik_connector_nc3mrx" data-chooseable="neutrik_male_nickel_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Male</span><em>Nickel</em></a></li>
+                      <li data-variant-id="19524196040790"  class="chooseable neutrik_connector_nc3frx" data-chooseable="neutrik_female_nickel_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Female</span><em>Nickel</em></a></li>
+
+                      <li data-variant-id="19524194238550"  class="chooseable neutrik_connector_nc3mxx-emc" data-chooseable="neutrik_male_black_emi" id=""><a href="#neutrik_xlr"><span>Male EMI</span><em>Black</em></a></li>
+                      <li data-variant-id="19524194205782"  class="chooseable neutrik_connector_nc3fxx-emc" data-chooseable="neutrik_female_black_emi" id=""><a href="#neutrik_xlr"><span>Female EMI</span><em>Black</em></a></li>
+
+                      <li data-variant-id="19524194173014"  class="chooseable neutrik_connector_nc3fmc-c" data-chooseable="neutrik_unisex_black"  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik"><a href="#neutrik_xlr"><span>Unisex</span><em>Black</em></a></li>
+
+                      <li data-variant-id="19524164583510"  class="chooseable switchcraft_connector_aaafz" data-chooseable="switchcraft_connector_aaafz"><a href="#male_xlr"><span>Female XLR</span><em>Nickel</em></a></li>
+                      <li data-variant-id="19524164649046"  class="chooseable switchcraft_connector_aaa3mz" data-chooseable="switchcraft_connector_aaa3mz"><a href="#female_xlr"><span>Male XLR</span><em>Nickel</em></a></li>
+                      <li data-variant-id="19524164386902"  class="chooseable switchcraft_connector_aaa3fbauz" data-chooseable="switchcraft_connector_aaa3fbauz"><a href="#unisex_xlr"><span>Female XLR</span><em>Black Metal</em></a></li>
+                      <li data-variant-id="19524164616278"  class="chooseable switchcraft_connector_aaa3mbauz" data-chooseable="switchcraft_connector_aaa3mbauz"><a href="#unisex_xlr"><span>Male XLR</span><em>Black Metal</em></a></li>
+                      <li data-variant-id="19524164321366"  class="chooseable switchcraft_connector_r3fz" data-chooseable="switchcraft_connector_r3fz"><a href="#unisex_xlr"><span>Female XLR</span><em>Right Angle</em></a></li>
+                      <li data-variant-id="19524164354134"  class="chooseable switchcraft_connector_r3mz" data-chooseable="switchcraft_connector_r3mz"><a href="#unisex_xlr"><span>Male XLR</span><em>Right Angle</em></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="option option_select dependent" id="multicore_sideX_channelX_ringColor" data-key="multicore_sideX_channelX_ring_color">
+                  <h3>Ring Colour</h3>
+                  <div class="input input_select input_colours">
+                    <ul class="input_select_ul visible" id="multicore_sideX_channelX_ringColor_neutrik">
+                       <li data-variant-id="19524170580054"  class="chooseable" data-chooseable="neutrik_ringColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524170612822"  class="chooseable" data-chooseable="neutrik_ringColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524170645590"  class="chooseable" data-chooseable="neutrik_ringColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524170678358"  class="chooseable" data-chooseable="neutrik_ringColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524170711126"  class="chooseable" data-chooseable="neutrik_ringColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524171333718"  class="chooseable" data-chooseable="neutrik_ringColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524171366486"  class="chooseable" data-chooseable="neutrik_ringColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524171399254"  class="chooseable" data-chooseable="neutrik_ringColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524171432022"  class="chooseable border" data-chooseable="neutrik_ringColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524171464790"  class="chooseable" data-chooseable="neutrik_ringColor_clear" data-colour="cancel"><a href="#no_sleeve"><span>Clear</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <div class="option option_select dependent" id="multicore_sideX_channelX_bootColor" data-key="multicore_sideX_channelX_boot_color">
+                  <h3>Boot Colour</h3>
+                  <div class="input input_select input_colours">
+                    <ul class="input_select_ul visible" id="multicore_sideX_channelX_bootColor_neutrik">
+                     <li data-variant-id="19524166713430"  class="chooseable" data-chooseable="neutrik_bootColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524166746198"  class="chooseable" data-chooseable="neutrik_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524166778966"  class="chooseable" data-chooseable="neutrik_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524166811734"  class="chooseable" data-chooseable="neutrik_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524166844502"  class="chooseable" data-chooseable="neutrik_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524166877270"  class="chooseable" data-chooseable="neutrik_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524166910038"  class="chooseable" data-chooseable="neutrik_bootColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524167073878"  class="chooseable" data-chooseable="neutrik_bootColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                      <li data-variant-id="19524166942806"  class="chooseable border" data-chooseable="neutrik_bootColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                
+                    </ul>
+                  </div>
+                </div>
+
+
+
+    </div>
+  </div>

@@ -1,0 +1,58 @@
+<div class="page-width">
+  <div class="grid__item medium-up--three-sixths">
+  {{ page.content }}
+  </div>
+  <div class="grid__item medium-up--one-sixth">&nbsp;
+  </div>
+  <div class="grid__item medium-up--two-sixths">
+    <h3>Equipment Hire FAQ</h3>
+    <p>Have questions about how all of this works? We've got answers. Check out our FAQ, and Terms &amp; Conditions for hiring equipment below.</p>
+    <div><a href="/pages/faqs-equipment-hire" class="button">Equipment Hire FAQ</a></div><br />
+    <div><a href="/pages/equipment-hire-terms-conditions" class="button">Terms &amp; Conditions</a></div>
+  </div>
+</div>
+
+<div class="page-width trav-width">
+  
+  
+  {% for collection in collections %}
+  {% if collection.title contains "Hire" %}
+  {% unless collection.handle == 'frontpage' %}
+  <div class="hire-collection">
+    <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">
+      {% if collection.image != blank %}
+        {{ collection | img_url: '480x480' | img_tag: collection.title }}
+      {% elsif collection.products.first != blank %}
+        {{ collection.products.first | img_url: '480x480' | img_tag: collection.title }}
+      {% else %}
+        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+        {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+      {% endif %}
+    </a>
+
+    <p>
+      <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">{{ collection.title }}</a>
+    </p>
+  </div>
+  {% endunless %}
+  {% endif %}
+{% endfor %}
+  
+  
+</div>
+
+<div class="page-width banner-csp">
+  <div class="page-width-banner-bg">
+  <div class="page-width">
+  <div class="grid__item">
+    
+    	<img src="{{ "csp_logo.png" | asset_url }}" />
+    <h3>Cablesmiths Productions offers professional audio services for small to mid-sized events using EAW speakers, Allen and Heath dLive consoles and some of the world's best live microphones. <span>Contact us for a competitive quote.</span></h3>
+    <a href="/pages/contact" class="button">CONTACT US</a>
+    
+    
+  </div>
+  </div>
+  </div>
+  
+</div>

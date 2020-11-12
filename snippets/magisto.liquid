@@ -1,0 +1,32 @@
+{% comment %}
+DO NOT EDIT. This snippet is generated automatically. Your changes may be overwritten.
+{% endcomment %}
+<!-- MAGISTO CHANGE THEME START -->
+{% if template contains "product" or template contains "index" %}
+  {% assign featured_url = product.featured_image | img_url: "1024x1024" | split: "_1024x1024" | first %}
+  <meta id="magistovideo_product_featured_image" content="{{ featured_url }}" />
+  {% assign mainImage = variant.featured_image | default: product.featured_image %}
+  {% assign featured_url = mainImage | img_url: "1024x1024" | split: "_1024x1024" | first %}
+  <meta id="magistovideo_featured_main_image" content="{{ featured_url }}_" />
+  <meta id="magistovideo_enabled" content="1" />
+  <meta id="magistovideo_selector" content="" />
+
+  <script>var magisto_server = 'www.magisto.com';</script>
+
+  <style type="text/css">
+  .product-gallery .main a { display: block }
+  .product-single__image-wrapper iframe, .product-single .product-single__featured-image-wrapper .product-single__photos iframe { position: absolute !important; top: 0; left: 0; width: 100%; }
+  .product-single__photo:not(#ProductPhoto):not(#FeaturedImageZoom-product-template) iframe,
+  .product-single__photo--flex > .product-single__photo--container > .product-single__photo-wrapper iframe,
+  .product__image-wrapper iframe, #slider-product-template .flex-viewport .slide iframe,
+  #shopify-section-product-template .product .product__photo .product__photo--single iframe { position: absolute; top: 0; left: 0; right: 0 }
+  #image-block .flexslider .slides > li {height: auto !important;}
+  .video-container iframe { position: relative; top: auto; left: auto; height: auto; }
+  #magistovideo_video { width: 100% !important; left: auto !important; right: auto !important; top: auto !important; margin: 0 !important; padding: 0 !important; height: auto !important; }
+  #ProductThumbs .product-single__thumbnail { position: relative }
+  .product-slideshow > .product-slideshow__content .product-slideshow__slide iframe { position: relative; top: 50%; transform: translateY(-50%); }
+  .product-slideshow { z-index: 99999 }
+  .product__photo--single .video-wrapper, .product-single__photos .video-wrapper { position: static !important; padding: 0 !important; }
+  </style>
+{% endif %}
+<!-- MAGISTO CHANGE THEME END -->

@@ -1,0 +1,11 @@
+{% assign all_collections = "" %}
+
+{% for collections in product.collections %}
+  {% if all_collections == "" %}
+  {% assign all_collections = all_collections | append: collections.handle %}
+  {% else %}
+  {% assign all_collections = all_collections | append: ', ' | append: collections.handle %}
+  {% endif %}
+{% endfor %}
+
+<input type="hidden" class="current_product" data-collections="{{ all_collections }}" data-tags="{{ product.tags | join: ', ' }}" />

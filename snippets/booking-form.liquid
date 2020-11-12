@@ -1,0 +1,85 @@
+{% comment %}
+BookThatApp 'Form 2 - Date Range'
+{% endcomment %}
+
+{% if product.metafields.bookthatapp.config %}
+
+{% assign product_in_cart = false %}
+{% for item in cart.items %}
+  {% if item.product.handle == product.handle %}
+    {% assign product_in_cart = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="booking-form">
+{% if product_in_cart %}
+    <p id="booking-guard-{{ product.handle }}"><a href="/cart">View Booking</a>.</p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        $('#booking-guard-{{ product.handle }}').closest('form[action^="/cart/add"]').find('input:submit, button:submit, .hide-if-in-cart').hide();
+      });
+    </script>
+{% else %}
+  
+  <div>
+    {% capture attribute %}booking-start{% endcapture %}
+    <label for="{{ attribute }}-{{ product.handle }}">I want my order to arrive:</label>
+    <input id="{{ attribute }}-{{ product.handle }}" type="text" name="properties[From]"
+           class="datepicker bta required bta-load-enable bta-dp-start" disabled="disabled"
+           data-handle="{{ product.handle }}" data-variant="{{ product.selected_or_first_available_variant.id }}"
+           data-bta-product-config="{{ product.metafields.bookthatapp.config }}"
+           data-bta-variant-config="{% for variant in product.variants %}{{ variant.id }}:{{ variant.metafields.bookthatapp.config }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+           data-bta-range-partner-id="#booking-finish-{{ product.handle }}"
+           {% comment %}data-bta-update-finish-date="true"{% endcomment %}
+           placeholder="Select date..." />
+  </div>
+ 
+  <div>
+    {% capture attribute %}booking-finish{% endcapture %}
+    <label for="{{ attribute }}-{{ product.handle }}">I'll ship it back on:</label>
+    <input id="{{ attribute }}-{{ product.handle }}" type="text" name="properties[To]"
+           class="datepicker bta required bta-load-enable bta-dp-finish" disabled="disabled"
+           data-bta-range-partner-id="#booking-start-{{ product.handle }}"
+           placeholder="Select date..." />
+  </div>
+
+
+  
+
+
+
+  <div class="bta-booking-fields"></div>
+
+  <div class="bta-validation-messages" style="display:none">
+    <p class="bta-validation-date-missing">Please select a from and to date.</p>
+  </div>
+{% endif %}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    {% unless bta_configured %}
+    var forms = document.forms;
+    for (var x = 0; x < forms.length; x++) {
+      if (forms[x].action.indexOf('/cart/add') > -1) {
+        // prevent form submit until bta has finished loading
+        forms[x].addEventListener("submit", function (event) {
+          // check if bta has loaded
+          if (!this.classList.contains("bta-active")) {
+            event.preventDefault();
+          }
+        }, true);
+      }
+    }
+
+    var bta = {
+      productId: {{ product.id }}
+    }
+
+    {% assign bta_configured = true %}
+    {% endunless %}
+  });
+</script>
+{% endif %}

@@ -1,0 +1,183 @@
+
+
+{% comment %}<section class="content__wrapper less--bottom">
+  <div class="page-width">
+    <div class="mainhead">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title | escape }}</h2>
+      {% endif %}
+    </div>
+    <div class="product__holder">
+      {% for block in section.blocks %}
+        <div class="product__block">
+          <div class="product__block-image">
+            {% if block.settings.block_image != blank %}
+              <img src="{{ block.settings.block_image | img_url: '1000x' }}" alt="{{ shop.name }}">
+            {% endif %}
+          </div>
+          <div class="product__block-text">
+            {% if block.settings.main_heading != blank %}
+              <h2>{{ block.settings.main_heading }}</h2>
+            {% endif %}
+            {{ block.settings.block_paragraph }}
+            <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_text }} <span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+          </div>
+        </div>
+      {% endfor %}
+      {% if section.blocks.size == 0 %}
+        asdad
+      {% endif %}
+    </div>
+  </div>
+</section>{% endcomment %}
+<section class="content__wrapper less--bottom">
+  <div class="page-width">
+    <div class="mainhead">
+      <h2>Professional Production Cables</h2>
+    </div>
+    <div class="product__holder">
+      
+      
+      <!-- SPEAKERS - PROFESSIONAL PRODUCTION SECTION -->
+      <div class="product__block general--animation">
+        <div class="product__block-image">
+          <img data-src="{{ 'pro_product_speakers.jpg' | asset_img_url: '632x' }}" class="lazyload" alt="{{ shop.name }}">
+        </div>
+        <div class="product__block-text">
+          <h2>Speaker Cables</h2>
+          <p>Explore our range of speaker cables for professional PA systems covering all NL4, NL8, EP5 and 8 pin CA-COM configurations available in standard and custom lengths.</p>
+          <a href="/collections/speakers" class="button">Browse <span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+        </div>
+      </div>
+      <!-- END OF SPEAKERS - PROFESSIONAL PRODUCTION SECTION -->
+      
+      
+      
+      
+      <!-- NETWORKING - PROFESSIONAL PRODUCTION SECTION -->
+      <div class="product__block general--animation">
+        <div class="product__block-image">
+          <img data-src="{{ 'data-networking-left.jpg' | asset_img_url: '632x' }}" class="lazyload" alt="{{ shop.name }}">
+        </div>
+        <div class="product__block-text">
+          <h2>Ethernet Network Cables</h2>
+          <p>Cat.6a, MADI and clock source patch cables and cable drums available with your choice of etherCON, RJ45 and BNC connectors in ruggedised or standard jacket versions.</p>
+          <a href="/collections/data-networking" class="button">Browse <span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+        </div>
+      </div>
+      <!-- END OF NETWORKING - PROFESSIONAL PRODUCTION SECTION -->
+      
+      
+      
+      
+      <!-- MULTICORES & STAGEBOXES - PROFESSIONAL PRODUCTION SECTION -->
+      <div class="product__block general--animation" id="pro_production_stageboxes">
+        <div class="product__block-image">
+          <img data-src="{{ 'multicore-stage-box-right3.jpg' | asset_img_url: '924x' }}" class="lazyload" alt="{{ shop.name }}">
+        </div>
+        <div class="product__block-text">
+          <h2>Multicores, Digital Snakes and Stageboxes</h2>
+          <p>Browse our customisable analog and digital multicores constructed with your choice of balanced connectors and brandable stageboxes with industry standard round multipin and etherCON connectors.</p>
+          <a href="/collections/multicores-stageboxes" class="button">Browse <span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+        </div>
+      </div>
+      <!-- END OF MULTICORES & STAGEBOXES - PROFESSIONAL PRODUCTION SECTION -->
+      
+      
+      
+      
+	  <!-- 4K UHD VIDEO - PROFESSIONAL PRODUCTION SECTION -->
+      <div class="product__block general--animation">
+        <div class="product__block-image">
+          <img data-src="{{ 'pro_product_video.jpg' | asset_img_url: '632x' }}" class="lazyload" alt="{{ shop.name }}">
+        </div>
+        <div class="product__block-text">
+          <h2>HD-SDI BNC Video Cables</h2>
+          <p>SDI BNC video cables available in both permanent install and field deployable patch cables and cable reels. Available in standard and custom lengths for high definition HD and UHD video. Our cables are made with Belden SDI cable using a combination or high precision multi step stripping machines and high end crimp tooling for flawless termination and operation. Contact us for you next installation project or buy our ready made SDI video cables here.</p>
+          <a href="/collections/data-networking" class="button">Browse <span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+        </div>
+      </div>
+      <!-- END OF 4K UHD VIDEO - PROFESSIONAL PRODUCTION SECTION -->
+
+      
+      
+      
+      <!-- BRAIDED INSTRUMENT - PROFESSIONAL PRODUCTION SECTION -->
+      <div class="product__block general--animation">
+        <div class="product__block-image">
+          <img data-src="{{ 'pro_product_braid.jpg' | asset_img_url: '632x' }}" class="lazyload" alt="{{ shop.name }}">
+        </div>
+        <div class="product__block-text">
+          <h2>Techflex Braided Guitar Cables</h2>
+          <p>Explore our extensive range of cut, abrasion and tangle resistant braided instrument cables for harsh and demanding environments. With over 25 Techflex designs in stock we have solutions available for musicians and retailers. Every cable terminated with silver solder!</p>
+          <a href="/collections/braided-instrument-cables" class="button">Browse <span class="ico-wrap">{% include 'icon-shopping-bag' %}</span></a>
+        </div>
+      </div>
+      <!-- END OF BRAIDED INSTRUMENT - PROFESSIONAL PRODUCTION SECTION -->
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Professional Production",
+    "max_blocks": 12,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Professional Production"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_icon",
+        "label": "Enable icons for the button",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Block image"
+          },
+          {
+            "type": "text",
+            "id": "main_heading",
+            "label": "Main Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "block_paragraph",
+            "label": "Block Paragraph"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Professional Production",
+        "category": "Product Collection"
+      }
+    ]
+  }
+{% endschema %}

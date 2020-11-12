@@ -1,0 +1,97 @@
+<section class="info__wrapper bottom__textblock" id="subscribe-block">
+  <div class="page-width">
+    <div class="grid grid--flex general--animation">
+      <div class="grid__item medium-up--one-half">
+        <div class="info">
+          <div class="info__ico">
+            <img src="{{ 'ico-faq.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <h4>FAQs</h4>
+          <p>Please <a href="https://cablesmiths.com.au/pages/faqs">click here</a> to read all our questions and answers.</p>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-half">
+        <div class="info">
+          <div class="info__ico">
+            <img src="{{ 'ico-tick.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <h4>Equipment Hire</h4>
+          <p>Please <a href="https://cablesmiths.com.au/pages/equipment-hire">click here</a> to hire equipment.</p>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-half">
+        <div class="info">
+          <div class="info__ico">
+            <img src="{{ 'ico-ship.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <h4>Shipping</h4>
+          <p>We provide world wide shipping option.</p>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-half">
+        <div class="info">
+          <div class="info__ico">
+            <img src="{{ 'ico-envelope.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <h4>Subscribe</h4>
+          <div class="subscribe__form">
+            {% form 'customer' %}
+              {{ form.errors | default_errors }}
+              {% if form.posted_successfully? %}
+                <p class="form--success">Thank you for subscribing.</p>
+              {% else %}
+                <div class="form__wrap">
+                  <input type="email"
+                    name="contact[email]"
+                    placeholder="Enter Your Email">
+                  <span class="input-group__btn">
+                    <button type="submit" class="newsletter__submit" name="commit" id="Subscribe">
+                      {% include 'icon-arrow-right-long' %}
+                    </button>
+                  </span>
+                </div>
+              {% endif %}
+            {% endform %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+ {
+  "name": "Bottom Text Block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Configure your own cable"
+    },
+    {
+      "type": "richtext",
+      "id": "promo_paragraph",
+      "label": "Description Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Customize now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bottom Text Block",
+      "category": "Text Description Block"
+    }
+  ]
+ }
+{% endschema %}

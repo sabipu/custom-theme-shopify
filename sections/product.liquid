@@ -1,0 +1,344 @@
+<div class="custom__configure" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
+  <div class="page-width">
+    <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
+    <meta itemprop="url" content="{{ shop.url }}{{ current_variant.url }}">
+    <meta itemprop="brand" content="{{ product.vendor }}">
+    <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
+    <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
+    <div class="grid">
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+      {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+      
+      <div class="grid__item medium-up--seven-twelfths">
+        <div class="prod__image">
+          <!-- <div class="prod__logo">
+            <img src="//cdn.shopify.com/s/files/1/1962/5973/t/9/assets/logo-mogami.png?7511618203715441235" alt="Cablesmiths">
+          </div> -->
+          {% if featured_image != blank %}
+            <img src="{{ featured_image | img_url: '960x960' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
+          {% endif %}
+          {% if product.images.size > 1 %}
+            <ul>
+              {% for image in product.images %}
+                {% if featured_image != image.src %}
+                <li>
+                  <!-- <a href="{{ image.src | img_url: '480x480' }}" data-product-single-thumbnail> -->
+                    <img src="{{ image.src | img_url: '960x960' }}" alt="{{ image.alt | escape }}">
+                  <!-- </a> -->
+                </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+        <div class="prod__infos">
+          <a href="#" class="prod__spec js__spec--control" id="prod__infostitle">Cable Specifications</a>
+          <span class="prod__info" id="prod__infosdesc">* Some items will not render on cable</span>
+        </div>
+        <div class="popup__wrapper">
+          <a href="#" class="js__spec--control popup__close">Close</a>
+          <div class="spec__wrapper">
+            <div class="spec__column">
+              <h3>XLR Technical Specifications:</h3>
+             <ul>
+               <li>XX Series</li>
+               <li>Connection Type: XLR</li>
+               <li>Gender: NC3MXX (male), NC3FXX (female)</li>
+               <li>Electrical</li>
+               <li>Capacitance between contacts: ≤ 4 pF</li>
+               <li>Contact resistance: ≤ 3 mΩ</li>
+               <li>Dielectric strength: 1,5 kVdc</li>
+               <li>Insulation resistance: > 10 GΩ (initial)</li>
+               <li>Rated current per contact: 16 A</li>
+               <li>Rated voltage: < 50 V</li>
+             </ul>
+            </div>
+            <div class="spec__column">
+              <h3>XLR Technical Specifications:</h3>
+             <ul>
+               <li>XX Series</li>
+               <li>Connection Type: XLR</li>
+               <li>Gender: NC3MXX (male), NC3FXX (female)</li>
+               <li>Electrical</li>
+               <li>Capacitance between contacts: ≤ 4 pF</li>
+               <li>Contact resistance: ≤ 3 mΩ</li>
+               <li>Dielectric strength: 1,5 kVdc</li>
+               <li>Insulation resistance: > 10 GΩ (initial)</li>
+               <li>Rated current per contact: 16 A</li>
+               <li>Rated voltage: < 50 V</li>
+             </ul>
+            </div>
+            <div class="spec__column">
+              <h3>XLR Technical Specifications:</h3>
+             <ul>
+               <li>XX Series</li>
+               <li>Connection Type: XLR</li>
+               <li>Gender: NC3MXX (male), NC3FXX (female)</li>
+               <li>Electrical</li>
+               <li>Capacitance between contacts: ≤ 4 pF</li>
+               <li>Contact resistance: ≤ 3 mΩ</li>
+               <li>Dielectric strength: 1,5 kVdc</li>
+               <li>Insulation resistance: > 10 GΩ (initial)</li>
+               <li>Rated current per contact: 16 A</li>
+               <li>Rated voltage: < 50 V</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid__item medium-up--five-twelfths">
+        <h1>{{ product.title }}</h1>
+
+        {% capture the_snippet_review_avg %}{% render 'ssw-widget-avg-rate-profile' %}{% endcapture %}
+        {% unless the_snippet_review_avg contains 'Liquid error' %}
+        {{ the_snippet_review_avg }}
+        {% endunless %}    
+        
+        {% comment %}<p>{{ product.vendor }}</p>{% endcomment %}
+        <div class="{% if product.metafields.bookthatapp.config %}bookthatapp{% endif %}" data-price-wrapper>
+          
+          {% if product.metafields['Contact']['show-contact-us-button'] == blank %}
+          <span class="prod__totalprice prod__totalprice__cost align--left" data-product-price>
+            <!-- {{ current_variant.price | money }} || --> {{ product.variants[0].price | money }}
+          </span>
+          <span class="prod__totalprice__rental align--left" data-product-price>
+            
+          </span>
+          {% if product.compare_at_price_max > product.price %}
+            <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+            <s data-compare-price>
+              {% if current_variant.compare_at_price > current_variant.price %}
+                {{ current_variant.compare_at_price | money }}
+              {% endif %}
+            </s>
+          {% endif %}
+          
+          {% endif %}
+        </div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+          <meta itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+          <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
+          <form action="/cart/add" method="post" enctype="multipart/form-data">
+            <div class="product__variant">
+              <div class="grid">
+                {% unless product.has_only_default_variant %}
+                  {% for option in product.options_with_values %}
+                    <div class="grid__item one-half">
+                      <div class="selector-wrapper js">
+                        <label for="SingleOptionSelector-{{ forloop.index0 }}">
+                          {{ option.name }}
+                        </label>
+                        <div class="select__wrapper">
+                          <select
+                            class="form__input"
+                            id="SingleOptionSelector-{{ forloop.index0 }}"
+                            data-single-option-selector
+                            data-index="option{{ option.position }}">
+                            {% for value in option.values %}
+                            
+                              {% if value contains "efault" %}
+                            
+                              {% else %}
+                              {% if value contains "etre" %}
+                            
+                              {% else %}
+                              {% if value contains "onfigurator" %}
+                            
+                              
+                              {% else %}
+                              <option
+                                value="{{ value | escape }}"
+                                {% if option.selected_value == value %}selected="selected"{% endif %}>
+                                  {{ value }}
+                              </option>
+                              {% endif %}{% endif %}{% endif %}
+                            {% endfor %}
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                {% endunless %}
+                
+                <select name="id" class="no-js form__input__val" data-product-select>
+                  {% for variant in product.variants %}
+                  
+                  	{% if variant.title contains "onfigurator" %}
+                            
+                              
+                    {% else %}
+                  
+                    <option
+                      {% if variant == current_variant %}selected="selected"{% endif %}
+                      {% unless variant.available %}disabled="disabled"{% endunless %}
+                      value="{{ variant.id }}">
+                        {{ variant.title }}
+                    </option>
+                  	{% endif %}
+                  {% endfor %}
+                </select>
+				
+                
+                {% if product.metafields.bookthatapp.config %}
+                
+                <div class="grid__item one-half quantity_field" style="display:none;" >
+                  <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+                  <div class="form__number">
+                    <input type="number" id="Quantity" name="quantity" value="1" min="1" step="1">
+                  </div>
+                </div>
+                
+                {% else %}
+                
+                  {% if product.metafields['Contact']['show-contact-us-button'] == blank %}
+                  <div class="grid__item one-half quantity_field">
+                    <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+                    <div class="form__number">
+                      <input type="number" id="Quantity" name="quantity" value="1" min="1" step="1">
+                    </div>
+                  </div>
+
+                  {% endif %}
+                
+                {% endif %}
+              </div>
+            </div>
+            <div class="product__btnholder">
+
+               {% if product.metafields['Contact']['show-contact-us-button'] == blank %}
+
+              <button
+                class="button"
+                type="submit"
+                name="add"
+                data-add-to-cart
+                {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+                
+                  <span data-add-to-cart-text>
+                    {% if current_variant.available %}
+                    
+                      {% if product.metafields.bookthatapp.config %}
+                      Hire Now
+                      {% else %}
+                      {{ 'products.product.add_to_cart' | t }}
+                      {% endif %}
+                    
+                      
+                    {% else %}
+                      {{ 'products.product.sold_out' | t }}
+                    {% endif %}
+                  </span>
+              </button>
+              
+             {% endif %}
+
+              
+               {% unless product.metafields['Customise']['customise-url'] == blank %}
+              <a href="{{ product.metafields['Customise']['customise-url'] }}" class="button button--plain">Customise</a>
+              <span class="custom__info">Why not customise your cable {% include 'icon-arrow-right-long' %}</span>
+             
+             {% endunless %}
+
+              {% if product.metafields['Contact']['show-contact-us-button'] != blank %}
+              
+               <a href="/pages/contact" class="button">Contact Us</a>
+              <span class="custom__info">Please contact us for more info on hiring this item</span>
+
+
+              {% endif %}
+
+
+
+            </div>
+            
+            {% if product.metafields['Contact']['show-contact-us-button'] == blank %}
+            <div id="bookingform">
+              
+            {% include 'booking-form' %}
+              
+            </div>
+            {% endif %}
+          </form>
+        </div>
+        <div class="product__rte">
+          {{ product.description }}
+        </div>
+        
+        {% comment %} 
+        <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+        {% endcomment %}
+        
+        {% comment %}{% if section.settings.show_share_buttons %}
+          {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+        {% endif %}{% endcomment %}
+
+        {% capture the_snippet_share %}
+        {% render 'ssw-widget-share-links' with 1 %}
+        {% endcapture %}
+        {% unless the_snippet_share contains 'Liquid error' %}
+        {{ the_snippet_share }}
+        {% endunless %}    
+        
+        {% unless product == empty %}
+          <script type="application/json" data-product-json>
+            {{ product | json }}
+          </script>
+        {% endunless %}
+      </div>
+    </div>
+
+    {% capture the_snippet_reviews %}{% render 'socialshopwave-widget-recommends' with 1 %}{% endcapture %}
+    {% unless the_snippet_reviews contains 'Liquid error' %}
+    {{ the_snippet_reviews }}
+    {% endunless %}    
+    
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function ()
+    {
+    console.log("running thing");
+    $('.form__input').change();
+    setTimeout(function ()
+               {
+      
+      
+      var $things = $('.form__input');
+    for(var i=0;i<$things.length;i++)
+    {
+     	var $thing = $($things[i]);
+      	var ov = $thing.val();
+      	console.log("form input", $thing.val());
+      	//$thing.val('1m');
+      	$thing.val(ov);
+      $thing.click();
+      $thing.change();
+    }
+      
+      
+      
+      
+      
+    }, 300);
+    
+  });
+</script>
+
+
+
+
+{% schema %}
+  {
+    "name": "Product pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

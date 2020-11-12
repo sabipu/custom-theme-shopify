@@ -1,0 +1,239 @@
+{% comment %}<footer>
+
+  {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+  <ul>
+    {% for social in social_accounts %}
+      {%- assign social_handle = social | handleize -%}
+      {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+      {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+
+      {% if settings[social_link] != blank %}
+        <li>
+          <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+            {% include social_icon %}
+            <span class="icon-fallback-text">{{ social }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+    {% endfor %}
+  </ul>
+
+  {% if section.settings.show_payment_icons %}
+    {% unless shop.enabled_payment_types == empty %}
+      {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' -%}
+
+      <span class="visually-hidden">{{ 'layout.footer.payment_methods' | t }}</span>
+      <ul class="payment-icons">
+        {% for type in shop.enabled_payment_types %}
+          {% if payment_icons_available contains type %}
+            <li>
+              {%- assign icon_name = type | prepend: 'icon-' -%}
+              {% include icon_name %}
+              <span class="visually-hidden">{{ type | capitalize | replace: '_', ' ' }}</span>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endunless %}
+  {% endif %}
+
+  {%- assign footer_linklist = section.settings.footer_linklist -%}
+  {% if linklists[footer_linklist].links.size > 0 %}
+    <ul>
+      {% for link in linklists[footer_linklist].links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div>
+    <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
+  </div>
+</footer>{% endcomment %}
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="page-width">
+      <div class="grid grid--flex">
+        <div class="grid__item medium-up--one-half">
+          <h4>Category</h4>
+          <ul class="footer__nav">
+<!--             <li><a href="/">B2B Portal</a></li> -->
+            <li>
+              <a href="/pages/custom-configurator"><span class="firstword">Custom Cable Builder</span> </a>
+            </li>
+            <li>
+              <a href="/collections/microphone">Microphone Cables</a>
+            </li>
+            <li>
+              <a href="/collections/guitars-and-keyboards"><span class="firstword">Guitar Cables</span></a>
+            </li>
+            <li>
+              <a href="/collections/speakers">Speaker Cables</a>
+            </li>
+            <li>
+              <a href="/collections/multicores-stageboxes"><span class="firstword">Stageboxes & Snakes</span></a>
+            </li>
+            <li>
+              <a href="/collections/data-networking"><span class="firstword">Video & Antenna Cables</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="grid__item medium-up--one-half">
+          <h4><a href="/pages/contact">Contact Us</a></h4>
+          <ul class="footer__nav">
+            <li><a href="mailto:info@cablesmiths.com.au">info@cablesmiths.com.au</a></li>
+            <li><a href="tel:+61423961903">+61423961903</a></li>
+          </ul>
+        </div>
+        <div class="grid__item medium-up--one-half">
+          <h4>Help</h4>
+          <ul class="footer__nav">
+            <li><a href="/pages/faqs">FAQs</a></li>
+            <li><a href="/pages/refunds">Refunds</a></li>
+            <li><a href="/pages/terms-of-service">Terms of Service</a></li>
+            <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="grid__item medium-up--one-half">
+          <div class="ipc-logo">
+            {% if section.settings.pic_logo != blank %}
+              <img src="{{ section.settings.pic_logo | img_url: '2048x' }}" alt="{{ shop.name }}">
+            {% else %}
+              <img src="{{ 'logo-ipc.jpg' | asset_url }}" alt="{{ shop.name }}">
+            {% endif %}
+          </div>
+          <!-- 
+          <ul class="payments">
+            <li>
+              <img src="{{ 'logo-mastercard.jpg' | asset_url }}" alt="{{ shop.name }}">
+            </li>
+            <li>
+              <img src="{{ 'logo-visa.jpg' | asset_url }}" alt="{{ shop.name }}">
+            </li>
+            <li>
+              <img src="{{ 'logo-paypal.jpg' | asset_url }}" alt="{{ shop.name }}">
+            </li>
+          </ul>
+-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="page-width">
+      <div class="grid">
+        <div class="grid__item medium-up--eight-twelfths">
+          <strong class="copyright">© 2019 <a href="">Cablesmiths</a> | <a href="/pages/privacy-policy">Privacy</a></strong>
+          {% if section.settings.show_payment_icons %}
+            {% unless shop.enabled_payment_types == empty %}
+              {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' -%}
+
+              <span class="visually-hidden">{{ 'layout.footer.payment_methods' | t }}</span>
+              <ul class="payment-icons">
+                {% for type in shop.enabled_payment_types %}
+                  {% if payment_icons_available contains type %}
+                    <li>
+                      {%- assign icon_name = type | prepend: 'icon-' -%}
+                      {% include icon_name %}
+                      <span class="visually-hidden">{{ type | capitalize | replace: '_', ' ' }}</span>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endunless %}
+          {% endif %}
+        </div>
+        <div class="grid__item medium-up--four-twelfths">
+          <ul class="social-networks">
+            <li><a href="https://facebook.com/cablesmiths">{% include 'icon-facebook' %}</a></li>
+            <li><a href="https://instagram.com/cablesmiths">{% include 'icon-instagram' %}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "footer_linklist",
+        "label": "First menu",
+        "default": "footer"
+      },
+      {
+        "type": "header",
+        "content": "Contact Information"
+      },
+      {
+        "type": "text",
+        "id": "contact_email",
+        "label": "Contact Email",
+        "default": "info@cablesmiths.com.au"
+      },
+      {
+        "type": "text",
+        "id": "contact_phone",
+        "label": "Contact Phone number",
+        "default": "+44 1252 236000"
+      },
+      {
+        "type": "text",
+        "id": "contact_timing",
+        "label": "Contact Timing",
+        "default": "9:00am – 3:00pm, Monday to Sunday"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_help",
+        "label": "Help menu"
+      },
+      {
+        "type": "image_picker",
+        "id": "ipc_logo",
+        "label": "IPC image"
+      },
+      {
+        "type": "header",
+        "content": "Footer Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_copyright",
+        "label": "Show copyright text",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "Show payment icons",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_social_networks",
+        "label": "Show social networks",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Payment Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "payment_logo_image",
+            "label": "Payment Logo image"
+          }
+        ]
+      }
+    ]
+  }
+
+{% endschema %}

@@ -1,0 +1,402 @@
+<header class="header">
+  <div class="headertop">
+    <div class="page-width">
+      <div class="header__left">
+        <ul class="top__features">
+	<!--  <li><a href="/pages/b2b-portal" title="B2B Portal">B2B Portal</a></li> -->
+          <li>{{ section.settings.second_text }}</li>
+        </ul>
+      </div>
+      <div class="header__right">
+        <ul class="headertop__nav">
+<!--           <li>
+
+            {% capture the_snippet_auth %}{% render 'socialshopwave-widget-auth' %}{% endcapture %}
+            {% if the_snippet_auth contains 'Liquid error' %}
+              {% if shop.customer_accounts_enabled %}
+                <ul>
+                  {% if customer %}
+                    <li class="is__customer">
+                      {% if customer.first_name != blank %}
+                        {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+                        {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+                      {% else %}
+                        <a href="/account">{{ 'layout.customer.account' | t }}</a>
+                      {% endif %}
+                    </li>
+                    <li>
+                      {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                    </li>
+                  {% else %}
+                    <li>
+                      {{ 'My Account' | customer_login_link }}
+                    </li>
+                    {% comment %}<li>
+                      {{ 'layout.customer.create_account' | t | customer_register_link }}
+                    </li>{% endcomment %}
+                  {% endif %}
+                </ul>
+              {% endif %}
+            {% else %}
+              {% if shop.customer_accounts_enabled %}
+              <ul id="ssw-topauth" class="ssw-topauth">
+                {% if customer %}
+                <li class="ssw-tprofile ssw-dropdown is__customer">
+                  <a class="ssw-dropdown-toggle" data-toggle="ssw-dropdown" href="javascript:void(0);">
+                    {{ customer.first_name }}
+                    {% if customer.last_name != 'Unknown' %}
+                    {{ customer.last_name | slice:0 | upcase }}.
+                    {% endif %}
+                    <i class="ssw-icon-down-open-big"></i>
+                  </a>
+                  <ul class="ssw-dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li id="customer_myorders_li"><a tabindex="-1" href="/account">{{ 'socialshopwave.my_orders' | t }}</a></li>
+                    {% render  'ssw-widget-dropdown' %}
+                    <li class="ssw-divider"></li>
+                    <li><a id="customer_logout_link" tabindex="-1" href="/account/logout">{{ 'socialshopwave.logout' | t }}</a></li>
+                  </ul>
+                </li>
+                {% else %}
+                <li>
+                  <a id="customer_login_link" href="javascript:void(0);" data-toggle="ssw-modal" data-target="#login_modal" onclick="trackShopStats('login_popup_view', 'all')">{{ 'socialshopwave.log_in' | t }}</a>
+                </li>
+                {% endif %}
+              </ul>
+              {% endif %}
+            {% endif %}    
+            
+          </li> -->
+          <li>
+            <div class="search__holder">
+              <form class="header__search" action="/search">
+                <input
+                       type="text"
+                       placeholder="Search"
+                       name="q"
+                       value="{{ search.terms | escape }}"
+                       />
+                <button type="submit"><svg class="icon" width="100pt" height="100pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="m85.207 79.375l-21.664-21.668c3.332-4.375 5.207-10 5.207-16.043 0-15-12.082-27.082-27.082-27.082s-27.086 12.086-27.086 27.086 12.082 27.082 27.082 27.082c6.043 0 11.457-1.875 16.043-5.207l21.668 21.668c0.83203 0.83203 1.875 1.25 2.918 1.25s2.082-0.41797 2.918-1.25c1.6641-1.668 1.6641-4.168-0.003907-5.8359zm-43.539-18.957c-10.418 0-18.75-8.332-18.75-18.75s8.332-18.75 18.75-18.75 18.75 8.332 18.75 18.75c0 10.414-8.3359 18.75-18.75 18.75z"/></svg></button>
+                {% include 'search-autocomplete' %}
+              </form>
+            </div>
+          </li>
+          {% if section.settings.cart_checbox == true %}
+          <li>
+            <a href="/cart">
+              <span class="cart__text">{{ 'layout.cart.title' | t }}</span>
+              <span id="the_cart_count"><span class="count" id="the_cart_count_text">{{ cart.item_count }}</span></span>
+              <span class="ico-wrap">{% include 'icon-cart' %}</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mainheader">
+    <div class="page-width">
+        <div class="logo">
+        {% if template.name == 'index' %}
+          <div class="h1" itemscope itemtype="http://schema.org/Organization">
+          {% else %}
+            <div class="h1" itemscope itemtype="http://schema.org/Organization">
+          {% endif %}
+              <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+                {% if section.settings.logo != blank %}
+                  {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+                  <img src="{{ section.settings.logo | img_url: '320x' }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+                {% else %}
+                  <img src="{{ 'logo.png' | asset_img_url: '153x' }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+                {% endif %}
+              </a>
+          {% if template.name == 'index' %}
+            </div>
+          {% else %}
+            </div>
+          {% endif %}
+      </div>
+      <div class="header__navhold">
+        <a href="#" class="nav__opener"><span></span></a>
+        <div class="nav__wrapper">
+          <div class="nav__closeholder">
+            <a href="#" class="nav__opener nav__closer"><span class="close"></span></a>
+          </div>
+          <nav class="main__nav" role="navigation">
+            <ul class="main__navigation">
+              {% for link in linklists[section.settings.main_linklist].links %}
+                {% if link.links != blank %}
+                  <li>
+                    <a class="main__navigation-link" href="{{ link.url }}"><span class="main__nav-center">{{ link.title | escape }} <span class="ico-wrap">{% include 'icon-angle-down' %}</span></span></a>
+                    <ul>
+                      {% for childlink in link.links %}
+                        {% if childlink.links != blank %}
+                          <li>
+                            <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                            <ul>
+                              {% for grandchildlink in childlink.links %}
+                                <li>
+                                  <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | escape }}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </li>
+                        {% else %}
+                          <li {% if childlink.title == 'Browse All' %} class="browse--all" {% endif %} {% if childlink.title == 'Braided Instrument Cables' %} class="images--all" {% endif %}>
+                            <a href="{{ childlink.url }}">
+                              <div class="menu__logowrap">
+                                {% assign handle = childlink.title %}
+                                {% case handle %}
+                                  {% when 'Belden' %}
+                                    {% capture image %}logo-belden.png{% endcapture %}
+                                    {% assign width = 150 %}
+                                  {% when 'Canare' %}
+                                    {% capture image %}logo-canare.png{% endcapture %}
+                                    {% assign width = 160 %}
+                                  {% when 'Syntax' %}
+                                    {% capture image %}logo-syntax.jpg{% endcapture %}
+                                    {% assign width = 160 %}
+                                  {% when 'Gotham' %}
+                                    {% capture image %}logo-gotham.png{% endcapture %}
+                                    {% assign width = 85 %}
+                                  {% when 'Sommer' %}
+                                    {% capture image %}logo-sommer.png{% endcapture %}
+                                    {% assign width = 150 %}
+                                  {% when 'Van Damme' %}
+                                    {% capture image %}logo-vandamme.png{% endcapture %}
+                                    {% assign width = 140 %}
+                                  {% when 'Mogami' %}
+                                    {% capture image %}logo-mogami.png{% endcapture %}
+                                    {% assign width = 130 %}
+                                  {% when 'Klotz' %}
+                                    {% capture image %}logo-klotz.png{% endcapture %}
+                                    {% assign width = 140 %}
+                                  {% when 'Cablesmiths' %}
+                                    {% capture image %}logo-black.png{% endcapture %}
+                                    {% assign width = 140 %}
+                                  {% when 'Braided Instrument Cables' %}
+                                    {% capture image %}logo-braided-instrument-cables.jpg{% endcapture %}
+                                    {% assign width = 140 %}
+                                  {% else %}
+                                    {% capture image %}logo-black.png{% endcapture %}
+                                {% endcase %}
+                                <img src="{{ image | asset_img_url: '144x' }}" alt="{{ shop.name }}">
+                              </div>
+                              <span class="menu__subtext">{{ childlink.title | escape }}</span>
+                            </a>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% else %}
+                  <li>
+                    <a class="main__navigation-link" href="{{ link.url }}"><span class="main__nav-center">{{ link.title | escape }}</span></a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+                  {% comment %}<li>
+                    <a class="main__navigation-link" href="/pages/custom-configurator"><span class="main__nav-center"><span class="firstword">Custom</span> Configurator</span></a>
+                  </li>
+                  <li>
+                    <a class="main__navigation-link" href="/collections/microphone"><span class="main__nav-center">Microphones <span class="ico-wrap">{% include 'icon-angle-down' %}</span></span></a>
+                    <div class="menu__dropdown">
+                      <div class="page-width">
+                        <ul class="sub__menu">
+                          <li class="sub__menu--sizetwo">
+                            <a href="#">
+                              <div class="menu__logowrap">
+                                <img src="{{ 'logo-canare.png' | asset_img_url: '144x' }}" alt="{{ shop.name }}">
+                              </div>
+                              <span class="menu__subtext">Canare</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="menu__logowrap">
+                                <img src="{{ 'logo-mogami1.png' | asset_url }}" alt="{{ shop.name }}">
+                              </div>
+                              <span class="menu__subtext">Mogami</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="menu__logowrap">
+                                <img src="{{ 'logo-vandamme.png' | asset_url }}" alt="{{ shop.name }}">
+                              </div>
+                              <span class="menu__subtext">Van Damme</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="menu__logowrap">
+                                <img src="{{ 'logo-klotz.png' | asset_url }}" alt="{{ shop.name }}">
+                              </div>
+                              <span class="menu__subtext">Klotz</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="menu__logowrap">
+                                <img src="{{ 'logo-sommercable.png' | asset_url }}" alt="{{ shop.name }}">
+                              </div>
+                              <span class="menu__subtext">Sommer Bolden</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <div class="menu__logowrap">
+                                <img src="{{ 'logo-gotham.png' | asset_url }}" alt="{{ shop.name }}">
+                              </div>
+                              <span class="menu__subtext">Gotham</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span class="browse__holder">
+                                <span class="browse__text">Browse All</span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="main__navigation-link" href="/collections/guitars-and-keyboards"><span class="main__nav-center"><span class="firstword">Guitars</span> &amp; Keyboards <span class="ico-wrap">{% include 'icon-angle-down' %}</span></span></a>
+                  </li>
+                  <li>
+                    <a class="main__navigation-link" href="/collections/speakers"><span class="main__nav-center">Speakers &amp; Power<span class="ico-wrap">{% include 'icon-angle-down' %}</span></span></a>
+                  </li>
+                  <li>
+                    <a class="main__navigation-link" href="/collections/multicores-stageboxes"><span class="main__nav-center"><span class="firstword">Multicores</span> &amp; Stageboxes <span class="ico-wrap">{% include 'icon-angle-down' %}</span></span></a>
+                  </li>
+                  <li>
+                    <a class="main__navigation-link" href="/collections/data-networking"><span class="main__nav-center"><span class="firstword">Data</span> &amp; Networking</span></a>
+                  </li>
+              {% endcomment %}
+            </ul>
+            {% comment %}<script defer>
+              var str = [];
+              var eachStr = jQuery('.main__navigation-link').text();
+
+              for(eachStr) {
+
+              }
+
+              console.log(str);
+
+              function getFirstWord(str) {
+                var spacePosition = str.indexOf(' ');
+                if (spacePosition === -1) {
+                  return str;
+                }
+                else {
+                  return str.substr(0, spacePosition);
+                }
+              };
+            </script>{% endcomment %}
+          </nav>
+          <nav role="navigation" class="popup__nav">
+            <ul class="aside__navigation">
+              {% for link in linklists[section.settings.aside_main_linklist].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% comment %}<style>
+  {% if section.settings.logo != blank %}
+    .site-header__logo-image {
+      max-width: {{ section.settings.logo_max_width }}px;
+    }
+  {% endif %}
+</style>
+<div data-section-id="{{ section.id }}" data-section-type="header-section">
+  <header role="banner">
+    
+
+    
+
+    
+
+    <form action="/search" method="get" role="search">
+      <label for="Search" class="label-hidden">
+        {{ 'general.search.placeholder' | t }}
+      </label>
+      <input type="search"
+             name="q"
+             id="Search"
+             value="{{ search.terms | escape }}"
+             placeholder="{{ 'general.search.placeholder' | t }}">
+      <button type="submit" class="btn">
+        {% include 'icon-search' %}
+        <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+      </button>
+    </form>
+
+  </header>
+
+  </div>{% endcomment %}
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Top Header Setting"
+      },
+      {
+        "type": "text",
+        "id": "first_text",
+        "label": "Header Left First Text",
+        "default": "B2B Portal"
+      },
+      {
+        "type": "text",
+        "id": "second_text",
+        "label": "Header Left Second Text",
+        "default": "Free Shipping on Cable Orders over $150"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_checbox",
+        "label": "Show cart icon header",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Main Header Setting"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Main Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "aside_main_linklist",
+        "label": "Aside Drawer Menu"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Header",
+        "category": "Main header"
+      }
+    ]
+  }
+{% endschema %}

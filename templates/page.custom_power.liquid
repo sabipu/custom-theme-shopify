@@ -1,0 +1,377 @@
+  <div id="main">
+    <div id="configurator">
+
+    <!-- OPTION: Cable -->
+    <div id="image_column" class="col col30">
+      <div id="image">
+        <div id="cable_side_a">
+
+          <div class="cable_block" id="cable_side_a_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_a_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_a_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_a_connector">
+          </div>
+
+          
+          
+
+        </div>
+        <div id="cable_side_b">
+          
+          <div class="cable_block" id="cable_side_b_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_b_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_b_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_b_connector">
+          </div>
+
+
+
+        </div>
+      </div>
+      {% include "configurator_tech_specs" %}
+    </div>
+
+    <div id="options" class="col col70">
+
+      <h1>Build your <em>Power Cable</em></h1>
+
+      <!-- OPTION: Cable -->
+      <div class="group open" id="cable">
+        <div class="group_header">
+          <h2>Cable</h2>
+          <span class="group_price price">$1.80</span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+
+
+          
+
+
+          <div class="option option_select independent" id="select_cable_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" data-hide="#select_cable_types .input_select_ul, #select_cable_length" data-show="#select_cable_types" data-deselect="#select_cable_types, #select_cable_length">
+                <li data-url-value="cable_types_3core" data-show="#cable_types_3core"><a href="#cable_types_3core"><span>3 Core Black Rubber Flex</span></a></li>
+<!--                 <li data-url-value="cable_types_3phase" data-show="#cable_types_3phase"><a href="#cable_types_3phase"><span>3 Phase Black Rubber Flex</span></a></li> -->
+                <li data-url-value="cable_types_socapex" data-show="#cable_types_socapex"><a href="#cable_types_socapex"><span>Socapex Flexible PVC</span></a></li>
+
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="option option_select dependent" id="select_cable_types" data-key="cable_type">
+            <h3>Cable Type</h3>
+            <div class="input input_select input_select_subtitles" data-show="#select_cable_length" data-hidex=".power__connectors"  data-deselect=".power__connectors">
+              
+
+              <ul class="input_select_ul" id="cable_types_3core" data-show="#select_cable_length" data-showx=".3core_black_rubber">
+                <li data-url-value="power_cable_3g_075mm" data-variant-id="27747050422358" class="chooseable unavailable" data-chooseable="power_cable_3g_075mm" data-multiply-by-length="true" data-click=".power_3pin_connectors"><a href="#power_cable_3g_075mm"><span>Power Cable</span><em>3G x 0.75mm</em></a></li>
+                <li data-url-value="power_cable_3g_1mm" data-variant-id="27747050422358" class="chooseable unavailable" data-chooseable="power_cable_3g_1mm" data-multiply-by-length="true" data-click=".power_3pin_connectors"><a href="#power_cable_3g_1mm"><span>Power Cable</span><em>3G x 1mm</em></a></li>
+                <li data-url-value="power_cable_3g_15mm" data-variant-id="27747050422358" class="chooseable" data-chooseable="power_cable_3g_15mm" data-multiply-by-length="true" data-click=".power_3pin_connectors"><a href="#power_cable_3g_15mm"><span>Power Cable</span><em>3G x 1.5mm</em></a></li>
+                <li data-url-value="power_cable_3g_25mm" data-variant-id="27747050422358" class="chooseable" data-chooseable="power_cable_3g_25mm" data-multiply-by-length="true" data-click=".power_3pin_connectors"><a href="#power_cable_3g_25mm"><span>Power Cable</span><em>3G x 2.5mm</em></a></li>
+              </ul>
+
+
+              <ul class="input_select_ul" id="cable_types_3phase" >
+                <li data-url-value="power_cable_4g_6mm" data-variant-id="27747071656022" class="chooseable" data-chooseable="power_cable_4g_6mm" data-multiply-by-length="true"  data-showx=".3phase_black_rubber_4g"><a href="#power_cable_4g_6mm"><span>3 Phase Power Cable</span><em>4G x 6mm</em></a></li>
+                <li data-url-value="power_cable_5g_6mm" data-variant-id="27747071656022" class="chooseable" data-chooseable="power_cable_5g_6mm" data-multiply-by-length="true"  data-showx=".3phase_black_rubber_5g"><a href="#power_cable_5g_6mm"><span>3 Phase Power Cable</span><em>5G x 6mm</em></a></li>
+              </ul>
+
+
+              <ul class="input_select_ul" id="cable_types_socapex">
+                <li data-url-value="power_cable_18g_25mm" data-variant-id="27747071656022" class="chooseable" data-chooseable="power_cable_18g_25mm" data-multiply-by-length="true" data-showx=".socapex_power_cable_18g" data-show="#select_connectorA_connector4, #select_connectorB_connector4" data-click="#connectorA .connector_inline_female_ssx19fv, #connectorB .connector_inline_male_ssx19mv"><a href="#power_cable_18g_25mm"><span>Socapex  Power Cable</span><em>18G x 2.5mm</em></a></li>
+              </ul>
+
+            </div>
+          </div>
+
+          
+
+          <div class="option option_text dependent" id="select_cable_length"  data-key="cable_length">
+            <h3>Cable Length</h3>
+            <div class="input input_text input_text_dial">
+              <div class="input_box">
+                <button type="button" class="minus"><span><i class="fas fa-minus"></i></span></button>
+                <input type="text" value="10 m" data-number="10" />
+                <button type="button" class="plus"><span><i class="fas fa-plus"></i></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Cable -->
+
+
+      <!-- OPTION: Connector A -  -->
+      <div class="group closed connector_group" id="connectorA">
+
+        <div class="group_header">
+          <h2>Connector <em>A</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          
+          <div class="3core_black_rubber power__connectors">
+            <div class="option option_select" data-show="#select_connectorA_connector" data-hidex="#select_connectorA_connector .input_select_ul" data-deselect="#select_connectorA_connector, .power__connectors" data-key="cable_brand" id="select_connectorA_brand">
+              <h3>Choose Type</h3>
+              <div class="input input_select">
+                <ul class="input_select_ul" data-hidex="#select_connectorA_connector .input_select_ul">
+                  <li data-url-value="3pin" data-showx="#select_connectorA_connector_3pin" class="connectorA_power_3pin_connectors power_3pin_connectors" data-click=".connectorB_power_3pin_connectors"><a href="#3pin"><span>3 Pin</span></a></li>
+                  <li data-url-value="industrial_3_pin" data-showx="#select_connectorA_connector_industrial_3_pin" class="selected connectorA_power_industrial_3_pin" data-click=".connectorB_power_industrial_3_pin"><a href="#industrial_3_pin"><span>Industrial 3 Pin</span></a></li>
+                  <li data-url-value="neutrik" data-showx="#select_connectorA_connector_neutrik" class="connectorA_power_neutrik" data-click=".connectorB_power_neutrik"><a href="#neutrik"><span>Neutrik</span></a></li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="option option_select selected" id="select_connectorA_connector" data-key="connectorA" data-postcallback="power_connectorA_selected(this);">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorA_connector_3pin">
+                  <li data-variant-id="28248526979158" class="chooseable connector_clipsal_439SHD" data-chooseable="connector_clipsal_439SHD" data-chooseb=".connector_clipsal_438HD_TR"><a href="#connector_clipsal_439SHD"><span>Clipsal 10A 3 Pin Plug</span><em>439SHD</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_clipsal_438HD_TR" data-chooseable="connector_clipsal_438HD_TR" data-chooseb=".connector_clipsal_439SHD"><a href="#connector_clipsal_438HD_TR"><span>Clipsal 10A Cord Extension</span><em>438HD-TR</em></a></li>
+                </ul>
+
+                <ul class="input_select_ul" id="select_connectorA_connector_industrial_3_pin">
+                  <li data-variant-id="XXXXXXXXXXX" class="chooseable connector_gen3_pl1ph10" data-chooseable="connector_gen3_pl1ph10" data-chooseb=".connector_gen3_pl1ph10_socket"><a href="#connector_gen3_pl1ph10"><span>10A Captiive 3 Pin Plug</span><em>PL1PH10</em></a></li>
+                  <li data-variant-id="XXXXXXXXXXX" class="chooseable connector_gen3_pl1ph10_socket" data-chooseable="connector_gen3_pl1ph10_socket" data-chooseb=".connector_gen3_pl1ph10"><a href="#connector_gen3_pl1ph10_socket"><span>10A Captiive Socket</span><em>PL1PH10</em></a></li>
+                </ul>
+                
+                <ul class="input_select_ul" id="select_connectorA_connector_neutrik">
+                  
+                  <li data-variant-id="19524195450966" class="chooseable connector_neutrik_powerCON_NC3FCA" data-chooseable="connector_neutrik_powerCON_NC3FCA" data-chooseba=".connector_neutrik_powerCON_NC3FCB"><a href="#connector_neutrik_powerCON_NC3FCA"><span>powerCON Mains-In</span><em>NC3FCA</em></a></li>
+                  <li data-variant-id="19524195483734" class="chooseable connector_neutrik_powerCON_NC3FCB" data-chooseable="connector_neutrik_powerCON_NC3FCB" data-chooseba=".connector_neutrik_powerCON_NC3FCA"><a href="#connector_neutrik_powerCON_NC3FCB"><span>powerCON Mains-Out</span><em>NC3FCB</em></a></li>
+
+                  <li data-variant-id="19769081790550" class="chooseable connector_neutrik_powerCON" data-chooseable="connector_neutrik_powerCON" data-chooseba=".connector_neutrik_powerCON_out"><a href="#connector_neutrik_powerCON"><span>powerCON TRUE1 TOP</span><em>NAC3FX-W-TOP</em></a></li>
+                  <li data-variant-id="19769056002134" class="chooseable connector_neutrik_powerCON_out" data-chooseable="connector_neutrik_powerCON_out" data-chooseba=".connector_neutrik_powerCON"><a href="#connector_neutrik_powerCON_out"><span>powerCON TRUE1 TOP</span><em>NAC3MX-W-TOP</em></a></li>
+
+                </ul>
+                <!-- END POWER CONNECTORS -->
+
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="3phase_black_rubber_4g power__connectors">
+            <div class="option option_select selected" id="select_connectorA_connector2" data-key="connectorA">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorA_connector_3phase_4g">
+                  <li data-variant-id="28248526979158" class="chooseable connector_straight_plug_4_pin_32a" data-chooseable="connector_straight_plug_4_pin_32a" data-chooseb=".connector_extension_4pin_32a"><a href="#connector_straight_plug_4_pin_32a"><span>Straight Plug</span><em>4 Pin 32A</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_extension_4pin_32a" data-chooseable="connector_extension_4pin_32a" data-chooseb=".connector_straight_plug_4_pin_32a"><a href="#connector_extension_4pin_32a"><span>Extension Socket</span><em>4 Pin 32A</em></a></li>
+                </ul>
+                <!-- END POWER CONNECTORS -->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="3phase_black_rubber_5g power__connectors">
+            <div class="option option_select selected" id="select_connectorA_connector3" data-key="connectorA">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorA_connector_3phase_5g">
+                  <li data-variant-id="28248526979158" class="chooseable connector_straight_plug_5_pin_32a" data-chooseable="connector_straight_plug_5_pin_32a" data-chooseb=".connector_extension_5pin_32a"><a href="#connector_straight_plug_5_pin_32a"><span>Straight Plug</span><em>5 Pin 32A</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_extension_5pin_32a" data-chooseable="connector_extension_5pin_32a" data-chooseb=".connector_straight_plug_5_pin_32a"><a href="#connector_extension_5pin_32a"><span>Extension Socket</span><em>5 Pin 32A</em></a></li>
+                </ul>
+                <!-- END POWER CONNECTORS -->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="socapex_power_cable_18g power__connectors">
+            <div class="option option_select selected" id="select_connectorA_connector4" data-key="connectorA">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorA_connector_socapex_power_cable_18g">
+                  <li data-variant-id="28248526979158" class="chooseable connector_inline_female_ssx19fv" data-chooseable="connector_inline_female_ssx19fv" data-chooseb=".connector_inline_male_ssx19mv"><a href="#connector_inline_female_ssx19fv"><span>Inline Female</span><em>SSX19FV</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_inline_male_ssx19mv" data-chooseable="connector_inline_male_ssx19mv" data-chooseb=".connector_inline_female_ssx19fv"><a href="#connector_inline_male_ssx19mv"><span>Inline Male</span><em>SSX19MV</em></a></li>
+                </ul>
+                <!-- END POWER CONNECTORS -->
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector A - -->
+
+
+
+     <!-- OPTION: Connector B -  -->
+      <div class="group closed connector_group" id="connectorB">
+
+        <div class="group_header">
+          <h2>Connector <em>B</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          
+          <div class="3core_black_rubber power__connectors">
+            <div class="option option_select" data-show="#select_connectorB_connector" data-hidex="#select_connectorB_connector .input_select_ul" data-deselect="#select_connectorB_connector, .power__connectors" data-key="cable_brand" id="select_connectorB_brand">
+              <h3>Choose Type</h3>
+              <div class="input input_select">
+                <ul class="input_select_ul" data-hidex="#select_connectorB_connector .input_select_ul">
+                  <li data-url-value="3pin" data-showx="#select_connectorB_connector_3pin" class="connectorB_power_3pin_connectors power_3pin_connectors" data-click=".connectorA_power_3pin_connectors"><a href="#3pin"><span>3 Pin</span></a></li>
+                  <li data-url-value="industrial_3_pin" data-showx="#select_connectorB_connector_industrial_3_pin" class="selected connectorB_power_industrial_3_pin" data-click=".connectorA_power_industrial_3_pin"><a href="#industrial_3_pin"><span>Industrial 3 Pin</span></a></li>
+                  <li data-url-value="neutrik" data-showx="#select_connectorB_connector_neutrik" class="connectorB_power_neutrik" data-click=".connectorA_power_neutrik"><a href="#neutrik"><span>Neutrik</span></a></li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="option option_select selected" id="select_connectorB_connector" data-key="connectorB">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorB_connector_3pin">
+                  <li data-variant-id="28248526979158" class="chooseable connector_clipsal_439SHD" data-chooseable="connector_clipsal_439SHD" data-chooseab=".connector_clipsal_438HD_TR"><a href="#connector_clipsal_439SHD"><span>Clipsal 10A 3 Pin Plug</span><em>439SHD</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_clipsal_438HD_TR" data-chooseable="connector_clipsal_438HD_TR" data-chooseab=".connector_clipsal_439SHD"><a href="#connector_clipsal_438HD_TR"><span>Clipsal 10A Cord Extension</span><em>438HD-TR</em></a></li>
+                </ul>
+
+                <ul class="input_select_ul" id="select_connectorB_connector_industrial_3_pin">
+                  <li data-variant-id="XXXXXXXXXXX" class="chooseable connector_gen3_pl1ph10" data-chooseable="connector_gen3_pl1ph10" data-chooseab=".connector_gen3_pl1ph10_socket"><a href="#connector_gen3_pl1ph10"><span>10A Captiive 3 Pin Plug</span><em>PL1PH10</em></a></li>
+                  <li data-variant-id="XXXXXXXXXXX" class="chooseable connector_gen3_pl1ph10_socket" data-chooseable="connector_gen3_pl1ph10_socket" data-chooseab=".connector_gen3_pl1ph10"><a href="#connector_gen3_pl1ph10_socket"><span>10A Captiive Socket</span><em>PL1PH10</em></a></li>
+                </ul>
+                
+                <ul class="input_select_ul" id="select_connectorB_connector_neutrik">
+                  
+                  <li data-variant-id="19524195450966" class="chooseable connector_neutrik_powerCON_NC3FCA" data-chooseable="connector_neutrik_powerCON_NC3FCA" data-chooseab=".connector_neutrik_powerCON_NC3FCB"><a href="#connector_neutrik_powerCON_NC3FCA"><span>powerCON Mains-In</span><em>NC3FCA</em></a></li>
+                  <li data-variant-id="19524195483734" class="chooseable connector_neutrik_powerCON_NC3FCB" data-chooseable="connector_neutrik_powerCON_NC3FCB" data-chooseab=".connector_neutrik_powerCON_NC3FCA"><a href="#connector_neutrik_powerCON_NC3FCB"><span>powerCON Mains-Out</span><em>NC3FCB</em></a></li>
+
+                  <li data-variant-id="19769081790550" class="chooseable connector_neutrik_powerCON" data-chooseable="connector_neutrik_powerCON" data-chooseab=".connector_neutrik_powerCON_out"><a href="#connector_neutrik_powerCON"><span>powerCON TRUE1 TOP</span><em>NAC3FX-W-TOP</em></a></li>
+                  <li data-variant-id="19769056002134" class="chooseable connector_neutrik_powerCON_out" data-chooseable="connector_neutrik_powerCON_out" data-chooseab=".connector_neutrik_powerCON"><a href="#connector_neutrik_powerCON_out"><span>powerCON TRUE1 TOP</span><em>NAC3MX-W-TOP</em></a></li>
+
+                </ul>
+                <!-- END POWER CONNECTORS -->
+
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="3phase_black_rubber_4g power__connectors">
+            <div class="option option_select selected" id="select_connectorB_connector2" data-key="connectorB">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorB_connector_3phase_4g">
+                  <li data-variant-id="28248526979158" class="chooseable connector_straight_plug_4_pin_32a" data-chooseable="connector_straight_plug_4_pin_32a" data-chooseab=".connector_extension_4pin_32a"><a href="#connector_straight_plug_4_pin_32a"><span>Straight Plug</span><em>4 Pin 32A</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_extension_4pin_32a" data-chooseable="connector_extension_4pin_32a" data-chooseab=".connector_straight_plug_4_pin_32a"><a href="#connector_extension_4pin_32a"><span>Extension Socket</span><em>4 Pin 32A</em></a></li>
+                </ul>
+                <!-- END POWER CONNECTORS -->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="3phase_black_rubber_5g power__connectors">
+            <div class="option option_select selected" id="select_connectorB_connector3" data-key="connectorB">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorB_connector_3phase_5g">
+                  <li data-variant-id="28248526979158" class="chooseable connector_straight_plug_5_pin_32a" data-chooseable="connector_straight_plug_5_pin_32a" data-chooseab=".connector_extension_5pin_32a"><a href="#connector_straight_plug_5_pin_32a"><span>Straight Plug</span><em>5 Pin 32A</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_extension_5pin_32a" data-chooseable="connector_extension_5pin_32a" data-chooseab=".connector_straight_plug_5_pin_32a"><a href="#connector_extension_5pin_32a"><span>Extension Socket</span><em>5 Pin 32A</em></a></li>
+                </ul>
+                <!-- END POWER CONNECTORS -->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="socapex_power_cable_18g power__connectors">
+            <div class="option option_select selected" id="select_connectorB_connector4" data-key="connectorB">
+              <h3>Choose Connector</h3>
+              <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+                <!-- POWER CONNECTORS -->
+                <ul class="input_select_ul" id="select_connectorB_connector_socapex_power_cable_18g">
+                  <li data-variant-id="28248526979158" class="chooseable connector_inline_female_ssx19fv" data-chooseable="connector_inline_female_ssx19fv" data-choosea=".connector_inline_male_ssx19mv"><a href="#connector_inline_female_ssx19fv"><span>Inline Female</span><em>SSX19FV</em></a></li>
+                  <li data-variant-id="19524194140246" class="chooseable connector_inline_male_ssx19mv" data-chooseable="connector_inline_male_ssx19mv" data-choosea=".connector_inline_female_ssx19fv"><a href="#connector_inline_male_ssx19mv"><span>Inline Male</span><em>SSX19MV</em></a></li>
+                </ul>
+                <!-- END POWER CONNECTORS -->
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector B - -->
+
+
+
+
+
+      
+      
+
+	{% include "custom_logo_text" %}
+
+
+
+      <!-- CART BUTTON & TOTAL -->
+      <div id="cart_buttons">
+        <h5>Total</h5>
+        <div id="total_price" class="price"><span class="currency_symbol">$</span><span class="price_text">0.00</span></div>
+        <button type="button" id="addToCart"><span class="text">Add To Cart</span></button>
+
+        <div class="button_spinner" id="addToCartSpinner" style="display:none;">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </div>
+
+        <div id="cart_status_message" style="display:none;">
+
+        </div>
+
+
+
+      </div>
+      <!-- END OF CART BUTTON & TOTAL -->
+
+
+
+    </div>
+    </div>
+  </div>

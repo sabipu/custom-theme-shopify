@@ -1,0 +1,412 @@
+  <div id="main">
+    <div id="configurator">
+
+    <!-- OPTION: Cable -->
+    <div id="image_column" class="col col30">
+      <div id="image">
+        <div id="cable_side_a">
+
+          <div class="cable_block" id="cable_side_a_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_a_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_a_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_a_connector">
+          </div>
+
+          
+          
+
+        </div>
+        <div id="cable_side_b">
+          
+          <div class="cable_block" id="cable_side_b_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_b_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_b_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_b_connector">
+          </div>
+
+
+
+        </div>
+      </div>
+      {% include "configurator_tech_specs" %}
+    </div>
+
+    <div id="options" class="col col70">
+
+      <h1>Build your <em>Speaker Cable</em></h1>
+
+      <!-- OPTION: Cable -->
+      <div class="group open" id="cable">
+        <div class="group_header">
+          <h2>Cable</h2>
+          <span class="group_price price">$1.80</span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_select independent" id="select_cable_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" data-hide="#select_cable_types .input_select_ul, #select_cable_color, #select_cable_length" data-show="#select_cable_types" data-deselect="#select_cable_types, #select_cable_color, #select_cable_length">
+                <li data-url-value="klotz" data-show="#cable_types_klotz"><a href="#klotz"><span>Klotz</span></a></li>
+<!--                 <li data-url-value="syntax" data-show="#cable_types_syntax"><a href="#syntax"><span>Syntax</span></a></li> -->
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="option option_select dependent" id="select_cable_types" data-key="cable_type">
+            <h3>Cable Type</h3>
+            <div class="input input_select input_select_subtitles"  data-hide="#select_cable_color"  data-show="#select_cable_length"  data-deselect="#select_cable_color,#connectorA,#connectorB" data-updateSelection="true">
+              
+
+              <ul class="input_select_ul" id="cable_types_klotz" data-showx=".speaker_connector, .non_nl4_connectors">
+<!--                 <li data-url-value="klotz_2core_2_5mm" data-variant-id="28164064968790" class="chooseable" data-chooseable="klotz_2core_2_5mm" data-hidex=".non_nl4_connectors"><a href="#klotz_2core_2_5mm"><span>Pro 2 Core</span><em>2.5mm</em></a></li>
+ -->
+                <li data-url-value="klotz_4core_2_5mm" data-variant-id="27721351692374" class="chooseable" data-chooseable="klotz_4core_2_5mm" data-hidex=".speaker_connector" data-showx=".klotz_4core_2_5mm"><a href="#klotz_4core_2_5mm"><span>Pro 4 Core</span><em>2.5mm</em></a></li>
+
+                <li data-url-value="klotz_4core_4_0mm" data-variant-id="27721390915670" class="chooseable" data-chooseable="klotz_4core_4_0mm" data-hidex=".speaker_connector" data-showx=".klotz_4core_4_0mm"><a href="#klotz_4core_4_0mm"><span>Pro 4 Core</span><em>4.0mm</em></a></li>
+
+                <li data-url-value="klotz_4core_4_0mm_sense" data-variant-id="27721556328534" class="chooseable" data-chooseable="klotz_4core_4_0mm_sense" data-hidex=".speaker_connector" data-showx=".klotz_4core_4_0mm_sense"><a href="#klotz_4core_4_0mm_sense"><span>Pro 4 Core (Sense Wire)</span><em>4.0mm</em></a></li>
+
+                <li data-url-value="klotz_8core_2_5mm" data-variant-id="27721450717270" class="chooseable" data-chooseable="klotz_8core_2_5mm" data-hidex=".speaker_connector" data-showx=".klotz_8core_2_5mm"><a href="#klotz_8core_2_5mm"><span>Pro 8 Core</span><em>2.5mm</em></a></li>
+                
+                <li data-url-value="klotz_8core_4_0mm" data-variant-id="27721474539606" class="chooseable" data-chooseable="klotz_8core_4_0mm" data-hidex=".speaker_connector" data-showx=".klotz_8core_4_0mm"><a href="#klotz_8core_4_0mm"><span>Pro 8 Core</span><em>4.0mm</em></a></li>
+
+              </ul>
+              
+              <ul class="input_select_ul" id="cable_types_syntax" data-showx=".speaker_connector, .non_nl4_connectors">
+                <li data-url-value="syntax_2core_2_5mm" data-variant-id="28164064968790" class="chooseable" data-chooseable="syntax_2core_2_5mm" data-hidex=".non_nl4_connectors"><a href="#syntax_2core_2_5mm"><span>Pro 2 Core</span><em>2.5mm</em></a></li>
+
+                <li data-url-value="syntax_4core_2_5mm" data-variant-id="27721351692374" class="chooseable" data-chooseable="syntax_4core_2_5mm" data-hidex=".speaker_connector" data-showx=".klotz_4core_2_5mm"><a href="#syntax_4core_2_5mm"><span>Pro 4 Core</span><em>2.5mm</em></a></li>
+
+                <li data-url-value="syntax_4core_4_0mm" data-variant-id="27721390915670" class="chooseable" data-chooseable="syntax_4core_4_0mm" data-hidex=".speaker_connector" data-showx=".klotz_4core_4_0mm"><a href="#syntax_4core_4_0mm"><span>Pro 4 Core</span><em>4.0mm</em></a></li>
+
+<!--                 <li data-url-value="syntax_4core_4_0mm_sense" data-variant-id="27721556328534" class="chooseable" data-chooseable="syntax_4core_4_0mm_sense" data-hidex=".speaker_connector" data-showx=".klotz_4core_4_0mm_sense"><a href="#syntax_4core_4_0mm_sense"><span>Pro 4 Core (Sense Wire)</span><em>4.0mm</em></a></li>
+ -->
+                <li data-url-value="syntax_8core_2_5mm" data-variant-id="27721450717270" class="chooseable" data-chooseable="syntax_8core_2_5mm" data-hidex=".speaker_connector" data-showx=".klotz_8core_2_5mm"><a href="#syntax_8core_2_5mm"><span>Pro 8 Core</span><em>2.5mm</em></a></li>
+                
+                <li data-url-value="syntax_8core_4_0mm" data-variant-id="27721474539606" class="chooseable" data-chooseable="syntax_8core_4_0mm" data-hidex=".speaker_connector" data-showx=".klotz_8core_4_0mm"><a href="#syntax_8core_4_0mm"><span>Pro 8 Core</span><em>4.0mm</em></a></li>
+
+              </ul>
+
+
+            </div>
+          </div>
+
+          
+
+          <div class="option option_text dependent" id="select_cable_length"  data-key="cable_length">
+            <h3>Cable Length</h3>
+            <div class="input input_text input_text_dial">
+              <div class="input_box">
+                <button type="button" class="minus"><span><i class="fas fa-minus"></i></span></button>
+                <input type="text" value="10 m" data-number="10" />
+                <button type="button" class="plus"><span><i class="fas fa-plus"></i></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Cable -->
+
+
+      <!-- OPTION: Connector A -->
+      <div class="group closed connector_group" id="connectorA">
+        <div class="group_header">
+          <h2>Connector <em>A</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_select" data-show="#select_connectorA_connector" data-hide="#select_connectorA_connector .input_select_ul, #select_connectorA_connector, #select_connectorA_ringColor, #select_connectorA_bootColor" data-deselect="#select_connectorA_connector" data-key="cable_brand" id="select_connectorA_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul">
+                <li data-url-value="amphenol" data-show="#select_connectorA_connector_amphenol" class="non_nl4_connectors"><a href="#amphenol"><span>Amphenol</span></a></li>
+                <li data-url-value="neutrik" data-show="#select_connectorA_connector_neutrik"><a href="#neutrik"><span>Neutrik</span></a></li>
+                <li data-url-value="neutrik_pro" data-show="#select_connectorA_connector_neutrik_pro"><a href="#neutrik_pro"><span>Neutrik Pro Touring</span></a></li>
+
+                <li data-url-value="lk" data-show="#select_connectorA_connector_lk" class="non_nl4_connectors"><a href="#lk"><span>CA-COM</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+        
+          
+          <div class="option option_select dependent" id="select_connectorA_connector" data-hide="#select_connectorA_ringColor, #select_connectorA_bootColor" data-key="connectorA">
+            <h3>Choose Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+              <!-- AMPHENOL CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorA_connector_amphenol">
+                <li data-variant-id="19524163502166" class="chooseable amphenol_connector_ax3fb speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm klotz_4core_4_0mm_sense" data-chooseable="connector_amphenol_ep511p"><a href="#female_xlr"><span>Female</span><em>EP-5-11P</em></a></li>
+                <li data-variant-id="19524163534934" class="chooseable amphenol_connector_ax3mb speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm klotz_4core_4_0mm_sense" data-chooseable="connector_amphenol_ep512"><a href="#male_xlr"><span>Male</span><em>EP-5-12</em></a></li>
+              </ul>
+              <!-- END AMPHENOL CONNECTORS -->
+
+
+
+              <!-- NEUTRIK CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorA_connector_neutrik">
+                <li data-variant-id="19524194992214"  class="chooseable connector_neutrik_speakOn_NL4FX_grey speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_grey"><a href="#connector_neutrik_speakOn_NL4FX"><span>speakOn NL4FX</span><em>Dark Grey</em></a></li>
+
+                <li data-variant-id="19524195024982"  class="chooseable connector_neutrik_speakOn_NL4FX_red speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_red"><a href="#connector_neutrik_speakOn_NL4FX"><span>speakOn NL4FX-2</span><em>Red</em></a></li>
+
+                <li data-variant-id="19524195057750"  class="chooseable connector_neutrik_speakOn_NL4FX_yellow speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_yellow"><a href="#connector_neutrik_speakOn_NL4FX_yellow"><span>speakOn NL4FX-4</span><em>Yellow</em></a></li>
+
+                <li data-variant-id="19524195090518"  class="chooseable connector_neutrik_speakOn_NL4FX_green speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_green"><a href="#connector_neutrik_speakOn_NL4FX_green"><span>speakOn NL4FX-5</span><em>Green</em></a></li> 
+
+                <li data-variant-id="19524195123286"  class="chooseable connector_neutrik_speakOn_NL4FX_white speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_white"><a href="#connector_neutrik_speakOn_NL4FX_white"><span>speakOn NL4FX-9</span><em>White</em></a></li>
+
+                <li data-variant-id="19524194926678"  class="chooseable connector_neutrik_speakOn_NL4FC speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FC"  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik" data-show="#select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#connector_neutrik_speakOn_NL4FC"><span>speakOn NL4FC</span><em>Connector</em></a></li>
+
+                <li data-variant-id="19524194959446"  class="chooseable connector_neutrik_speakOn_NL4FRX speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FRX"  data-show="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik" data-hide="#select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#connector_neutrik_speakOn_NL4FRX"><span>speakOn NL4FRX</span><em>Connector</em></a></li>
+
+                
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorA_connector_neutrik_pro">
+                
+                <li data-variant-id="19524195713110"  class="chooseable neutrik_female_NLT4FX_BAG speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="neutrik_female_NLT4FX_BAG" id=""><a href="#neutrik_xlr"><span>Female</span><em>NLT4FX-BAG</em></a></li>
+
+                <li data-variant-id="19524195778646"  class="chooseable neutrik_male_NLT4MX_BAG speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="neutrik_male_NLT4MX_BAG" id=""><a href="#neutrik_xlr"><span>Male</span><em>NLT4MX-BAG</em></a></li>
+
+                <li data-variant-id="19524195811414"  class="chooseable neutrik_female_NLT8FX_BAG non_nl4_connectors speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="neutrik_female_NLT8FX_BAG" id=""><a href="#neutrik_xlr"><span>Female</span><em>NLT8FX-BAG</em></a></li>
+
+                <li data-variant-id="19524195876950"  class="chooseable neutrik_male_NLT8MX_BAG non_nl4_connectors speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="neutrik_male_NLT8MX_BAG" id=""><a href="#neutrik_xlr"><span>Male</span><em>NLT8MX-BAG</em></a></li>
+
+                <li data-variant-id="19524195352662"  class="chooseable neutrik_NL8FC non_nl4_connectors speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="neutrik_NL8FC" id="" data-deselect="#select_connectorA_ringColor, #select_connectorA_bootColor"><a href="#neutrik_NL8FC"><span>speakOn</span><em>NL8FC</em></a></li>
+                
+              </ul>
+              <!-- END OF NEUTRIK CONNECTORS -->
+
+              <!-- LK CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorA_connector_lk">
+                <li data-variant-id="19524192567382"  class="chooseable lk_connector_lka08fv speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="lk_connector_lka08fv"><a href="#male_xlr"><span>Pro LKA 08 FV</span><em>Female Metal Locking Ring</em></a></li>
+                <li data-variant-id="19524192665686"  class="chooseable lk_connector_lka08mv speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="lk_connector_lka08mv"><a href="#male_xlr"><span>Pro LKA 08 MV</span><em>Male No Locking Ring</em></a></li>
+
+                <li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008fv klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="syntax_connector_008fv"><a href="#male_xlr"><span>Syntax 008FV</span><em>Female Rubber Locking Ring</em></a></li>
+                <li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008mv klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="syntax_connector_008mv"><a href="#male_xlr"><span>Syntax 008MV</span><em>Male Rubber Locking Ring</em></a></li>
+                <li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008mv_noring klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="syntax_connector_008mv_noring"><a href="#male_xlr"><span>Syntax 008MV</span><em>Male No Locking Ring</em></a></li>
+				<li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008fv_noring klotz_8core_2_5mm klotz_8core_4_0mm " data-chooseable="syntax_connector_008fv_noring"><a href="#male_xlr"><span>Syntax 008FV</span><em>Female No Locking Ring</em></a></li>
+                
+              </ul>
+
+              
+              <!-- END OF LK CONNECTORS -->
+
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_ringColor" data-key="connectorA_ring_color">
+            <h3>Ring Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorA_ringColor_neutrik">
+                <li data-variant-id="19524195909718"  class="chooseable" data-chooseable="neutrik_ringColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195942486"  class="chooseable" data-chooseable="neutrik_ringColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195975254"  class="chooseable" data-chooseable="neutrik_ringColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524196008022"  class="chooseable border" data-chooseable="neutrik_ringColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_bootColor" data-key="connectorA_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorA_bootColor_neutrik">
+                
+               <li data-variant-id="19524194664534"  class="chooseable" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524194697302"  class="chooseable" data-chooseable="neutrik_bootColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194730070"  class="chooseable" data-chooseable="neutrik_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194762838"  class="chooseable" data-chooseable="neutrik_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194795606"  class="chooseable" data-chooseable="neutrik_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194828374"  class="chooseable" data-chooseable="neutrik_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194861142"  class="chooseable" data-chooseable="neutrik_bootColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <!-- <li data-variant-id="19524167073878"  class="chooseable" data-chooseable="neutrik_bootColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li> -->
+                <li data-variant-id="19524194893910"  class="chooseable border" data-chooseable="neutrik_bootColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+          
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector A -->
+
+
+      <!-- OPTION: Connector B -->
+      <div class="group closed connector_group" id="connectorB">
+        <div class="group_header">
+          <h2>Connector <em>B</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_select" data-show="#select_connectorB_connector" data-hide="#select_connectorB_connector .input_select_ul, #select_connectorB_connector, #select_connectorB_ringColor, #select_connectorB_bootColor" data-deselect="#select_connectorB_connector" data-key="cable_brand" id="select_connectorB_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul">
+                <li data-url-value="amphenol" data-show="#select_connectorB_connector_amphenol" class="non_nl4_connectors"><a href="#amphenol"><span>Amphenol</span></a></li>
+                <li data-url-value="neutrik" data-show="#select_connectorB_connector_neutrik"><a href="#neutrik"><span>Neutrik</span></a></li>
+                <li data-url-value="neutrik_pro" data-show="#select_connectorB_connector_neutrik_pro"><a href="#neutrik_pro"><span>Neutrik Pro Touring</span></a></li>
+
+                <li data-url-value="lk" data-show="#select_connectorB_connector_lk" class="non_nl4_connectors"><a href="#lk"><span>CA-COM</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+        
+          
+          <div class="option option_select dependent" id="select_connectorB_connector" data-hide="#select_connectorB_ringColor, #select_connectorB_bootColor" data-key="connectorB">
+            <h3>Choose Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+              <!-- AMPHENOL CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorB_connector_amphenol">
+                <li data-variant-id="19524163502166" class="chooseable amphenol_connector_ax3fb speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm klotz_4core_4_0mm_sense" data-chooseable="connector_amphenol_ep511p"><a href="#female_xlr"><span>Female</span><em>EP-5-11P</em></a></li>
+                <li data-variant-id="19524163534934" class="chooseable amphenol_connector_ax3mb speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm klotz_4core_4_0mm_sense" data-chooseable="connector_amphenol_ep512"><a href="#male_xlr"><span>Male</span><em>EP-5-12</em></a></li>
+              </ul>
+              <!-- END AMPHENOL CONNECTORS -->
+
+
+
+              <!-- NEUTRIK CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorB_connector_neutrik">
+                <li data-variant-id="19524194992214"  class="chooseable connector_neutrik_speakOn_NL4FX_grey speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_grey"><a href="#connector_neutrik_speakOn_NL4FX"><span>speakON NL4 SPX</span><em>NL4FX</em></a></li>
+
+                <li data-variant-id="19524195024982"  class="chooseable connector_neutrik_speakOn_NL4FX_red speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_red"><a href="#connector_neutrik_speakOn_NL4FX"><span>speakON NL4 SPX</span><em>NL4FX-2</em></a></li>
+
+                <li data-variant-id="19524195057750"  class="chooseable connector_neutrik_speakOn_NL4FX_yellow speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_yellow"><a href="#connector_neutrik_speakOn_NL4FX_yellow"><span>speakON NL4 SPX</span><em>NL4FX-4</em></a></li>
+
+                <li data-variant-id="19524195090518"  class="chooseable connector_neutrik_speakOn_NL4FX_green speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_green"><a href="#connector_neutrik_speakOn_NL4FX_green"><span>speakON NL4 SPX</span><em>NL4FX-5</em></a></li> 
+
+                <li data-variant-id="19524195123286"  class="chooseable connector_neutrik_speakOn_NL4FX_white speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FX_white"><a href="#connector_neutrik_speakOn_NL4FX_white"><span>speakON NL4 SPX</span><em>NL4FX-9</em></a></li>
+
+                <li data-variant-id="19524194926678"  class="chooseable connector_neutrik_speakOn_NL4FC speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FC"  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik" data-show="#select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#connector_neutrik_speakOn_NL4FC"><span>speakON NL4 FC</span><em>NL4FC</em></a></li>
+
+                <li data-variant-id="19524194959446"  class="chooseable connector_neutrik_speakOn_NL4FRX speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="connector_neutrik_speakOn_NL4FRX"  data-show="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik" data-hide="#select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#connector_neutrik_speakOn_NL4FRX"><span>speakON NL4 SPX</span><em>NL4FRX</em></a></li>
+
+                
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorB_connector_neutrik_pro">
+                
+                <li data-variant-id="19524195713110"  class="chooseable neutrik_female_NLT4FX_BAG speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="neutrik_female_NLT4FX_BAG" id=""><a href="#neutrik_xlr"><span>speakON Female NL4 STX</span><em>NLT4FX-BAG</em></a></li>
+
+                <li data-variant-id="19524195778646"  class="chooseable neutrik_male_NLT4MX_BAG speaker_connector klotz_4core_2_5mm klotz_4core_4_0mm" data-chooseable="neutrik_male_NLT4MX_BAG" id=""><a href="#neutrik_xlr"><span>speakON Male NL4 STX</span><em>NLT4MX-BAG</em></a></li>
+
+                <li data-variant-id="19524195811414"  class="chooseable neutrik_female_NLT8FX_BAG non_nl4_connectors speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="neutrik_female_NLT8FX_BAG" id=""><a href="#neutrik_xlr"><span>speakON Female NL8 STX</span><em>NLT8FX-BAG</em></a></li>
+
+                <li data-variant-id="19524195876950"  class="chooseable neutrik_male_NLT8MX_BAG non_nl4_connectors speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="neutrik_male_NLT8MX_BAG" id=""><a href="#neutrik_xlr"><span>speakON Male NL8 STX</span><em>NLT8MX-BAG</em></a></li>
+
+                <li data-variant-id="19524195352662"  class="chooseable neutrik_NL8FC non_nl4_connectors speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="neutrik_NL8FC" id=""><a href="#neutrik_NL8FC"><span>speakON Female NL8</span><em>NL8FC</em></a></li>
+                
+              </ul>
+              <!-- END OF NEUTRIK CONNECTORS -->
+
+              <!-- LK CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorB_connector_lk">
+                <li data-variant-id="19524192567382"  class="chooseable lk_connector_lka08fv speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="lk_connector_lka08fv"><a href="#male_xlr"><span>Pro LKA 08 FV</span><em>Female</em></a></li>
+                <li data-variant-id="19524192665686"  class="chooseable lk_connector_lka08mv speaker_connector klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="lk_connector_lka08mv"><a href="#male_xlr"><span>Pro LKA 08 MV</span><em>Male</em></a></li>
+
+                <li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008fv klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="syntax_connector_008fv"><a href="#male_xlr"><span>Syntax 008FV</span><em>Female Rubber Locking Ring</em></a></li>
+                <li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008mv klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="syntax_connector_008mv"><a href="#male_xlr"><span>Syntax 008MV</span><em>Male Rubber Locking Ring</em></a></li>
+                <li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008mv_noring klotz_8core_2_5mm klotz_8core_4_0mm" data-chooseable="syntax_connector_008mv_noring"><a href="#male_xlr"><span>Syntax 008MV</span><em>Male No Locking Ring</em></a></li>
+                <li data-variant-id="19524192665686"  class="chooseable speaker_connector syntax_connector_008fv_noring klotz_8core_2_5mm klotz_8core_4_0mm " data-chooseable="syntax_connector_008fv_noring"><a href="#male_xlr"><span>Syntax 008FV</span><em>Female No Locking Ring</em></a></li>
+
+
+                
+              </ul>
+
+              
+              <!-- END OF LK CONNECTORS -->
+
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_ringColor" data-key="connectorB_ring_color">
+            <h3>Ring Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorB_ringColor_neutrik">
+                <li data-variant-id="19524195909718"  class="chooseable" data-chooseable="neutrik_ringColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195942486"  class="chooseable" data-chooseable="neutrik_ringColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524195975254"  class="chooseable" data-chooseable="neutrik_ringColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524196008022"  class="chooseable border" data-chooseable="neutrik_ringColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_bootColor" data-key="connectorB_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorB_bootColor_neutrik">
+                
+               <li data-variant-id="19524194664534"  class="chooseable" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+
+               <li data-variant-id="19524194697302"  class="chooseable" data-chooseable="neutrik_bootColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194730070"  class="chooseable" data-chooseable="neutrik_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194762838"  class="chooseable" data-chooseable="neutrik_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194795606"  class="chooseable" data-chooseable="neutrik_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194828374"  class="chooseable" data-chooseable="neutrik_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194861142"  class="chooseable" data-chooseable="neutrik_bootColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524194861142"  class="chooseable" data-chooseable="neutrik_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+
+                <!-- <li data-variant-id="19524167073878"  class="chooseable" data-chooseable="neutrik_bootColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li> -->
+                <li data-variant-id="19524194893910"  class="chooseable border" data-chooseable="neutrik_bootColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+          
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector B -->
+      
+
+	{% include "custom_logo_text" %}
+
+      
+
+      <!-- CART BUTTON & TOTAL -->
+      <div id="cart_buttons">
+        <h5>Total</h5>
+        <div id="total_price" class="price"><span class="currency_symbol">$</span><span class="price_text">0.00</span></div>
+        <button type="button" id="addToCart"><span class="text">Add To Cart</span></button>
+
+        <div class="button_spinner" id="addToCartSpinner" style="display:none;">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </div>
+
+        <div id="cart_status_message" style="display:none;">
+
+        </div>
+
+
+
+      </div>
+      <!-- END OF CART BUTTON & TOTAL -->
+
+
+
+    </div>
+    </div>
+  </div>

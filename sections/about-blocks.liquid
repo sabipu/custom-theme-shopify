@@ -1,0 +1,152 @@
+<div class="general__wrapper" id="b2b__subheader" style="background-image: url({{ section.settings.banner_image | img_url: 'master' }});">
+  <div class="page-width">
+    <div class="general__content general__content--b2b">
+      <div class="grid grid--flex">
+        <div class="grid__item medium-up--one-half">
+          <div class="general__text">
+            <h2>{{ section.settings.banner_heading }}</h2>
+            <p>{{ section.settings.banner_text }}</p>
+          </div>
+        </div>
+        <div class="grid__item medium-up--one-half">
+          <div class="image__holder">
+            <!-- <img src="{{ 'img01.jpg' | asset_url }}" alt="{{ shop.name }}"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% assign count = 1 %}
+{% for block in section.blocks %}
+<div class="general__wrapper" data-id="{{ count }}">
+  <div class="page-width">
+    <div class="general__content general__content--b2b">
+      <div class="grid grid--flex" id="b2b__benefits">
+        <div class="grid__item medium-up--one-fifth">
+          <h2>{{ block.settings.icon_heading }}</h2>
+        </div>
+        {% case count %}
+        {% when 1 %}
+        	<div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-manufacturing' %}</span>
+              <h3>High Quality Manufacturing</h3>
+            </div>
+            <div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-tools' %}</span>
+              <h3>Silver Solder for all Guitar and Touring Loudspeaker Cables</h3>
+            </div>
+            <div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-quality' %}</span>
+              <h3>All Cables Quality Checked and Tested</h3>
+            </div>
+        {% when 2 %}
+        	<div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-measuringtape' %}</span>
+              <h3>Any Cable Length Available</h3>
+            </div>
+            <div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-audioplug' %}</span>
+              <h3>Extensive Connector Customisation Options</h3>
+            </div>
+            <div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-design' %}</span>
+              <h3>Real time Online Cable Design and Customisation App</h3>
+            </div>
+        {% when 3 %}
+            <div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-inventory' %}</span>
+              <h3>Live inventory levels</h3>
+            </div>
+            <div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-price' %}</span>
+              <h3>Your negotiated prices, discounts & MOQ</h3>
+            </div>
+            <div class="grid__item medium-up--one-quarter benefit">
+              <span class="icon__holder">{% include 'icon-international' %}</span>
+              <h3>Private label manufacturing and International shipping</h3>
+            </div>
+        {% endcase %}
+      </div>
+      <div class="grid grid--flex" id="b2b__logins">
+        <div class="grid__item medium-up--one-half">
+          <div class="general__text">
+            <h2>{{ block.settings.main_heading }}</h2>
+            <p>{{ block.settings.block_paragraph }}</p>
+          </div>
+        </div>
+        <div class="grid__item medium-up--one-half">
+          <div class="image__holder" id="b2b__alreadyaccount" style="background-image: url({{ block.settings.block_image | img_url: 'master' }});">
+            <h2>&nbsp;</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% assign count = count | plus: 1 %}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "New Page",
+    "max_blocks": 5,
+	"settings": [
+		{
+          "type": "image_picker",
+          "id": "banner_image",
+          "label": "Banner image"
+        },
+		{
+          "type": "text",
+          "id": "banner_heading",
+          "label": "Banner heading"
+		},
+		{
+          "type": "richtext",
+          "id": "banner_text",
+          "label": "Banner Text"
+		}
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Block image"
+          },
+		  {
+            "type": "text",
+            "id": "icon_heading",
+            "label": "Icon Block Heading"
+          },
+          {
+            "type": "text",
+            "id": "main_heading",
+            "label": "Main Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "block_paragraph",
+            "label": "Block Paragraph"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Inner Text Blocks",
+        "category": "Text Description Block"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,87 @@
+<section class="promo">
+  <div class="page-width">
+    <div class="promo__holder">
+      <div class="promo__wrapper">
+        {% if section.settings.main_heading != blank %}
+          <h2>{{ section.settings.main_heading }}</h2>
+        {% endif %}
+        {% if section.settings.promo_paragraph != blank %}
+          {{ section.settings.promo_paragraph }}
+        {% endif %}
+        {% if section.settings.button_text != blank %}
+          <div class="button__holder">
+            <a href="{{ section.settings.button_link }}" class="button button--white">{{ section.settings.button_text }}</a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="promo__images">
+        <div class="promo__image promo__image-parta">
+          <div class="promo__image-main promo__image-parta1">
+            <img src="{{ 'configpart1.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <div class="promo__image-main promo__image-parta2">
+            <img src="{{ 'configpart2.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <div class="promo__image-main promo__image-parta3">
+            <img src="{{ 'configpart3.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <div class="promo__image-main promo__image-parta4">
+            <img src="{{ 'configpart4.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+        </div>
+        <div class="promo__image promo__image-partb">
+          <div class="promo__image-main promo__image-partb1">
+            <img src="{{ 'config2part1.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <div class="promo__image-main promo__image-partb2">
+            <img src="{{ 'config2part2.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <div class="promo__image-main promo__image-partb3">
+            <img src="{{ 'config2part3.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+          <div class="promo__image-main promo__image-partb4">
+            <img src="{{ 'config2part4.svg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+ {
+  "name": "Configure Text Block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Design your own custom cable"
+    },
+    {
+      "type": "richtext",
+      "id": "promo_paragraph",
+      "label": "Description Paragraph",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Customise now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Configure Text Block",
+      "category": "Text Description Block"
+    }
+  ]
+ }
+{% endschema %}

@@ -1,0 +1,82 @@
+<section class="info__wrapper usps__textblock" id="usps-block">
+  <div class="page-width">
+    <div class="grid grid--flex general--animation">
+      <div class="grid__item medium-up--one-quarter">
+        <div class="info">
+          <div class="info__ico">
+            <img class="lazyload" data-src="{{ 'icon-fast-delivery.svg' | asset_url }}" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" alt="{{ shop.name }}">
+          </div>
+          <p>{{ section.settings.richtext__usp_block1 }}</p>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-quarter">
+        <div class="info">
+          <div class="info__ico">
+            <img class="lazyload" data-src="{{ 'icon-free-shipping.svg' | asset_url }}" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" alt="{{ shop.name }}">
+          </div>
+          <p>{{ section.settings.richtext__usp_block2 }}</p>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-quarter">
+        <div class="info">
+          <div class="info__ico">
+            <img class="lazyload" data-src="{{ 'quality-control.svg' | asset_url }}" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" alt="{{ shop.name }}">
+          </div>
+          <p>{{ section.settings.richtext__usp_block3 }}</p>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-quarter">
+        <div class="info">
+          <div class="info__ico">
+            <img class="lazyload" data-src="{{ 'icon-shield.svg' | asset_url }}" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" alt="{{ shop.name }}">
+          </div>
+          <p>{{ section.settings.richtext__usp_block4 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+ {
+  "name": "USPs Text Block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Your Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext__usp_block1",
+      "label": "Column Text Block 1",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext__usp_block2",
+      "label": "Column Text Block 2",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext__usp_block3",
+      "label": "Column Text Block 3",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext__usp_block4",
+      "label": "Column Text Block 4",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "USPs Text Block",
+      "category": "Text Description Block"
+    }
+  ]
+ }
+{% endschema %}

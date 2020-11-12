@@ -1,0 +1,145 @@
+<section class="content__wrapper content__four_tile_block">
+  <div class="page-width">
+    <header class="mainhead">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title | escape }}</h2>
+      {% endif %}
+    </header>
+    <div class="products general--animation">
+   {% assign count = 1 %}
+  {% for block in section.blocks %}
+  
+    <div class="slide" data-id="{{ count }}">
+          <div class="product">
+            <div class="product__image">
+              <a href="{{ block.settings.button_url }}">
+                {% if block.settings.block_image != blank %}
+                  {{ block.settings.block_image.src | img_url: 'master' | img_tag: block.settings.block_heading }}
+                {% else %}
+                  <img src="{{ 'cable01.png' | asset_url }}" alt="{{ shop.name }}">
+                {% endif %}
+              </a>
+            </div>
+            <div class="product__text">
+              <h2><a href="{{ block.settings.button_url }}">{{ block.settings.block_heading }}</a></h2>
+              <!-- <span class="product__option">6 colors</span> -->
+              {% if block.settings.block_paragraph != blank %}<span class="product__price"> {{ block.settings.block_paragraph }} </span>{% endif %}
+              <div class="product__meta">
+                <a href="{{ block.settings.button_url }}" class="button">{{ block.settings.button_text }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  {% assign count = count | plus: 1 %}
+  {% endfor %}
+      </div>
+  </div>
+</section>
+
+
+
+{% comment %}{%- assign collection = collections[section.settings.collection] -%}
+
+{% for product in collection.products limit: 6 %}
+  <a href="{{ product.url }}">
+
+    {% if product.featured_image != blank %}
+      {{ product.featured_image.src | img_url: '480x480' | img_tag: product.title }}
+    {% endif %}
+
+    <p>{{ product.title }}</p>
+  </a>
+
+  <p>
+    {% if product.compare_at_price > product.price %}
+
+      {% if product.price_varies %}
+        {%- assign sale_price = product.price | money -%}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+      {% else %}
+        {{ 'products.product.on_sale' | t }}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% else %}
+
+      {% if product.price_varies %}
+        {%- assign price = product.price | money -%}
+        {{ 'products.product.from_text_html' | t: price: price }}
+      {% else %}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% endif %}
+  </p>
+{% else %}
+
+  {% for i in (1..6) %}
+    <a href="#">
+      {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+      {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+
+      <p>
+        {{ 'homepage.onboarding.product_title' | t }}
+      </p>
+    </a>
+
+    <p>{{ 1999 | money }}</p>
+  {% endfor %}
+{% endfor %}{% endcomment %}
+
+{% schema %}
+  {
+    "name": "Four Tile Block",
+	"max_blocks": 4,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Lorem Ipsum"
+      }
+    ],
+	"blocks": [
+      {
+        "type": "block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Block image"
+          },
+		  {
+            "type": "text",
+            "id": "block_heading",
+            "label": "Block Heading"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          },
+{
+            "type": "text",
+            "id": "button_url",
+            "label": "Button URL"
+          },
+          {
+            "type": "text",
+            "id": "block_paragraph",
+            "label": "Block Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Four Tile Block",
+        "category": "Text Description Block"
+      }
+    ]
+  }
+
+{% endschema %}

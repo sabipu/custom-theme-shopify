@@ -1,0 +1,89 @@
+<section class="logo__holder">
+  <div class="page-width">
+    <ul class="logos logo__slider">
+      <li>
+          <img class="lazyload" data-src="{{ 'logo-canare.png' | asset_img_url: '144x' }}" alt="{{ shop.name }}" width="124">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo01.jpg' | asset_img_url: '124x' }}" alt="{{ shop.name }}" width="124">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo-belden.png' | asset_img_url: '144x' }}" alt="{{ shop.name }}" width="124">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo04.jpg' | asset_img_url: '114x' }}" alt="{{ shop.name }}" width="114">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo-syntax.jpg' | asset_img_url: '138x' }}" alt="{{ shop.name }}" width="138">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo05.jpg' | asset_img_url: '138x' }}" alt="{{ shop.name }}" width="138">
+      </li>
+      
+      <li>
+          <img class="lazyload" data-src="{{ 'logo02.jpg' | asset_img_url: '63x' }}" alt="{{ shop.name }}" width="63">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo07.jpg' | asset_img_url: '138x' }}" alt="{{ shop.name }}" width="138">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo-neutrik.png' | asset_url }}" alt="{{ shop.name }}" width="138">
+      </li>
+      
+      <li>
+          <img class="lazyload" data-src="{{ 'logo06.jpg' | asset_url }}" alt="{{ shop.name }}" width="115">
+      </li>
+ 
+      <li>
+          <img class="lazyload" data-src="{{ 'eaw_logo.jpg' | asset_img_url: '115x' }}" alt="{{ shop.name }}" width="115">
+      </li>
+        
+      <li>
+          <img class="lazyload" data-src="{{ 'powersoft_logo.jpg' | asset_img_url: '115x' }}" alt="{{ shop.name }}" width="115">
+      </li>
+      
+      <li>
+          <img class="lazyload" data-src="{{ 'techflex-logo2.jpg' | asset_img_url: '115x' }}" alt="{{ shop.name }}" width="115">
+      </li>
+      
+      <li>
+          <img class="lazyload" data-src="{{ 'cablesmiths_logo_black.jpg' | asset_img_url: '115x' }}" alt="{{ shop.name }}" width="115">
+      </li>
+      <li>
+          <img class="lazyload" data-src="{{ 'logo03.jpg' | asset_img_url: '115x' }}" alt="{{ shop.name }}" width="115">
+      </li>
+      
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Logos Block",
+    "max_blocks": 25,
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo image"
+          },
+          {
+            "type": "url",
+            "id": "logo_link",
+            "label": "Logo Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logos Block",
+        "category": "Logo Collection"
+      }
+    ]
+  }
+{% endschema %}

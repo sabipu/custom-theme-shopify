@@ -1,0 +1,997 @@
+$color-black: #202122;
+$color-grey: #DBD7DB;
+$color-grey-light: #eee;
+$color-blue: #4783ff;
+
+$color-green: #4ab362;
+$color-red: #c4132a;
+
+$font-bold:  "Proxima Nova Extra Bold";
+$font-normal:  "Proxima Nova";
+
+
+
+
+@mixin size($w, $h) {
+  height: $h;
+  width: $w;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-normal, "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  color: #222;
+}
+
+h1, h2, h3, h4
+{
+  font-weight: 800;
+}
+
+textarea, select, input, button { outline: none; }
+
+h1 em, h2 em
+{
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+h2 em
+{
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+em.amp
+{
+  font-style: normal;
+  font-family: $font-normal;
+  margin: 0 5px;
+}
+input[type=text] {
+  border: none;
+}
+
+button[type=button] {
+  display: inline-block;
+  background: $color-black;
+  border-radius: 30px;
+  line-height: 36px;
+  color: white;
+  text-transform: uppercase;
+  padding: 0 20px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+
+  &:hover
+  {
+    background-color: $color-blue;
+  }
+}
+
+.hidden
+{
+  display: none;
+}
+
+
+
+#main {
+  margin: 0 auto 40px auto;
+  width: 1180px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.option.dependent
+{
+  display: none;
+  &.selected
+  {
+    display: block;
+  }
+}
+.option.dependent .input_select_ul
+{
+  display: none !important;
+  &.selected {
+    display: flex !important;
+  }
+  &.visible {
+    display: flex !important;
+  }
+}
+#configurator {
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+#configurator .col {
+}
+
+#configurator .col30 {
+  width: 600px;
+  position: relative;
+  top: 0;
+  max-width: 600px;
+}
+
+#configurator .col70 {
+  width: calc(100% - 600px);
+  padding-left: 60px;
+}
+
+@media screen and (max-width: 1200px) {
+  #configurator .col70 {
+    width: calc(100% - 600px);
+  }
+}
+
+#configurator h1 {
+    margin: 0;
+    font-size: 26px;
+    margin-bottom: 15px;
+
+    em {
+      font-weight: normal;
+    }
+}
+
+
+
+#cable_specs {
+  background: #e6cf58;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+#cable_specs a {
+  color: #222;
+}
+
+.input_select_ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input_select_ul li {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 10px 20px;
+  margin: 0 10px 9px 0;
+  font-size: 12px;
+  border: 3px solid #dddbdd;
+  transition-property: "background, border, border-color";
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+  text-align: center;
+  line-height: 13px;
+  position: relative;
+
+  &.selected
+  {
+    background-color: $color-black;
+    border-color: $color-black;
+    
+
+
+
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-black;
+    border-color: $color-black;
+  }
+  &.selected:after {
+
+      display: block;
+      content: '';
+      width: 14px;
+      height: 14px;
+      background-color: $color-black;
+      transform: rotate(45deg) translateX(-50%);
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      z-index: 1;
+  }
+
+  a {
+    text-decoration: none;
+    color: #222;
+    font-weight: normal;
+    font-weight: 800;
+  }
+
+
+}
+
+.input_colours_patterns li.selected a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000000d1;
+    border-radius: 100%;
+}
+
+
+.input_select_subtitles li a em {
+    display: block;
+    color: #b9b9b9;
+    font-style: normal;
+    font-weight: normal;
+    font-family: $font-normal;
+    font-size: 10px;
+}
+
+.input_select_ul li:hover a, .input_select_ul li.selected a {
+  color: white;
+}
+
+.input_colours .input_select_ul li {
+    border-radius: 36px;
+    padding: 0;
+    min-height: 36px;
+    min-width: 36px;
+    margin-right: 3px;
+    margin-bottom: 6px;
+    border: none;
+    transform: scale(0.7);
+    transition: transform 0.2s;
+  box-shadow: #00000030 0px 4px 14px;
+
+
+}
+
+.input_colours li[data-colour=cancel], .input_colours li[data-image=cancel] {
+
+  background-image: url(https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/circle_cancel.png);
+  background-size: 100% 100%;
+  border: 3px solid #ccc;
+  
+  span {
+      display: none;
+  }
+
+  &:hover, &.selected
+  {
+    background-color: transparent;
+  }
+}
+
+.input_colours .input_select_ul li:hover, .input_colours .input_select_ul li.selected {
+  transform: scale(1.1);
+
+}
+
+
+.input_colours .input_select_ul li.selected:after {
+  display: none;
+}
+
+.input.input_select.input_colours {
+    left: -5px;
+    position: relative;
+}
+
+.input_colours .input_select_ul li i
+{
+  transition: opacity 0.5s;
+  opacity: 0;
+  font-size: 13px;
+    display: block;
+    height: 30px;
+    line-height: 37px;
+    color: white;
+
+}
+
+.input_colours .input_select_ul li.selected i
+{
+  opacity: 1;
+}
+
+.input_colours .input_select_ul li.border.selected i {
+    opacity: 1;
+    color: #4c4c4c;
+}
+
+.input_box button {
+    position: relative;
+    top: -2px;
+}
+
+
+
+.input_box input {
+    position: relative;
+    top: -1px;
+}
+
+.price {
+  color: $color-blue;
+  display: none;
+}
+#total_price
+{
+  display: block;
+}
+
+.input_select_products li {
+    width: 128px;
+    height: 140px;
+    position: relative;
+    a {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      font-size: 1em;
+      letter-spacing: 0px;
+      z-index: 2;
+    }
+}
+
+
+h2 {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  font-weight: normal;
+  color: #8d8d8d;
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: $font-normal;
+
+}
+
+.group {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 3px solid $color-grey;
+}
+
+.group:first-of-type {
+  border-top: none;
+}
+
+.group_header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.group_inner
+{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s;
+}
+
+.group.open .group_inner
+{
+  overflow: visible;
+  max-height: 2000px;
+  padding: 15px 0 5px;
+}
+
+.option {
+  margin: 22px 0;
+  clear: both;
+}
+
+.group_header {
+  .arrow {
+    top: -3px;
+      right: 0;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0 20px;
+      border-color: #1D1E1F transparent transparent transparent;
+      transform: scale(0.35) rotate(180deg);
+
+    &:after {
+      content: '';
+      top: -26px;
+      right: -18px;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 18px 18px 0 18px;
+      border-color: white transparent transparent transparent;
+    }
+  }
+
+  .group.open & {
+    .arrow {
+      transform: scale(0.35);
+    }
+  }
+}
+
+.group_price {
+  em {
+    color: $color-grey;
+  }
+}
+
+
+.input_box
+{
+  border: 3px solid #dddbdd;
+  display: inline-block;
+  padding: 3px;
+}
+.input_box button {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-family: "Proxima Nova Extra Bold";
+    width: 50px;
+    z-index: 1;
+}
+
+.input.input_text input[type=text] {
+    width: 300px;
+    padding: 10px;
+    font-size: 13px;
+    background: transparent;
+}
+
+
+.input_text_dial input
+{
+  text-align: center;
+  font-weight: 800;
+  font-size: 13px;
+  width: 100px !important;
+}
+button.minus, button.plus, .input_text_dial input {
+  outline: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  color: $color-black;
+}
+button.minus i, button.plus i {
+  font-size: 10px;
+
+}
+
+button.minus:hover, button.plus:hover
+{
+  background-color: transparent;
+}
+
+.input_box button:hover
+{
+  color: $color-blue;
+  cursor: pointer;
+}
+
+#uploaded_image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.user_custom_image #uploaded_image
+{
+    background-color: $color-grey-light;
+}
+
+.uploaded_image {
+    width: 100px;
+    height: 100px;
+    background: $color-grey-light;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url(https://s3-ap-southeast-1.amazonaws.com/cdn-dilate-digital/cablesmiths/images/your_logo.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+
+    .remove
+    {
+      display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    }
+
+    &.user_custom_image:hover .remove
+    {
+      display: block;
+    }
+
+    .remove span
+    {
+      display: none;
+    }
+    .remove i
+    {
+      color: white;
+      font-size: 30px;
+    }
+
+    .remove:hover i
+    {
+      color: white;
+    }
+
+}
+
+.upload_status {
+    font-size: 11px;
+    margin: 12px;
+
+    span {
+      margin-right: 12px;
+  }
+
+  .upload_status_title
+  {
+    font-weight: 800;
+  }
+
+  .upload_status_title.success
+  {
+    color: $color-green;
+  }
+
+  .upload_status_title.error
+  {
+    color: $color-red;
+  }
+
+
+}
+
+#group_custom_logo .group_inner .option:first-child {
+    margin-top: 15px;
+}
+
+button.upload {
+    line-height: 30px;
+    padding: 0 18px;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+
+#cart_buttons {
+    padding-top: 15px;
+    border-top: 3px solid #DBD7DB;
+  text-align: right;
+  padding-bottom: 30px;
+
+  button
+  {
+    margin-top: 30px;
+  }
+
+  h5
+  {
+      margin: 10px 0 0;
+  }
+  
+}
+
+#total_price {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// IMAGE
+
+#image {
+  background-color: #eee;
+  height: 600px;
+  border-radius: 5px;
+  position: relative;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+#cable_side_a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    bottom: 0;
+    background: red;
+    background-color: transparent;
+    opacity: 1;
+    transition: opacity 0.2s linear; 
+}
+
+#cable_side_b {
+    position: absolute;
+    top: 0;
+    right: -12%;
+    width: 70%;
+    bottom: 0;
+    background: blue;
+    background-color: transparent;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+#image 
+{
+  .cable_block
+  {
+    position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 27%;
+    background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 130% auto;
+  }
+
+  .connector
+  {
+    position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      height: 75%;
+    background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% 100% ;
+  }
+}
+
+div#cable_side_a_cable {
+    
+    background-color: transparent;
+}
+
+div#cable_side_b_cable {
+
+  background-color: transparent;
+}
+
+#image #cable_side_a_connector
+{
+  background-color: transparent;
+}
+
+
+#image #cable_side_b_connector
+{
+  background-color: transparent;
+}
+
+
+.input_select_images .input_select_ul li {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 76px 76px;
+    background-position-y: 10px;
+}
+
+
+
+.upload_form 
+{
+  & .upload_status
+  {
+    
+  }
+}
+
+
+
+
+.spinner {
+  margin: 0 auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+.button_spinner {
+    background: #202122;
+    border-radius: 30px;
+    height: 36px;
+    padding-top: 9px;
+    width: 161px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+
+.channel_connector
+{
+  display: none;
+  &.selected
+  {
+    display: block;
+  }
+}
+
+.invisible
+{
+  display: none;
+  &.selected
+  {
+    display: block;
+  }
+}
+
+
+.input_select_ul.circles li {
+    border-radius: 30px;
+    width: 40px;
+    line-height: 35px;
+    height: 40px;
+    padding: 0;
+    margin: 0 8px 10px 0;
+    font-weight: bold;
+    &.selected
+    {
+      color: white;
+    }
+    &:hover
+    {
+      color: white;
+    }
+}
+
+.input_select_ul.circles li.selected:after
+{
+  display: none !important;
+}
+
+#cable_side_toggle {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#cable_side_toggle strong {
+    display: block;
+    width: 45%;
+    text-align: right;
+    padding-right: 17px;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+#cable_side_toggle a {
+    display: inline-block;
+    width: 34px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #aaa;
+    text-align: center;
+}
+
+#cable_side_toggle a.selected {
+  color: #222;
+}
+
+
+@media screen and (max-width: 992px)
+{
+  #main {
+    width: auto;
+  }
+
+  #MainContent {
+      padding: calc(76px + 0px) 0 40px;
+  }
+
+  #configurator {
+    display: block;
+  }
+
+  #configurator .col30
+  {
+    width: auto;
+    z-index: 999;
+  }
+
+  #image {
+    background-color: #eee;
+    height: 320px;
+    border-radius: 5px;
+    position: relative; 
+  }
+ 
+
+  #configurator .col70 {
+    width: auto;
+    padding-left: 22px;
+    padding: 22px;
+  }
+
+  #configurator h1 {
+      margin: 0;
+      font-size: 20px;
+      margin-bottom: 15px;
+      text-align: left;
+  }
+}
+
+
+
+.preloading_images
+{
+   background-image: url({{ 'spinner.gif' | asset_url }});
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+}
+
+.preloading_images #cable_side_a,
+.preloading_images #cable_side_b
+{
+  opacity: 0 !important;
+/*   display: none !important; */
+}
+
+
+div#cable_side_b_sleeve {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    height: 27%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 44% auto;
+}
+
+div#cable_side_a_sleeve {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    height: 27%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 44% auto;
+}
+
+.input_select_ul_hidden
+{
+   display: none; 
+}
+
+.input_select_ul_hidden.selected
+{
+   display: flex; 
+}
+
+@media only screen and (max-width: 1240px) {
+  #main {
+    width: auto;
+    max-width: 1180px;
+  }
+  #image {
+    height: 450px;
+  }
+  
+  #configurator .col30 {
+    width: 450px;
+  }
+  
+  #configurator .col70 {
+    width: calc(100% - 450px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #main {
+    padding: 0;
+  }
+
+  #configurator .col30 {
+    width: auto;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  
+  #configurator .col70 {
+    width: auto;
+  }
+  
+  #image {
+    height: 320px;
+  }
+}

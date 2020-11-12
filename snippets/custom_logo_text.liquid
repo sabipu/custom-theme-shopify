@@ -1,0 +1,129 @@
+
+      <!-- OPTION: Custom Logo & Text -->
+      <div class="group closed" id="group_custom_logo">
+        <div class="group_header">
+          <h2>Custom Logo <em class="amp">&amp;</em> Text</h2>
+          <span class="group_price price"><em>(optional)</em></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_upload">
+            <div class="uploaded_image">
+              
+              <div id="uploaded_image"><img src="" /></div>
+
+              <a href="#remove_logo" class="remove" id="remove-image"><i class="fas fa-times-circle"></i><span>Remove</span></a>
+
+            </div>
+            <div class="upload_form">
+              <h3>Upload a Custom Logo</h3>
+              <div class="input input_file">
+                <form enctype="multipart/form-data" id="custom_logo_file_upload_form" action="#form_upload" method="post">
+                  <input type="hidden" name="submit" value="1" />
+                  <button type="button" class="upload"  id="custom_logo_file_upload_button"><span class="upload_icon"></span> <span class="btn_text">Upload</span></button>
+                  <label  id="custom_logo_file_upload_input_label" style="display: none;">
+                    <input type="file" id="custom_logo_file_upload_input" name="custom_logo_file_upload" />
+                  </label>
+
+<!--                  <button type="submit" id="custom_logo_file_upload_button_submit">Submit</button>
+ -->
+                </form>
+              </div>
+              <div class="upload_status hidden">
+                <span class="upload_status_title success" id="upload_status_title">Uploaded</span>
+                <span class="upload_status_filename" id="upload_status_filename">sample_logo.png</span>
+                <span class="upload_status_filesize" id="upload_status_filesize">345 kb</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="option option_text">
+            <h3>Custom Text</h3>
+            <div class="input input_text">
+              <div class="input_box">
+                <input type="text" value="" placeholder="Type your custom text..." id="input_box_custom_text" maxlength="40" />
+              </div>
+            </div>
+          </div>
+          
+           <div class="option option_select">
+            <h3>Text Direction</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" id="custom_text_logo_direction_select">
+                <li data-url-value="horizontal" data-value="horizontal"><a href="#horizontal"><span>Horizontal</span></a></li>
+                <li data-url-value="vertical" data-value="vertical" class="selected"><a href="#vertical"><span>Vertical</span></a></li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <div class="option option_select">
+            <h3>Imprint Ink Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="custom_text_logo_color_select">
+				<li data-value="cancel" data-chooseable="cancel" data-image="cancel" class="chooseable-alt"><a href="#none"><span>None</span></a></li>
+                <li data-variant-id="27751582302294"  data-colour="#000000" data-value="black" class="chooseable-alt"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751582203990"  data-colour="#906b4d" data-value="brown" class="chooseable-alt"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751582400598"  data-colour="#c4132a" data-value="red" class="chooseable-alt"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751582138454"  data-colour="#fa7b00" data-value="orange" class="chooseable-alt"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751579222102"  data-colour="#f4cb13" data-value="yellow" class="chooseable-alt"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751579287638"  data-colour="#3d9451" data-value="green" class="chooseable-alt"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751579254870"  data-colour="#2c919f" data-value="turqoise" class="chooseable-alt"><a href="#colour_turquoise"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751579320406"  data-colour="#45a6fb" data-value="cyan" class="chooseable-alt"><a href="#colour_cyan"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751582105686"  data-colour="#00109b" data-value="darkblue" class="chooseable-alt"><a href="#colour_dkblue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751582072918"  data-colour="#777777" data-value="grey" class="chooseable-alt"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751582367830"  data-colour="#ffffff" data-value="white" data-border="#c7c5c0"  class="border chooseable-alt"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                
+                
+                
+
+                
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select">
+            <h3>Flat Heatshrink Colour</h3>
+            <div class="input input_select input_colours">
+
+
+
+              <ul class="input_select_ul input_heatshrink" id="custom_text_logo_heatshrink_select">
+                <li data-colour="#cccccc" data-value="cancel" data-chooseable="cancel" data-image="cancel" class="chooseable-alt"><a href="#none"><span>None</span></a></li>
+
+                <li data-variant-id="27751465451606" data-colour="#000000" data-value="black" class="chooseable-alt"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751469482070" data-colour="#906b4d" data-value="brown" class="chooseable-alt"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751465418838" data-colour="#c4132a" data-value="red" class="chooseable-alt"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751469514838" data-colour="#fa7b00" data-value="orange" class="chooseable-alt"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751465484374" data-colour="#f4cb13" data-value="yellow" class="chooseable-alt"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                
+                <li data-variant-id="27751465386070" data-colour="#3d9451" data-value="green" class="chooseable-alt"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751465353302" data-colour="#4886cf" data-value="blue" class="chooseable-alt"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                
+                <li data-variant-id="27751465517142" data-colour="#ffffff" data-value="white" data-border="#c7c5c0"  class="border chooseable-alt"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27751465451606" data-colour="#777777" data-value="grey" class="chooseable-alt"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                
+                
+                
+                
+              </ul>
+
+
+
+
+
+            </div>
+          </div>
+
+          
+
+          <input type="hidden" name="custom_logo_text_product" value="19524183588950" id="custom_logo_text_product" />
+
+
+        </div>
+        
+       
+        
+        
+      </div>
+      <!-- END OF OPTION: Custom Logo & Text -->

@@ -1,0 +1,113 @@
+<div class="general__wrapper">
+  <div class="page-width">
+    <div class="general__content">
+      <div class="grid grid--flex">
+        <div class="grid__item ">
+          <div class="iframeholder">
+          	<iframe width="560" height="315" src="https://www.youtube.com/embed/tRXcylOfkn8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <!-- 
+        <div class="grid__item medium-up--one-half">
+          <div class="image__holder">
+            <img src="{{ 'img01.jpg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+        </div>
+        <div class="grid__item medium-up--one-half">
+          <div class="general__text">
+            <h2>Example Title2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+		-->
+        
+      </div>
+      <!-- 
+      <div class="grid grid--flex">
+        <div class="grid__item medium-up--one-half">
+          <div class="image__holder">
+            <img src="{{ 'img02.jpg' | asset_url }}" alt="{{ shop.name }}">
+          </div>
+        </div>
+        <div class="grid__item medium-up--one-half">
+          <div class="general__text">
+            <h2>Example Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+		</div>
+	-->
+
+    </div>
+  </div>
+</div>
+
+{% comment %}<div class="general__wrapper">
+  <div class="page-width">
+    <div class="general__content">
+      {% for block in section.blocks %}
+        <div class="grid grid--flex">
+          <div class="grid__item medium-up--one-half">
+            <div class="image__holder">
+              {% if block.settings.block_image != blank %}
+                <img src="{{ block.settings.block_image | img_url: '1000x' }}" alt="{{ shop.name }}">
+              {% else %}
+                <img src="{{ 'img01.jpg' | asset_url }}" alt="{{ shop.name }}">
+              {% endif %}
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-half">
+            <div class="general__text">
+              {% if block.settings.main_heading != blank %}
+                <h2>{{ block.settings.main_heading }}</h2>
+              {% endif %}
+              {{ block.settings.block_paragraph }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% if section.blocks.size == 0 %}
+        asdad
+      {% endif %}
+    </div>
+  </div>
+</div>{% endcomment %}
+
+{% schema %}
+  {
+    "name": "Inner Text Blocks",
+    "max_blocks": 12,
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Block image"
+          },
+          {
+            "type": "text",
+            "id": "main_heading",
+            "label": "Main Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "block_paragraph",
+            "label": "Block Paragraph"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Inner Text Blocks",
+        "category": "Text Description Block"
+      }
+    ]
+  }
+{% endschema %}

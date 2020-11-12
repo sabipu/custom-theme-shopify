@@ -1,0 +1,604 @@
+<!-- Custom Config : Microphone Cable -->
+  <div id="main">
+    <div id="configurator">
+
+    <!-- OPTION: Cable -->
+    <div id="image_column" class="col col30">
+      <div id="image">
+        <div id="cable_side_a">
+
+          <div class="cable_block" id="cable_side_a_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_a_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_a_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_a_connector">
+          </div>
+
+          
+          
+
+        </div>
+        <div id="cable_side_b">
+          
+          <div class="cable_block" id="cable_side_b_cable">
+          </div>
+
+          
+
+          <div class="braided_sleeve" id="cable_side_b_braided_sleeve">
+          </div>
+
+          <div class="custom_sleeve" id="cable_side_b_sleeve">
+          </div>
+
+          <div class="connector" id="cable_side_b_connector">
+          </div>
+
+
+
+        </div>
+      </div>
+      
+      {% include "configurator_tech_specs" %}
+      
+      
+    </div>
+
+    <div id="options" class="col col70">
+
+      <h1>Build your <em>Microphone Cable</em></h1>
+
+      <!-- OPTION: Cable -->
+      <div class="group open" id="cable">
+        <div class="group_header">
+          <h2>Cable</h2>
+          <span class="group_price price">$1.80</span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_select independent" id="select_cable_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" data-hide="#select_cable_types .input_select_ul, #select_cable_color, #select_cable_length" data-show="#select_cable_types" data-deselect="#select_cable_types, #select_cable_color, #select_cable_length">
+                <li data-url-value="beldon" data-show="#cable_types_beldon"><a href="#beldon"><span>Belden</span></a></li>
+                <li data-url-value="canare" data-show="#cable_types_canare"><a href="#canare"><span>Canare</span></a></li>
+                <li data-url-value="gotham" data-show="#cable_types_gotham"><a href="#gotham"><span>Gotham</span></a></li>
+                <li data-url-value="sommer" data-show="#cable_types_sommer"><a href="#sommer"><span>Sommer</span></a></li>
+                <li data-url-value="vandamme" data-show="#cable_types_vandamme"><a href="#vandamme"><span>Van Damme</span></a></li>
+                <li data-url-value="mogami" data-show="#cable_types_mogami"><a href="#mogami"><span>Mogami</span></a></li>
+                <li data-url-value="klotz" data-show="#cable_types_klotz"><a href="#klotz"><span>Klotz</span></a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="option option_select dependent" id="select_cable_types" data-key="cable_type">
+            <h3>Cable Type</h3>
+            <div class="input input_select input_select_subtitles"  data-hide="#select_cable_color"  data-show="#select_cable_length"  data-deselect="#select_cable_color">
+              <ul class="input_select_ul" id="cable_types_beldon">
+                <li data-variant-id="27721571631190"  data-url-value="aes_ebu"  class="chooseable" data-multiply-by-length="true" data-chooseable="beldon_1800F"><a href="#beldon_1800F"><span>AES/EBU</span><em>1800F</em></a></li>
+                 <li data-variant-id="19749355683926" data-url-value="heavy_duty_8412"  class="chooseable" data-multiply-by-length="true" data-chooseable="beldon_8412"><a href="#beldon_8412"><span>Heavy Duty</span><em>8412</em></a></li>
+               </ul>
+
+
+
+
+              <ul class="input_select_ul" id="cable_types_canare" data-deselect="#select_cable_color">
+                <li data-url-value="canare_6mm" data-show="#select_cable_color, #select_cable_colours_canare_6MM" data-hide="#select_cable_length"><a href="#canare_6MM"><span>Star Quad 6MM</span><em>L4E6S</em></a></li>
+                <li data-url-value="canare_5mm" data-variant-id="19797714468950"  class="chooseable" data-multiply-by-length="true" data-chooseable="canare_5mm_l-4e5at"><a href="#canare_5mm"><span>Star Quad 5MM</span><em>L4E5AT</em></a></li>
+                <li data-url-value="canare_narrow" data-show="#select_cable_color, #select_cable_colours_canare_narrow_profile" data-hide="#select_cable_length"><a href="#canare_narrowprofile"><span>Star Quad Narrow Profile</span><em>L4E5C</em></a></li>
+              </ul>
+
+
+
+
+              <ul class="input_select_ul" id="cable_types_gotham">
+                <li data-url-value="gac_41" data-variant-id="27861103607894" class="chooseable need_tradegecko" data-multiply-by-length="true" data-chooseable="gotham_GAC4"><a href="#gotham_GAC4"><span>GAC4/1</span><em>Star Quad</em></a></li>
+                <li data-url-value="gac_31" data-variant-id="19823121825878" class="chooseable" data-multiply-by-length="true" data-chooseable="gotham_GAC3"><a href="#gotham_GAC3"><span>GAC3/1</span><em>Star Quad Neumann Wire</em></a></li>
+<!--                 <li data-variant-id="xxx" id="input_cable_types_gotham_GAC7_tube_mic" class="chooseable" data-chooseable="gotham_GAC7"><a href="#gotham_GAC7"><span>GAC7</span><em>Tube Mic</em></a></li>
+ -->              </ul>
+
+              <ul class="input_select_ul" id="cable_types_sommer">
+                <li data-url-value="sommer_2000311" data-variant-id="27746786050134" class="chooseable" data-multiply-by-length="true" data-chooseable="sommer_2000311"><a href="#sommer_2000311"><span>Narrow Profile</span><em>200-0311</em></a></li>
+                <li data-url-value="sommer_2000451" data-variant-id="27746942713942" class="chooseable" data-multiply-by-length="true" data-chooseable="sommer_2000451"><a href="#sommer_2000451"><span>Super Narrow Profile</span><em>200-0451</em></a></li>
+<!--                 <li data-url-value="sommer_2000001" data-variant-id="27746912763990" class="chooseable" data-multiply-by-length="true" data-chooseable="sommer_2000001"><a href="#sommer_2000001"><span>Highflex</span><em>200-0001</em></a></li> -->
+              </ul>
+
+              <ul class="input_select_ul" id="cable_types_vandamme">
+                <li data-url-value="vandamme_xke" data-variant-id="27747138011222" class="chooseable" data-multiply-by-length="true" data-chooseable="vandamme_xke"><a href="#vandamme_xke"><span>Classic XKE</span><em>Tour Grade</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="cable_types_mogami">
+                <li data-url-value="mogami_w2549" data-show="#select_cable_color, #select_cable_colours_mogami_w2549" data-hide="#select_cable_length" data-chooseable="mogami_w2549"><a href="#mogami_w2549"><span>W2549</span><em>NEGLEX 2 Core</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="cable_types_klotz">
+                <li data-url-value="klotz_KTZ_MY206" data-variant-id="27721305686102" class="chooseable" data-multiply-by-length="true" data-chooseable="klotz_KTZ_MY206"><a href="#klotz_KTZ_MY206"><span>KTZ-MY206</span><em>Professional</em></a></li>
+                <li data-url-value="klotz_KTZ_OT1000" data-variant-id="27721263448150" class="chooseable" data-multiply-by-length="true" data-chooseable="klotz_KTZ_OT1000"><a href="#klotz_KTZ_OT1000"><span>KTZ-OT1000</span><em>AES/EBU</em></a></li>
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="option option_select dependent" id="select_cable_color"  data-key="cable_colour">
+            <h3>Cable Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul input_select_ul_hidden selected" data-show="#select_cable_length" id="select_cable_colours_canare_6MM">
+                <li data-variant-id="19822636433494" data-colour="#000000" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_black"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19822684536918" data-colour="#906b4d" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_brown"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19823036661846" data-colour="#c4132a" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_red"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19823052554326" data-colour="#fa7b00" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_orange"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19823044231254" data-colour="#f4cb13" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_yellow"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19822705115222" data-colour="#3d9451" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_green"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19822657830998" data-colour="#4886cf" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_blue"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19823055405142" data-colour="#9452b7" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_purple"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19823006974038" data-colour="#c7c5c0" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_grey"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19823033286742" data-colour="#ffffff" data-border="#c7c5c0"  class="border chooseable" data-multiply-by-length="true" data-chooseable="canare_6mm_white"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+
+              </ul>
+
+
+              <ul class="input_select_ul input_select_ul_hidden selected" data-show="#select_cable_length" id="select_cable_colours_canare_narrow_profile">
+                <li data-variant-id="19823072510038" data-colour="#000000" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_narrow_profile_black"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19823075065942" data-colour="#c7c5c0" class="chooseable" data-multiply-by-length="true" data-chooseable="canare_narrow_profile_grey"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+              </ul>
+
+              <ul class="input_select_ul input_select_ul_hidden selected" data-show="#select_cable_length" id="select_cable_colours_mogami_w2549">
+                <li data-variant-id="27746628042838" data-colour="#000000" class="chooseable" data-multiply-by-length="true" data-chooseable="mogami_w2549_black"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27746682634326" data-colour="#c4132a" class="chooseable" data-multiply-by-length="true" data-chooseable="mogami_w2549_red"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27746700329046" data-colour="#f4cb13" class="chooseable" data-multiply-by-length="true" data-chooseable="mogami_w2549_yellow"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="27746660286550" data-colour="#3d9451" class="chooseable" data-multiply-by-length="true" data-chooseable="mogami_w2549_green"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="33290979147862" data-colour="#4886cf" class="chooseable" data-multiply-by-length="true" data-chooseable="mogami_w2549_blue"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class="option option_text dependent" id="select_cable_length"  data-key="cable_length">
+            <h3>Cable Length</h3>
+            <div class="input input_text input_text_dial">
+              <div class="input_box">
+                <button type="button" class="minus"><span><i class="fas fa-minus"></i></span></button>
+                <input type="text" value="3 m" data-number="3" />
+                <button type="button" class="plus"><span><i class="fas fa-plus"></i></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Cable -->
+
+
+     
+      <!-- OPTION: Connector A -->
+      <div class="group closed connector_group" id="connectorA">
+        <div class="group_header">
+          <h2>Connector <em>A</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_select" data-show="#select_connectorA_connection" data-hide="#select_connectorA_connection .input_select_ul, #select_connectorA_connector, #select_connectorA_ringColor, #select_connectorA_bootColor" data-deselect="#select_connectorA_connection" data-key="cable_brand" id="select_connectorA_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul">
+                <li data-url-value="amphenol" data-show="#select_connectorA_connection_amphenol"><a href="#amphenol"><span>Amphenol</span></a></li>
+                <li data-url-value="neutrik" data-show="#select_connectorA_connection_neutrik"><a href="#neutrik"><span>Neutrik</span></a></li>
+                <li data-url-value="switchcraft" data-show="#select_connectorA_connection_switchcraft"><a href="#switchcraft"><span>Switchcraft</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_connection" data-show="#select_connectorA_connector" data-hide="#select_connectorA_ringColor, #select_connectorA_bootColor" data-deselect="#select_connectorA_connector">
+            <h3>Choose Connection</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" id="select_connectorA_connection_amphenol">
+                <li data-url-value="amphenol_xlr" id="connectorA_amphenol_xlr" class="connectors_xlr" data-show-sibling="#select_connectorA_connector_amphenol_XLR"><a href="#XLR"><span>XLR</span></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorA_connection_neutrik">
+                <li data-url-value="neutrik_14" id="connectorA_neutrik_14" class="connectors_14" data-show-sibling="#select_connectorA_connector_neutrik_14" data-postcallback="postCallback_neutrik_14_connectorA_hideB(this);"><a href="#1-4"><span>1/4"</span></a></li>
+                <li data-url-value="neutrik_xlr" id="connectorA_neutrik_XLR" class="connectors_xlr" data-show-sibling="#select_connectorA_connector_neutrik_XLR" data-postcallback="postCallback_neutrik_XLR(); postCallback_neutrik_XLR_connectorA_hideB(this);"><a href="#XLR"><span>XLR</span></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorA_connection_switchcraft">
+                <li data-url-value="switchcraft_14" id="connectorA_switchcraft_14" class="connectors_14" data-show-sibling="#select_connectorA_connector_switchcraft_14" data-postcallback="postCallback_switchcraft_14_connectorA_hideB(this);"><a href="#1-4"><span>1/4"</span></a></li>
+                <li data-url-value="switchcraft_xlr" id="connectorA_switchcraft_XLR" class="connectors_xlr" data-show-sibling="#select_connectorA_connector_switchcraft_XLR" data-postcallback="postCallback_switchcraft_XLR_connectorA_hideB(this);"><a href="#XLR"><span>XLR</span></a></li>
+                <li data-url-value="switchcraft_35mm" id="connectorA_switchcraft_35mm" class="connectors_35mm" data-show-sibling="#select_connectorA_connector_switchcraft_35mm" data-postcallback="postCallback_switchcraft_35mm_connectorA_hideB(this);"><a href="#35mm"><span>3.5mm</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_connector" data-hide="#select_connectorA_ringColor, #select_connectorA_bootColor" data-key="connectorA">
+            <h3>Choose Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+              <!-- AMPHENOL CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorA_connector_amphenol_XLR">
+                <li data-variant-id="19524091609174" class="chooseable amphenol_connector_ax3fb amphenol_connector_mic_ax3fb" data-chooseable="connector_amphenol_ax3fb"><a href="#female_xlr"><span>Female XLR</span><em>AX3FB</em></a></li>
+                <li data-variant-id="19524091641942" class="chooseable amphenol_connector_ax3mb amphenol_connector_mic_ax3mb" data-chooseable="connector_amphenol_ax3mb"><a href="#male_xlr"><span>Male XLR</span><em>AX3MB</em></a></li>
+              </ul>
+              <!-- END AMPHENOL CONNECTORS -->
+
+
+
+              <!-- NEUTRIK CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorA_connector_neutrik_14" data-show="#select_connectorA_bootColor, #select_connectorA_bootColor_neutrik" data-postcallback="neutrik_connectorA_postcallback();">
+                <li data-variant-id="19524193976406"  class="chooseable neutrik_connector_np3x_b" data-chooseable="connector_neutrik_np3x_b"><a href="#neutrik_14"><span>Stereo</span><em>NP3X-B</em></a></li>
+                <li data-variant-id="19524194041942"  class="chooseable neutrik_connector_np3x" data-chooseable="connector_neutrik_np3x"><a href="#neutrik_14"><span>Stereo</span><em>NP3X</em></a></li>
+                <li data-variant-id="19524193845334"  class="chooseable neutrik_connector_np3rx_b" data-chooseable="connector_neutrik_np3rx_b"><a href="#neutrik_14"><span>Right Angle</span><em>NP3RX-B</em></a></li>
+                <li data-variant-id="19524193910870"  class="chooseable neutrik_connector_np3rx" data-chooseable="connector_neutrik_np3rx"><a href="#neutrik_14"><span>Right Angle</span><em>NP3RX</em></a></li>
+                <li data-variant-id="19524189225046"  class="chooseable neutrik_connector_nj3fc6_b" data-chooseable="connector_neutrik_nj3fc6_b" data-hide="#select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_14"><span>1/4" Cable Jack</span><em>NJ3FC6-BAG</em></a></li>
+                <li data-variant-id="19524192272470"  class="chooseable neutrik_connector_nj3fc6" data-chooseable="connector_neutrik_nj3fc6" data-hide="#select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_14"><span>1/4" Cable Jack</span><em>NJ3FC6</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorA_connector_neutrik_XLR" data-show="#select_connectorA_ringColor, #select_connectorA_bootColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor_neutrik" data-update-choices="postCallback_neutrik_XLR();" data-postcallback="neutrik_connectorA_postcallback();">
+                
+                <li data-variant-id="19524172087382"  class="chooseable neutrik_connector_nc3mxx-b" data-chooseable="neutrik_male_black_xlr" id=""><a href="#neutrik_xlr"><span>Male</span><em>NC3MXX-B</em></a></li>
+                <li data-variant-id="19524169531478"  class="chooseable neutrik_connector_nc3fxx-b" data-chooseable="neutrik_female_black_xlr" id=""><a href="#neutrik_xlr"><span>Female</span><em>NC3FXX-B</em></a></li>
+
+                <li data-variant-id="19524172054614"  class="chooseable neutrik_connector_nc3mxx" data-chooseable="neutrik_male_nickel_xlr" id=""><a href="#neutrik_xlr"><span>Male</span><em>NC3MXX</em></a></li>
+                <li data-variant-id="19524169236566"  class="chooseable neutrik_connector_nc3fxx" data-chooseable="neutrik_female_nickel_xlr" id=""><a href="#neutrik_xlr"><span>Female</span><em>NC3FXX</em></a></li>
+
+                <li data-variant-id="19524166516822"  class="chooseable neutrik_connector_nc3mrx-b" data-chooseable="neutrik_male_black_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Male</span><em>NC3MRX-B</em></a></li>
+                <li data-variant-id="19524196073558"  class="chooseable neutrik_connector_nc3frx-b" data-chooseable="neutrik_female_black_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Female</span><em>NC3FRX-B</em></a></li>
+
+                <li data-variant-id="19524196106326"  class="chooseable neutrik_connector_nc3mrx" data-chooseable="neutrik_male_nickel_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Male</span><em>NC3MRX</em></a></li>
+                <li data-variant-id="19524196040790"  class="chooseable neutrik_connector_nc3frx" data-chooseable="neutrik_female_nickel_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Female</span><em>NC3FRX</em></a></li>
+
+                <li data-variant-id="19524194238550"  class="chooseable neutrik_connector_nc3mxx-emc" data-chooseable="neutrik_male_black_emi" id=""><a href="#neutrik_xlr"><span>Male EMI</span><em>NC3MXX-EMC</em></a></li>
+                <li data-variant-id="19524194205782"  class="chooseable neutrik_connector_nc3fxx-emc" data-chooseable="neutrik_female_black_emi" id=""><a href="#neutrik_xlr"><span>Female EMI</span><em>NC3FXX-EMC</em></a></li>
+
+                <li data-variant-id="19524194173014"  class="chooseable neutrik_connector_nc3fmc-c" data-chooseable="neutrik_unisex_black"  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik"><a href="#neutrik_xlr"><span>Unisex</span><em>NC3FM-C</em></a></li>
+
+
+
+
+                <li data-variant-id="19768932171862"  class="chooseable neutrik_connector_nc3mx-top" data-chooseable="neutrik_top_male_xlr" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_top_male_xlr" ><span>Top Male</span><em>NC3MX-TOP</em></a></li>
+                <li data-variant-id="19768926863446"  class="chooseable neutrik_connector_nc3fx-top" data-chooseable="neutrik_top_female_xlr" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_top_female_xlr"><span>Top Female</span><em>NC3FX-TOP</em></a></li>
+                <li data-variant-id="19769180356694"  class="chooseable neutrik_connector_nc3fxx-wt" data-chooseable="neutrik_connector_nc3fxx-wt" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_connector_nc3fxx-wt"><span>Female</span><em>NC3FXX-WT</em></a></li>
+                <li data-variant-id="19769212174422"  class="chooseable neutrik_connector_nc3mxx-wt" data-chooseable="neutrik_connector_nc3mxx-wt" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_connector_nc3mxx-wt"><span>Male</span><em>NC3MXX-WT</em></a></li>
+                <li data-variant-id="19769250938966"  class="chooseable neutrik_connector_nc3fx-hd" data-chooseable="neutrik_connector_nc3fx-hd" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_connector_nc3fx-hd"><span>Female</span><em>NC3FX-HD</em></a></li>
+                <li data-variant-id="19769264210006"  class="chooseable neutrik_connector_nc3mx-hd" data-chooseable="neutrik_connector_nc3mx-hd" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_connector_nc3mx-hd"><span>Male</span><em>NC3MX-HD</em></a></li>
+                <li data-variant-id="19769304973398"  class="chooseable neutrik_connector_nc3fx-hd-b" data-chooseable="neutrik_connector_nc3fx-hd-b" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_connector_nc3fx-hd-b"><span>Female</span><em>NC3FX-HD-B</em></a></li>
+                <li data-variant-id="19769322569814"  class="chooseable neutrik_connector_nc3mx-hd-b" data-chooseable="neutrik_connector_nc3mx-hd-b" id=""  data-hide="#select_connectorA_ringColor, #select_connectorA_ringColor_neutrik, #select_connectorA_bootColor, #select_connectorA_bootColor_neutrik"><a href="#neutrik_connector_nc3mx-hd-b"><span>Male</span><em>NC3MX-HD-B</em></a></li>
+
+
+              </ul>
+              <!-- END OF NEUTRIK CONNECTORS -->
+
+              <!-- SWITCHCRAFT CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorA_connector_switchcraft_14">
+                <li data-variant-id="19524178247766"  class="chooseable switchcraft_connector_297" data-chooseable="switchcraft_connector_297"><a href="#male_xlr"><span>1/4" Stereo</span><em>297</em></a></li>
+                <li data-variant-id="19524176805974"  class="chooseable switchcraft_connector_190" data-chooseable="switchcraft_connector_190"><a href="#female_xlr"><span>1/4" Stereo (Heavy Duty)</span><em>190</em></a></li>
+                <li data-variant-id="19524177985622"  class="chooseable switchcraft_connector_236" data-chooseable="switchcraft_connector_236"><a href="#unisex_xlr"><span>1/4" Stereo (Right Angle)</span><em>236</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorA_connector_switchcraft_XLR">
+                <li data-variant-id="19524164583510"  class="chooseable switchcraft_connector_aaafz" data-chooseable="switchcraft_connector_aaafz"><a href="#male_xlr"><span>Female XLR</span><em>AAA3FZ</em></a></li>
+                <li data-variant-id="19524164649046"  class="chooseable switchcraft_connector_aaa3mz" data-chooseable="switchcraft_connector_aaa3mz"><a href="#female_xlr"><span>Male XLR</span><em>AAA3MZ</em></a></li>
+                <li data-variant-id="19524164386902"  class="chooseable switchcraft_connector_aaa3fbauz" data-chooseable="switchcraft_connector_aaa3fbauz"><a href="#unisex_xlr"><span>Female XLR</span><em>AAA3FBAUZ</em></a></li>
+                <li data-variant-id="19524164616278"  class="chooseable switchcraft_connector_aaa3mbauz" data-chooseable="switchcraft_connector_aaa3mbauz"><a href="#unisex_xlr"><span>Male XLR</span><em>AAA3MBAUZ</em></a></li>
+                <li data-variant-id="19524164321366"  class="chooseable switchcraft_connector_r3fz" data-chooseable="switchcraft_connector_r3fz"><a href="#unisex_xlr"><span>Female XLR</span><em>R3FZ</em></a></li>
+                <li data-variant-id="19524164354134"  class="chooseable switchcraft_connector_r3mz" data-chooseable="switchcraft_connector_r3mz"><a href="#unisex_xlr"><span>Male XLR</span><em>R3MZ</em></a></li>
+
+                
+
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorA_connector_switchcraft_35mm">
+                <li data-variant-id="19524178444374"  class="chooseable switchcraft_connector_35HDBAU" data-chooseable="switchcraft_connector_35HDBAU"><a href="#switchcraft_connector_35HDBAU"><span>3.5MM GOLD</span><em>35HDBAU</em></a></li>
+                <li data-variant-id="19524163862614"  class="chooseable switchcraft_connector_35HDBN" data-chooseable="switchcraft_connector_35HDBN"><a href="#switchcraft_connector_35HDBN"><span>3.5MM TIN</span><em>35HDBN</em></a></li>
+                <li data-variant-id="19524163993686"  class="chooseable switchcraft_connector_35HDNAU" data-chooseable="switchcraft_connector_35HDNAU"><a href="#switchcraft_connector_35HDNAU"><span>3.5MM GOLD</span><em>35HDNAU</em></a></li>
+                <li data-variant-id="19524164124758"  class="chooseable switchcraft_connector_35HDNN" data-chooseable="switchcraft_connector_35HDNN"><a href="#switchcraft_connector_35HDNN"><span>3.5MM TIN</span><em>35HDNN</em></a></li>
+
+                <li data-variant-id="19524164124758"  class="chooseable switchcraft_connector_35HDRABAU" data-chooseable="switchcraft_connector_35HDRABAU"><a href="#switchcraft_connector_35HDRABAU"><span>3.5MM GOLD</span><em>35HDRABAU</em></a></li>
+                <li data-variant-id="19524164124758"  class="chooseable switchcraft_connector_35HDRANAU" data-chooseable="switchcraft_connector_35HDRANAU"><a href="#switchcraft_connector_35HDRANAU"><span>3.5MM TIN</span><em>35HDRANAU</em></a></li>
+                <li data-variant-id="19524164124758"  class="chooseable switchcraft_connector_35HDRANN" data-chooseable="switchcraft_connector_35HDRANN"><a href="#switchcraft_connector_35HDRANN"><span>3.5MM TIN</span><em>35HDRANN</em></a></li>
+<!--                 <li data-variant-id="29623330930774 "  class="chooseable switchcraft_connector_35LJNAU" data-chooseable="switchcraft_connector_35LJNAU"><a href="#switchcraft_connector_35LJNAU"><span>3.5MM EXTENSION</span><em>35LJNAU</em></a></li>
+ -->
+
+              </ul>
+              <!-- END OF SWITCHCRAFT CONNECTORS -->
+
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_ringColor" data-key="connectorA_ring_color">
+            <h3>Ring Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorA_ringColor_neutrik">
+                <li data-variant-id="19524170580054a"  class="chooseable" data-chooseable="neutrik_ringColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                 <li data-variant-id="19524170580054"  class="chooseable" data-chooseable="neutrik_ringColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170612822"  class="chooseable" data-chooseable="neutrik_ringColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170645590"  class="chooseable" data-chooseable="neutrik_ringColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170678358"  class="chooseable" data-chooseable="neutrik_ringColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170711126"  class="chooseable" data-chooseable="neutrik_ringColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171333718"  class="chooseable" data-chooseable="neutrik_ringColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171366486"  class="chooseable" data-chooseable="neutrik_ringColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171399254"  class="chooseable" data-chooseable="neutrik_ringColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171432022"  class="chooseable border" data-chooseable="neutrik_ringColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171464790"  class="chooseable" data-chooseable="neutrik_ringColor_clear" data-colour="cancel"><a href="#no_sleeve"><span>Clear</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorA_bootColor" data-key="connectorA_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorA_bootColor_neutrik">
+                <li data-variant-id="19524166713430b"  class="chooseable" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+               <li data-variant-id="19524166713430"  class="chooseable" data-chooseable="neutrik_bootColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166746198"  class="chooseable" data-chooseable="neutrik_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166778966"  class="chooseable" data-chooseable="neutrik_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166811734"  class="chooseable" data-chooseable="neutrik_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166844502"  class="chooseable" data-chooseable="neutrik_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166877270"  class="chooseable" data-chooseable="neutrik_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166910038"  class="chooseable" data-chooseable="neutrik_bootColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524167073878"  class="chooseable" data-chooseable="neutrik_bootColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166942806"  class="chooseable border" data-chooseable="neutrik_bootColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+          
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector A -->
+
+
+      
+     <!-- OPTION: Connector B -->
+      <div class="group closed connector_group" id="connectorB">
+        <div class="group_header">
+          <h2>Connector <em>B</em></h2>
+          <span class="group_price price"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="group_inner">
+          <div class="option option_select" data-show="#select_connectorB_connection" data-hide="#select_connectorB_connection .input_select_ul, #select_connectorB_connector, #select_connectorB_ringColor, #select_connectorB_bootColor" data-deselect="#select_connectorB_connection" data-key="cable_brand" id="select_connectorB_brand">
+            <h3>Choose Brand</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul">
+                <li data-url-value="amphenol" data-show="#select_connectorB_connection_amphenol"><a href="#amphenol"><span>Amphenol</span></a></li>
+                <li data-url-value="neutrik" data-show="#select_connectorB_connection_neutrik"><a href="#neutrik"><span>Neutrik</span></a></li>
+                <li data-url-value="switchcraft" data-show="#select_connectorB_connection_switchcraft"><a href="#switchcraft"><span>Switchcraft</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_connection" data-show="#select_connectorB_connector" data-hide="#select_connectorB_ringColor, #select_connectorB_bootColor" data-deselect="#select_connectorB_connector">
+            <h3>Choose Connection</h3>
+            <div class="input input_select">
+              <ul class="input_select_ul" id="select_connectorB_connection_amphenol">
+                <li data-url-value="amphenol_xlr" id="connectorB_amphenol_xlr" class="connectors_xlr" data-show-sibling="#select_connectorB_connector_amphenol_XLR"><a href="#XLR"><span>XLR</span></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorB_connection_neutrik">
+                <li data-url-value="neutrik_14" id="connectorB_neutrik_14" class="connectors_14" data-show-sibling="#select_connectorB_connector_neutrik_14" data-postcallback="postCallback_neutrik_14_connectorB_hideA(this);"><a href="#1-4"><span>1/4"</span></a></li>
+                <li data-url-value="neutrik_xlr" id="connectorB_neutrik_XLR" class="connectors_xlr" data-show-sibling="#select_connectorB_connector_neutrik_XLR" data-postcallback="postCallback_neutrik_XLR(); postCallback_neutrik_XLR_connectorB_hideA(this);"><a href="#XLR"><span>XLR</span></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorB_connection_switchcraft">
+                <li data-url-value="switchcraft_14" id="connectorB_switchcraft_14" class="connectors_14" data-show-sibling="#select_connectorB_connector_switchcraft_14" data-postcallback="postCallback_switchcraft_14_connectorB_hideA(this);"><a href="#1-4"><span>1/4"</span></a></li>
+                <li data-url-value="switchcraft_xlr" id="connectorB_switchcraft_XLR" class="connectors_xlr" data-show-sibling="#select_connectorB_connector_switchcraft_XLR" data-postcallback="postCallback_switchcraft_XLR_connectorB_hideA(this);"><a href="#XLR"><span>XLR</span></a></li>
+                <li data-url-value="switchcraft_35mm" id="connectorB_switchcraft_35mm" class="connectors_35mm" data-show-sibling="#select_connectorB_connector_switchcraft_35mm" data-postcallback="postCallback_switchcraft_35mm_connectorB_hideA(this);"><a href="#35mm"><span>3.5mm</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_connector" data-hide="#select_connectorB_ringColor, #select_connectorB_bootColor" data-key="connectorB">
+            <h3>Choose Connector</h3>
+            <div class="input input_select input_select_subtitles input_select_images input_select_products">
+
+              <!-- AMPHENOL CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorB_connector_amphenol_XLR">
+                <li data-variant-id="19524091609174" class="chooseable amphenol_connector_ax3fb amphenol_connector_mic_ax3fb" data-chooseable="connector_amphenol_ax3fb"><a href="#female_xlr"><span>Female XLR</span><em>AX3FB</em></a></li>
+                <li data-variant-id="19524091641942" class="chooseable amphenol_connector_ax3mb amphenol_connector_mic_ax3mb" data-chooseable="connector_amphenol_ax3mb"><a href="#male_xlr"><span>Male XLR</span><em>AX3MB</em></a></li>
+              </ul>
+              <!-- END AMPHENOL CONNECTORS -->
+
+
+
+              <!-- NEUTRIK CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorB_connector_neutrik_14" data-show="#select_connectorB_bootColor, #select_connectorB_bootColor_neutrik" data-postcallback="neutrik_connectorB_postcallback();">
+                <li data-variant-id="19524193976406"  class="chooseable neutrik_connector_np3x_b" data-chooseable="connector_neutrik_np3x_b"><a href="#neutrik_14"><span>Stereo</span><em>NP3X-B</em></a></li>
+                <li data-variant-id="19524194041942"  class="chooseable neutrik_connector_np3x" data-chooseable="connector_neutrik_np3x"><a href="#neutrik_14"><span>Stereo</span><em>NP3X</em></a></li>
+                <li data-variant-id="19524193845334"  class="chooseable neutrik_connector_np3rx_b" data-chooseable="connector_neutrik_np3rx_b"><a href="#neutrik_14"><span>Right Angle</span><em>NP3RX-B</em></a></li>
+                <li data-variant-id="19524193910870"  class="chooseable neutrik_connector_np3rx" data-chooseable="connector_neutrik_np3rx"><a href="#neutrik_14"><span>Right Angle</span><em>NP3RX</em></a></li>
+                <li data-variant-id="19524189225046"  class="chooseable neutrik_connector_nj3fc6_b" data-chooseable="connector_neutrik_nj3fc6_b" data-hide="#select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_14"><span>1/4" Cable Jack</span><em>NJ3FC6-BAG</em></a></li>
+                <li data-variant-id="19524192272470"  class="chooseable neutrik_connector_nj3fc6" data-chooseable="connector_neutrik_nj3fc6" data-hide="#select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_14"><span>1/4" Cable Jack</span><em>NJ3FC6</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorB_connector_neutrik_XLR" data-show="#select_connectorB_ringColor, #select_connectorB_bootColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor_neutrik" data-update-choices="postCallback_neutrik_XLR();" data-postcallback="neutrik_connectorB_postcallback();">
+                
+                <li data-variant-id="19524172087382"  class="chooseable neutrik_connector_nc3mxx-b" data-chooseable="neutrik_male_black_xlr" id=""><a href="#neutrik_xlr"><span>Male</span><em>NC3MXX-B</em></a></li>
+                <li data-variant-id="19524169531478"  class="chooseable neutrik_connector_nc3fxx-b" data-chooseable="neutrik_female_black_xlr" id=""><a href="#neutrik_xlr"><span>Female</span><em>NC3FXX-B</em></a></li>
+
+                <li data-variant-id="19524172054614"  class="chooseable neutrik_connector_nc3mxx" data-chooseable="neutrik_male_nickel_xlr" id=""><a href="#neutrik_xlr"><span>Male</span><em>NC3MXX</em></a></li>
+                <li data-variant-id="19524169236566"  class="chooseable neutrik_connector_nc3fxx" data-chooseable="neutrik_female_nickel_xlr" id=""><a href="#neutrik_xlr"><span>Female</span><em>NC3FXX</em></a></li>
+
+                <li data-variant-id="19524166516822"  class="chooseable neutrik_connector_nc3mrx-b" data-chooseable="neutrik_male_black_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Male</span><em>NC3MRX-B</em></a></li>
+                <li data-variant-id="19524196073558"  class="chooseable neutrik_connector_nc3frx-b" data-chooseable="neutrik_female_black_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Female</span><em>NC3FRX-B</em></a></li>
+
+                <li data-variant-id="19524196106326"  class="chooseable neutrik_connector_nc3mrx" data-chooseable="neutrik_male_nickel_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Male</span><em>NC3MRX</em></a></li>
+                <li data-variant-id="19524196040790"  class="chooseable neutrik_connector_nc3frx" data-chooseable="neutrik_female_nickel_rt_xlr" id=""><a href="#neutrik_xlr"><span>Right Angle Female</span><em>NC3FRX</em></a></li>
+
+                <li data-variant-id="19524194238550"  class="chooseable neutrik_connector_nc3mxx-emc" data-chooseable="neutrik_male_black_emi" id=""><a href="#neutrik_xlr"><span>Male EMI</span><em>NC3MXX-EMC</em></a></li>
+                <li data-variant-id="19524194205782"  class="chooseable neutrik_connector_nc3fxx-emc" data-chooseable="neutrik_female_black_emi" id=""><a href="#neutrik_xlr"><span>Female EMI</span><em>NC3FXX-EMC</em></a></li>
+
+                <li data-variant-id="19524194173014"  class="chooseable neutrik_connector_nc3fmc-c" data-chooseable="neutrik_unisex_black"  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik"><a href="#neutrik_xlr"><span>Unisex</span><em>NC3FM-C</em></a></li>
+
+
+
+
+                <li data-variant-id="19768932171862"  class="chooseable neutrik_connector_nc3mx-top" data-chooseable="neutrik_top_male_xlr" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_top_male_xlr" ><span>Top Male</span><em>NC3MX-TOP</em></a></li>
+                <li data-variant-id="19768926863446"  class="chooseable neutrik_connector_nc3fx-top" data-chooseable="neutrik_top_female_xlr" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_top_female_xlr"><span>Top Female</span><em>NC3FX-TOP</em></a></li>
+                <li data-variant-id="19769180356694"  class="chooseable neutrik_connector_nc3fxx-wt" data-chooseable="neutrik_connector_nc3fxx-wt" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_connector_nc3fxx-wt"><span>Female</span><em>NC3FXX-WT</em></a></li>
+                <li data-variant-id="19769212174422"  class="chooseable neutrik_connector_nc3mxx-wt" data-chooseable="neutrik_connector_nc3mxx-wt" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_connector_nc3mxx-wt"><span>Male</span><em>NC3MXX-WT</em></a></li>
+                <li data-variant-id="19769250938966"  class="chooseable neutrik_connector_nc3fx-hd" data-chooseable="neutrik_connector_nc3fx-hd" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_connector_nc3fx-hd"><span>Female</span><em>NC3FX-HD</em></a></li>
+                <li data-variant-id="19769264210006"  class="chooseable neutrik_connector_nc3mx-hd" data-chooseable="neutrik_connector_nc3mx-hd" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_connector_nc3mx-hd"><span>Male</span><em>NC3MX-HD</em></a></li>
+                <li data-variant-id="19769304973398"  class="chooseable neutrik_connector_nc3fx-hd-b" data-chooseable="neutrik_connector_nc3fx-hd-b" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_connector_nc3fx-hd-b"><span>Female</span><em>NC3FX-HD-B</em></a></li>
+                <li data-variant-id="19769322569814"  class="chooseable neutrik_connector_nc3mx-hd-b" data-chooseable="neutrik_connector_nc3mx-hd-b" id=""  data-hide="#select_connectorB_ringColor, #select_connectorB_ringColor_neutrik, #select_connectorB_bootColor, #select_connectorB_bootColor_neutrik"><a href="#neutrik_connector_nc3mx-hd-b"><span>Male</span><em>NC3MX-HD-B</em></a></li>
+
+
+              </ul>
+              <!-- END OF NEUTRIK CONNECTORS -->
+
+              <!-- SWITCHCRAFT CONNECTORS -->
+              <ul class="input_select_ul" id="select_connectorB_connector_switchcraft_14">
+                <li data-variant-id="19524178247766"  class="chooseable switchcraft_connector_297" data-chooseable="switchcraft_connector_297"><a href="#male_xlr"><span>1/4" Stereo</span><em>297</em></a></li>
+                <li data-variant-id="19524176805974"  class="chooseable switchcraft_connector_190" data-chooseable="switchcraft_connector_190"><a href="#female_xlr"><span>1/4" Stereo (Heavy Duty)</span><em>190</em></a></li>
+                <li data-variant-id="19524177985622"  class="chooseable switchcraft_connector_236" data-chooseable="switchcraft_connector_236"><a href="#unisex_xlr"><span>1/4" Stereo (Right Angle)</span><em>236</em></a></li>
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorB_connector_switchcraft_XLR">
+                <li data-variant-id="19524164583510"  class="chooseable switchcraft_connector_aaafz" data-chooseable="switchcraft_connector_aaafz"><a href="#male_xlr"><span>Female XLR</span><em>AAA3FZ</em></a></li>
+                <li data-variant-id="19524164649046"  class="chooseable switchcraft_connector_aaa3mz" data-chooseable="switchcraft_connector_aaa3mz"><a href="#female_xlr"><span>Male XLR</span><em>AAA3MZ</em></a></li>
+                <li data-variant-id="19524164386902"  class="chooseable switchcraft_connector_aaa3fbauz" data-chooseable="switchcraft_connector_aaa3fbauz"><a href="#unisex_xlr"><span>Female XLR</span><em>AAA3FBAUZ</em></a></li>
+                <li data-variant-id="19524164616278"  class="chooseable switchcraft_connector_aaa3mbauz" data-chooseable="switchcraft_connector_aaa3mbauz"><a href="#unisex_xlr"><span>Male XLR</span><em>AAA3MBAUZ</em></a></li>
+                <li data-variant-id="19524164321366"  class="chooseable switchcraft_connector_r3fz" data-chooseable="switchcraft_connector_r3fz"><a href="#unisex_xlr"><span>Female XLR</span><em>R3FZ</em></a></li>
+                <li data-variant-id="19524164354134"  class="chooseable switchcraft_connector_r3mz" data-chooseable="switchcraft_connector_r3mz"><a href="#unisex_xlr"><span>Male XLR</span><em>R3MZ</em></a></li>
+
+                
+
+              </ul>
+
+              <ul class="input_select_ul" id="select_connectorB_connector_switchcraft_35mm">
+                <li data-variant-id="19524178444374"  class="chooseable switchcraft_connector_35HDBAU" data-chooseable="switchcraft_connector_35HDBAU"><a href="#switchcraft_connector_35HDBAU"><span>3.5MM GOLD</span><em>35HDBAU</em></a></li>
+                <li data-variant-id="19524163862614"  class="chooseable switchcraft_connector_35HDBN" data-chooseable="switchcraft_connector_35HDBN"><a href="#switchcraft_connector_35HDBN"><span>3.5MM TIN</span><em>35HDBN</em></a></li>
+                <li data-variant-id="19524163993686"  class="chooseable switchcraft_connector_35HDNAU" data-chooseable="switchcraft_connector_35HDNAU"><a href="#switchcraft_connector_35HDNAU"><span>3.5MM GOLD</span><em>35HDNAU</em></a></li>
+                <li data-variant-id="19524164124758"  class="chooseable switchcraft_connector_35HDNN" data-chooseable="switchcraft_connector_35HDNN"><a href="#switchcraft_connector_35HDNN"><span>3.5MM TIN</span><em>35HDNN</em></a></li>
+
+                <li data-variant-id="19524178280534"  class="chooseable switchcraft_connector_35HDRABAU" data-chooseable="switchcraft_connector_35HDRABAU"><a href="#switchcraft_connector_35HDRABAU"><span>3.5MM GOLD</span><em>35HDRABAU</em></a></li>
+                <li data-variant-id="19524178313302"  class="chooseable switchcraft_connector_35HDRANAU" data-chooseable="switchcraft_connector_35HDRANAU"><a href="#switchcraft_connector_35HDRANAU"><span>3.5MM TIN</span><em>35HDRANAU</em></a></li>
+                <li data-variant-id="19524178378838"  class="chooseable switchcraft_connector_35HDRANN" data-chooseable="switchcraft_connector_35HDRANN"><a href="#switchcraft_connector_35HDRANN"><span>3.5MM TIN</span><em>35HDRANN</em></a></li>
+<!--                 <li data-variant-id="29623330930774 "  class="chooseable switchcraft_connector_35LJNAU" data-chooseable="switchcraft_connector_35LJNAU"><a href="#switchcraft_connector_35LJNAU"><span>3.5MM EXTENSION</span><em>35LJNAU</em></a></li>
+ -->
+              </ul>
+              <!-- END OF SWITCHCRAFT CONNECTORS -->
+
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_ringColor" data-key="connectorB_ring_color">
+            <h3>Ring Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorB_ringColor_neutrik">
+                <li data-variant-id="19524170580054b"  class="chooseable" data-chooseable="neutrik_ringColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                 <li data-variant-id="19524170580054"  class="chooseable" data-chooseable="neutrik_ringColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170612822"  class="chooseable" data-chooseable="neutrik_ringColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170645590"  class="chooseable" data-chooseable="neutrik_ringColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170678358"  class="chooseable" data-chooseable="neutrik_ringColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524170711126"  class="chooseable" data-chooseable="neutrik_ringColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171333718"  class="chooseable" data-chooseable="neutrik_ringColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171366486"  class="chooseable" data-chooseable="neutrik_ringColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171399254"  class="chooseable" data-chooseable="neutrik_ringColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171432022"  class="chooseable border" data-chooseable="neutrik_ringColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524171464790"  class="chooseable" data-chooseable="neutrik_ringColor_clear" data-colour="cancel"><a href="#no_sleeve"><span>Clear</span></a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="option option_select dependent" id="select_connectorB_bootColor" data-key="connectorB_boot_color">
+            <h3>Boot Colour</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="select_connectorB_bootColor_neutrik">
+                <li data-variant-id="19524166713430b"  class="chooseable" data-chooseable="neutrik_bootColor_black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+               <li data-variant-id="19524166713430"  class="chooseable" data-chooseable="neutrik_bootColor_brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166746198"  class="chooseable" data-chooseable="neutrik_bootColor_red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166778966"  class="chooseable" data-chooseable="neutrik_bootColor_orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166811734"  class="chooseable" data-chooseable="neutrik_bootColor_yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166844502"  class="chooseable" data-chooseable="neutrik_bootColor_green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166877270"  class="chooseable" data-chooseable="neutrik_bootColor_blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166910038"  class="chooseable" data-chooseable="neutrik_bootColor_purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524167073878"  class="chooseable" data-chooseable="neutrik_bootColor_grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524166942806"  class="chooseable border" data-chooseable="neutrik_bootColor_white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+          
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Connector B -->
+
+	{% include "custom_logo_text" %}
+
+
+      <!-- OPTION: Sleeve & Cable Tie -->
+      <div class="group closed" id="sleeve">
+        <div class="group_header">
+          <h2>Sleeve <em class="amp">&amp;</em> Cable Tie</h2>
+          <span class="group_price price"><em>(optional)</em></span>
+          <span class="arrow"></span>
+        </div>
+      
+
+        <div class="group_inner">
+          {% include "techflex" %}
+          
+          <div class="option option_select">
+            <h3>Rip-Lock CableWrap Colour (1" x 6.5")</h3>
+            <div class="input input_select input_colours">
+              <ul class="input_select_ul" id="input_select_cable_tie">
+                <li class="chooseable" data-chooseable="value" data-colour="cancel"><a href="#no_sleeve"><span>No Cable Tie</span></a></li>
+          
+                <li data-variant-id="19524172677206"  class="chooseable" data-chooseable="black" data-colour="#000000"><a href="#colour_black"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173987926"  class="chooseable" data-chooseable="brown" data-colour="#906b4d"><a href="#colour_brown"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173955158"  class="chooseable" data-chooseable="red" data-colour="#c4132a"><a href="#colour_red"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524172742742"  class="chooseable" data-chooseable="orange" data-colour="#fa7b00"><a href="#colour_orange"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173856854"  class="chooseable" data-chooseable="yellow" data-colour="#f4cb13"><a href="#colour_yellow"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173922390"  class="chooseable" data-chooseable="green" data-colour="#3d9451"><a href="#colour_green"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173824086"  class="chooseable" data-chooseable="blue" data-colour="#4886cf"><a href="#colour_blue"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524172709974"  class="chooseable" data-chooseable="purple" data-colour="#9452b7"><a href="#colour_purple"><i class="fas fa-check"></i></a></li>
+                <li data-variant-id="19524173889622"  class="chooseable" data-chooseable="grey" data-colour="#c7c5c0"><a href="#colour_grey"><i class="fas fa-check"></i></a></li>
+
+
+                <li data-variant-id="19524174020694"  class="chooseable border" data-chooseable="white" data-colour="#ffffff" data-border="#c7c5c0"><a href="#colour_white"><i class="fas fa-check"></i></a></li>
+
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF OPTION: Sleeve & Cable Tie -->
+
+      <!-- CART BUTTON & TOTAL -->
+      <div id="cart_buttons">
+        <h5>Total</h5>
+        <div id="total_price" class="price"><span class="currency_symbol">$</span><span class="price_text">0.00</span></div>
+        <button type="button" id="addToCart"><span class="text">Add To Cart</span></button>
+
+        <div class="button_spinner" id="addToCartSpinner" style="display:none;">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </div>
+
+        <div id="cart_status_message" style="display:none;">
+
+        </div>
+
+
+
+      </div>
+      <!-- END OF CART BUTTON & TOTAL -->
+
+
+
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,115 @@
+<section class="banner">
+  <div class="bg-image">
+    {% if section.settings.banner_image != blank %}
+      <img src="{{ section.settings.banner_image | img_url: '1500x' }}" alt="{{ shop.name }}">
+    {% else %}
+      <img src="{{ 'banner-bg.jpg' | asset_img_url: '1500x' }}" alt="{{ shop.name }}">
+    {% endif %}
+  </div>
+  <div class="page-width">
+    <div class="banner__wrapper">
+      <div class="banner__text parallax--block">
+        {% if section.settings.banner_heading != blank %}
+          <h1>{{ section.settings.banner_heading }}</h1>
+        {% endif %}
+        {% if section.settings.banner_paragraph != blank %}
+          {{ section.settings.banner_paragraph }}
+        {% endif %}
+        <div class="button__wrap">
+          {% if section.settings.button_1_text != blank %}
+            <a href="{{ section.settings.button_1_link }}" class="button button--primary">{{ section.settings.button_1_text }}</a>
+          {% endif %}
+          {% if section.settings.button_2_text != blank %}
+            <a href="{{ section.settings.button_2_link }}" class="button button--outline">{{ section.settings.button_2_text }} <span class="ico-wrap">{% include 'icon-arrow-down' %}</span></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <!--<div class="cable__image">
+      {% if section.settings.cable_image != blank %}
+        <img class="lazyload" src="{{ section.settings.cable_image | img_url: '1500x' }}" alt="{{ shop.name }}">
+      {% else %}
+        <img class="lazyload" src="{{ 'cables.png' | asset_url }}" alt="{{ shop.name }}">
+      {% endif %}
+    </div>-->
+    {% if section.settings.social_link_bottom != false %}
+      <div class="social__wrapper">
+        {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+        <ul class="social__list">
+          {% for social in social_accounts %}
+            {%- assign social_handle = social | handleize -%}
+            {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+            {% if settings[social_link] != blank %}
+              <li>
+                <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">{{ social }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner image"
+      },
+      {
+        "type": "text",
+        "id": "banner_heading",
+        "label": "Banner Main Heading",
+        "default": "Our specialization is the supply of custom-made cable assemblies"
+      },
+      {
+        "type": "richtext",
+        "id": "banner_paragraph",
+        "label": "Banner Main Paragraph",
+        "default": "<p>Custom made high quality multicore cables for live production and recording studios.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "cable_image",
+        "label": "Cable image"
+      },
+      {
+        "type": "text",
+        "id": "button_1_text",
+        "label": "Banner 1st Button text",
+        "default": "Build yours now"
+      },
+      {
+        "type": "url",
+        "id": "button_1_link",
+        "label": "Banner 1st Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_2_text",
+        "label": "Banner 2nd Button text",
+        "default": "Our Story"
+      },
+      {
+        "type": "url",
+        "id": "button_2_link",
+        "label": "Banner 2nd Button Link"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_link_bottom",
+        "label": "Show social sharing Links",
+        "default": true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner",
+        "category": "Main Banner"
+      }
+    ]
+  }
+{% endschema %}

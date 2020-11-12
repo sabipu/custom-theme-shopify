@@ -1,0 +1,121 @@
+<div class="general__wrapper" id="b2b__subheader">
+  <div class="page-width">
+    <div class="general__content general__content--b2b">
+      
+      <div class="grid grid--flex">
+        
+        
+        <div class="grid__item medium-up--one-half">
+          <div class="general__text">
+            <h2>Audio, video, data & power cables for stage, studio, production & resellers</h2>
+            <p>We take the manufacturing of professional cable assemblies seriously. So we decided to offer our products & services to other pro audio, broadcast, installation and retail businesses</p>
+            <a href="https://cablesmiths-2.gogecko.com/users/request-access" class="button">Request Access</a>
+            <a href="https://cablesmiths-2.gogecko.com/users/login" class="button border-button">Login</a>
+          </div>
+        </div>
+        
+        <div class="grid__item medium-up--one-half">
+          <div class="image__holder">
+            <!-- <img src="{{ 'img01.jpg' | asset_url }}" alt="{{ shop.name }}"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+<div class="general__wrapper">
+  <div class="page-width">
+    <div class="general__content general__content--b2b">
+      
+      <div class="grid grid--flex" id="b2b__benefits">
+        <div class="grid__item medium-up--one-fifth">
+          <h2>Benefits of the Cablesmiths <span>B2B Platform</span></h2>
+        </div>
+        <div class="grid__item medium-up--one-fifth benefit">
+          <span class="icon__holder">{% include 'icon-order' %}</span>
+          <h3>Simple ordering and re-ordering</h3>
+        </div>
+        <div class="grid__item medium-up--one-fifth benefit">
+          <span class="icon__holder">{% include 'icon-inventory' %}</span>
+          <h3>Live inventory levels</h3>
+        </div>
+        <div class="grid__item medium-up--one-fifth benefit">
+          <span class="icon__holder">{% include 'icon-price' %}</span>
+          <h3>Your negotiated prices, discounts & MOQ</h3>
+        </div>
+        <div class="grid__item medium-up--one-fifth benefit">
+          <span class="icon__holder">{% include 'icon-international' %}</span>
+          <h3>Private label manufacturing and International shipping</h3>
+        </div>
+      </div>
+      
+      
+      
+      <div class="grid grid--flex" id="b2b__logins">
+        
+        <div class="grid__item medium-up--one-half">
+          <div class="general__text">
+            <h2>Request Access to Cablesmith's Pty Ltd's Private <span>B2B Platform</span></h2>
+            <p>For us to understand better if we're a good fit, fill out the application form below and we'll get in touch with you!</p>
+            <a href="https://cablesmiths-2.gogecko.com/users/request-access" class="button">Request Access</a>
+          </div>
+        </div>
+        
+        
+        <div class="grid__item medium-up--one-half">
+          <div class="image__holder" id="b2b__alreadyaccount">
+            <h2>Already have an account?</h2>
+            <a href="https://cablesmiths-2.gogecko.com/users/login" class="button border-button">Login Here</a>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+      
+      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "B2B Page",
+    "max_blocks": 12,
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Block image"
+          },
+          {
+            "type": "text",
+            "id": "main_heading",
+            "label": "Main Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "block_paragraph",
+            "label": "Block Paragraph"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Inner Text Blocks",
+        "category": "Text Description Block"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
